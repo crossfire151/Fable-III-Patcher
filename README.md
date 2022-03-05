@@ -9,3 +9,7 @@ It has a built in troubleshooter for those frequently asked questions!
 I hope this helps you guys out, I know it's helped me!
 
 This Patcher includes all the required resources so there is no need to download them seperately.
+
+Note:
+
+You'll need the recources zip file found in releases if you plan on using this source code.
