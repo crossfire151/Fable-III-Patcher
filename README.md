@@ -18,7 +18,8 @@ This is supported with both 32bit and 64bit operating systems.
 
 Troubleshooting:
 
-1. Make sure you have the folder "resources" included in the same folder as Fabel III Patcher.exe. This folder must contain the following: gfwlclient.msi, gfwlivesetup.exe, wllogin_32.msi, wllogin_64.msi, xliveredist.msi.
+1. Make sure you have the folder "resources" included in the same folder as Fable III Patcher.exe.
+This folder must contain the following: gfwlclient.msi, gfwlivesetup.exe, wllogin_32.msi, wllogin_64.msi, xliveredist.msi.
 2. You should have the MetroSet UI.dll included as well inside the same folder as Fable III Patcher.exe.
 
 File Structure should look like this:
