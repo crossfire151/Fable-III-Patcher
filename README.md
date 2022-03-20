@@ -23,16 +23,17 @@ This folder must contain the following: gfwlclient.msi, gfwlivesetup.exe, wllogi
 2. You should have the MetroSet UI.dll included as well inside the same folder as Fable III Patcher.exe.
 
 File Structure should look like this:
-[MAIN FOLDER]
-/resources/
-Fable III Patcher.exe
-Metro UI.dll
 
-[/resources FOLDER]
-gfwlclient.msi
-gfwlivesetup.exe
-wllogin_32.msi
-wllogin_64.msi
-xliveredist.msi
+"[MAIN FOLDER]"
+1. /resources/
+2. Fable III Patcher.exe
+3. Metro UI.dll
+
+"[/resources FOLDER]"
+1. gfwlclient.msi
+2. gfwlivesetup.exe
+3. wllogin_32.msi
+4. wllogin_64.msi
+5. xliveredist.msi
 
 If you notice any error popups please copy the error log and create a new Issue above.
