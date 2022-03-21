@@ -16,24 +16,17 @@ You'll need the recources zip file found in releases if you plan on using this s
 
 This is supported with both 32bit and 64bit operating systems.
 
-Troubleshooting:
 
-1. Make sure you have the folder "resources" included in the same folder as Fable III Patcher.exe.
-This folder must contain the following: gfwlclient.msi, gfwlivesetup.exe, wllogin_32.msi, wllogin_64.msi, xliveredist.msi.
-2. You should have the MetroSet UI.dll included as well inside the same folder as Fable III Patcher.exe.
+Version 1.0.0.1
 
-File Structure should look like this:
-
-"[MAIN FOLDER]"
-1. /resources/
-2. Fable III Patcher.exe
-3. Metro UI.dll
-
-"[/resources FOLDER]"
-1. gfwlclient.msi
-2. gfwlivesetup.exe
-3. wllogin_32.msi
-4. wllogin_64.msi
-5. xliveredist.msi
+Added resources self installer, the application will now verify all the dependencies; if they are not found it will then automatically load them for you.
+The resources zip file is no longer required.
 
 If you notice any error popups please copy the error log and create a new Issue above.
+
+REQUIREMENTS:
+
+A Windows Operating sytem of Windows 7 or later must be installed.
+Both 32bit and 64bit OS are supported.
+
+!! WINDOWS ONLY !!
