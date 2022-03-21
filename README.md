@@ -10,11 +10,9 @@ I hope this helps you guys out, I know it's helped me!
 
 This Patcher includes all the required resources so there is no need to download them seperately.
 
-Note:
 
-You'll need the recources zip file found in releases if you plan on using this source code.
-
-This is supported with both 32bit and 64bit operating systems.
+Visit the Releases section to download this patcher, I have conveniently zipped up everything you need. The Patcher will do the rest!
+This should prevent those DOTS in the filenames, this was done buy github during the upload for some strange reason; the zip file should have solved this.
 
 
 Version 1.0.0.1
