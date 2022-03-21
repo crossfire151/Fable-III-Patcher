@@ -138,4 +138,8 @@
     Private Sub MetroSetButton14_Click(sender As Object, e As EventArgs) Handles MetroSetButton14.Click
         MetroSetPanel3.Visible = False
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dependency_Check.Show()
+    End Sub
 End Class

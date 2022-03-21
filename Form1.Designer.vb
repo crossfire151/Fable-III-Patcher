@@ -26,11 +26,9 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MetroSetTile1 = New MetroSet_UI.Controls.MetroSetTile()
         Me.MetroSetPanel1 = New MetroSet_UI.Controls.MetroSetPanel()
-        Me.MetroSetButton2 = New MetroSet_UI.Controls.MetroSetButton()
-        Me.MetroSetProgressBar1 = New MetroSet_UI.Controls.MetroSetProgressBar()
-        Me.MetroSetButton11 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetPanel2 = New MetroSet_UI.Controls.MetroSetPanel()
         Me.MetroSetPanel3 = New MetroSet_UI.Controls.MetroSetPanel()
+        Me.MetroSetButton14 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetLabel7 = New MetroSet_UI.Controls.MetroSetLabel()
         Me.MetroSetButton10 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton9 = New MetroSet_UI.Controls.MetroSetButton()
@@ -40,6 +38,9 @@ Partial Class Form1
         Me.MetroSetButton7 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton6 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetLabel4 = New MetroSet_UI.Controls.MetroSetLabel()
+        Me.MetroSetButton2 = New MetroSet_UI.Controls.MetroSetButton()
+        Me.MetroSetProgressBar1 = New MetroSet_UI.Controls.MetroSetProgressBar()
+        Me.MetroSetButton11 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton5 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton4 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetLabel3 = New MetroSet_UI.Controls.MetroSetLabel()
@@ -53,7 +54,6 @@ Partial Class Form1
         Me.GWFLInstaller = New System.Windows.Forms.Timer(Me.components)
         Me.MetroSetButton12 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton13 = New MetroSet_UI.Controls.MetroSetButton()
-        Me.MetroSetButton14 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetPanel1.SuspendLayout()
         Me.MetroSetPanel2.SuspendLayout()
         Me.MetroSetPanel3.SuspendLayout()
@@ -116,84 +116,6 @@ Partial Class Form1
         Me.MetroSetPanel1.ThemeAuthor = "Narwin"
         Me.MetroSetPanel1.ThemeName = "MetroLite"
         '
-        'MetroSetButton2
-        '
-        Me.MetroSetButton2.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton2.DisabledForeColor = System.Drawing.Color.Gray
-        Me.MetroSetButton2.Enabled = False
-        Me.MetroSetButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.MetroSetButton2.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MetroSetButton2.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MetroSetButton2.HoverTextColor = System.Drawing.Color.White
-        Me.MetroSetButton2.IsDerivedStyle = True
-        Me.MetroSetButton2.Location = New System.Drawing.Point(318, 349)
-        Me.MetroSetButton2.Name = "MetroSetButton2"
-        Me.MetroSetButton2.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton2.NormalColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton2.NormalTextColor = System.Drawing.Color.White
-        Me.MetroSetButton2.PressBorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.MetroSetButton2.PressColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.MetroSetButton2.PressTextColor = System.Drawing.Color.White
-        Me.MetroSetButton2.Size = New System.Drawing.Size(208, 48)
-        Me.MetroSetButton2.Style = MetroSet_UI.Enums.Style.Light
-        Me.MetroSetButton2.StyleManager = Nothing
-        Me.MetroSetButton2.TabIndex = 14
-        Me.MetroSetButton2.Text = "Play Fable III"
-        Me.MetroSetButton2.ThemeAuthor = "Narwin"
-        Me.MetroSetButton2.ThemeName = "MetroLite"
-        '
-        'MetroSetProgressBar1
-        '
-        Me.MetroSetProgressBar1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.MetroSetProgressBar1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.MetroSetProgressBar1.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.MetroSetProgressBar1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.MetroSetProgressBar1.DisabledProgressColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetProgressBar1.IsDerivedStyle = True
-        Me.MetroSetProgressBar1.Location = New System.Drawing.Point(207, 241)
-        Me.MetroSetProgressBar1.Maximum = 100
-        Me.MetroSetProgressBar1.Minimum = 0
-        Me.MetroSetProgressBar1.Name = "MetroSetProgressBar1"
-        Me.MetroSetProgressBar1.Orientation = MetroSet_UI.Enums.ProgressOrientation.Horizontal
-        Me.MetroSetProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetProgressBar1.Size = New System.Drawing.Size(430, 23)
-        Me.MetroSetProgressBar1.Style = MetroSet_UI.Enums.Style.Light
-        Me.MetroSetProgressBar1.StyleManager = Nothing
-        Me.MetroSetProgressBar1.TabIndex = 13
-        Me.MetroSetProgressBar1.Text = "MetroSetProgressBar1"
-        Me.MetroSetProgressBar1.ThemeAuthor = "Narwin"
-        Me.MetroSetProgressBar1.ThemeName = "MetroLite"
-        Me.MetroSetProgressBar1.Value = 0
-        Me.MetroSetProgressBar1.Visible = False
-        '
-        'MetroSetButton11
-        '
-        Me.MetroSetButton11.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton11.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton11.DisabledForeColor = System.Drawing.Color.Gray
-        Me.MetroSetButton11.Enabled = False
-        Me.MetroSetButton11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.MetroSetButton11.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MetroSetButton11.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MetroSetButton11.HoverTextColor = System.Drawing.Color.White
-        Me.MetroSetButton11.IsDerivedStyle = True
-        Me.MetroSetButton11.Location = New System.Drawing.Point(207, 270)
-        Me.MetroSetButton11.Name = "MetroSetButton11"
-        Me.MetroSetButton11.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton11.NormalColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton11.NormalTextColor = System.Drawing.Color.White
-        Me.MetroSetButton11.PressBorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.MetroSetButton11.PressColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.MetroSetButton11.PressTextColor = System.Drawing.Color.White
-        Me.MetroSetButton11.Size = New System.Drawing.Size(430, 62)
-        Me.MetroSetButton11.Style = MetroSet_UI.Enums.Style.Light
-        Me.MetroSetButton11.StyleManager = Nothing
-        Me.MetroSetButton11.TabIndex = 12
-        Me.MetroSetButton11.Text = "Let's get Fable III working on Windows 10 with the power of Compatibility Tools!"
-        Me.MetroSetButton11.ThemeAuthor = "Narwin"
-        Me.MetroSetButton11.ThemeName = "MetroLite"
-        '
         'MetroSetPanel2
         '
         Me.MetroSetPanel2.BackgroundColor = System.Drawing.Color.White
@@ -236,6 +158,32 @@ Partial Class Form1
         Me.MetroSetPanel3.ThemeAuthor = "Narwin"
         Me.MetroSetPanel3.ThemeName = "MetroLite"
         Me.MetroSetPanel3.Visible = False
+        '
+        'MetroSetButton14
+        '
+        Me.MetroSetButton14.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton14.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton14.DisabledForeColor = System.Drawing.Color.Gray
+        Me.MetroSetButton14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.MetroSetButton14.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton14.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton14.HoverTextColor = System.Drawing.Color.White
+        Me.MetroSetButton14.IsDerivedStyle = True
+        Me.MetroSetButton14.Location = New System.Drawing.Point(330, 6)
+        Me.MetroSetButton14.Name = "MetroSetButton14"
+        Me.MetroSetButton14.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton14.NormalColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton14.NormalTextColor = System.Drawing.Color.White
+        Me.MetroSetButton14.PressBorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton14.PressColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton14.PressTextColor = System.Drawing.Color.White
+        Me.MetroSetButton14.Size = New System.Drawing.Size(93, 41)
+        Me.MetroSetButton14.Style = MetroSet_UI.Enums.Style.Light
+        Me.MetroSetButton14.StyleManager = Nothing
+        Me.MetroSetButton14.TabIndex = 3
+        Me.MetroSetButton14.Text = "Previous"
+        Me.MetroSetButton14.ThemeAuthor = "Narwin"
+        Me.MetroSetButton14.ThemeName = "MetroLite"
         '
         'MetroSetLabel7
         '
@@ -424,6 +372,84 @@ Partial Class Form1
         Me.MetroSetLabel4.ThemeAuthor = "Narwin"
         Me.MetroSetLabel4.ThemeName = "MetroLite"
         '
+        'MetroSetButton2
+        '
+        Me.MetroSetButton2.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton2.DisabledForeColor = System.Drawing.Color.Gray
+        Me.MetroSetButton2.Enabled = False
+        Me.MetroSetButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.MetroSetButton2.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton2.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton2.HoverTextColor = System.Drawing.Color.White
+        Me.MetroSetButton2.IsDerivedStyle = True
+        Me.MetroSetButton2.Location = New System.Drawing.Point(318, 349)
+        Me.MetroSetButton2.Name = "MetroSetButton2"
+        Me.MetroSetButton2.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton2.NormalColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton2.NormalTextColor = System.Drawing.Color.White
+        Me.MetroSetButton2.PressBorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton2.PressColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton2.PressTextColor = System.Drawing.Color.White
+        Me.MetroSetButton2.Size = New System.Drawing.Size(208, 48)
+        Me.MetroSetButton2.Style = MetroSet_UI.Enums.Style.Light
+        Me.MetroSetButton2.StyleManager = Nothing
+        Me.MetroSetButton2.TabIndex = 14
+        Me.MetroSetButton2.Text = "Play Fable III"
+        Me.MetroSetButton2.ThemeAuthor = "Narwin"
+        Me.MetroSetButton2.ThemeName = "MetroLite"
+        '
+        'MetroSetProgressBar1
+        '
+        Me.MetroSetProgressBar1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.MetroSetProgressBar1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.MetroSetProgressBar1.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.MetroSetProgressBar1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.MetroSetProgressBar1.DisabledProgressColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetProgressBar1.IsDerivedStyle = True
+        Me.MetroSetProgressBar1.Location = New System.Drawing.Point(207, 241)
+        Me.MetroSetProgressBar1.Maximum = 100
+        Me.MetroSetProgressBar1.Minimum = 0
+        Me.MetroSetProgressBar1.Name = "MetroSetProgressBar1"
+        Me.MetroSetProgressBar1.Orientation = MetroSet_UI.Enums.ProgressOrientation.Horizontal
+        Me.MetroSetProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetProgressBar1.Size = New System.Drawing.Size(430, 23)
+        Me.MetroSetProgressBar1.Style = MetroSet_UI.Enums.Style.Light
+        Me.MetroSetProgressBar1.StyleManager = Nothing
+        Me.MetroSetProgressBar1.TabIndex = 13
+        Me.MetroSetProgressBar1.Text = "MetroSetProgressBar1"
+        Me.MetroSetProgressBar1.ThemeAuthor = "Narwin"
+        Me.MetroSetProgressBar1.ThemeName = "MetroLite"
+        Me.MetroSetProgressBar1.Value = 0
+        Me.MetroSetProgressBar1.Visible = False
+        '
+        'MetroSetButton11
+        '
+        Me.MetroSetButton11.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton11.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton11.DisabledForeColor = System.Drawing.Color.Gray
+        Me.MetroSetButton11.Enabled = False
+        Me.MetroSetButton11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.MetroSetButton11.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton11.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton11.HoverTextColor = System.Drawing.Color.White
+        Me.MetroSetButton11.IsDerivedStyle = True
+        Me.MetroSetButton11.Location = New System.Drawing.Point(207, 270)
+        Me.MetroSetButton11.Name = "MetroSetButton11"
+        Me.MetroSetButton11.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton11.NormalColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton11.NormalTextColor = System.Drawing.Color.White
+        Me.MetroSetButton11.PressBorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton11.PressColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton11.PressTextColor = System.Drawing.Color.White
+        Me.MetroSetButton11.Size = New System.Drawing.Size(430, 62)
+        Me.MetroSetButton11.Style = MetroSet_UI.Enums.Style.Light
+        Me.MetroSetButton11.StyleManager = Nothing
+        Me.MetroSetButton11.TabIndex = 12
+        Me.MetroSetButton11.Text = "Let's get Fable III working on Windows 10 with the power of Compatibility Tools!"
+        Me.MetroSetButton11.ThemeAuthor = "Narwin"
+        Me.MetroSetButton11.ThemeName = "MetroLite"
+        '
         'MetroSetButton5
         '
         Me.MetroSetButton5.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
@@ -523,6 +549,7 @@ Partial Class Form1
         Me.MetroSetButton1.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.MetroSetButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.MetroSetButton1.DisabledForeColor = System.Drawing.Color.Gray
+        Me.MetroSetButton1.Enabled = False
         Me.MetroSetButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.MetroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MetroSetButton1.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -660,32 +687,6 @@ Partial Class Form1
         Me.MetroSetButton13.Text = "×"
         Me.MetroSetButton13.ThemeAuthor = "Narwin"
         Me.MetroSetButton13.ThemeName = "MetroDark"
-        '
-        'MetroSetButton14
-        '
-        Me.MetroSetButton14.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton14.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton14.DisabledForeColor = System.Drawing.Color.Gray
-        Me.MetroSetButton14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.MetroSetButton14.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MetroSetButton14.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MetroSetButton14.HoverTextColor = System.Drawing.Color.White
-        Me.MetroSetButton14.IsDerivedStyle = True
-        Me.MetroSetButton14.Location = New System.Drawing.Point(330, 6)
-        Me.MetroSetButton14.Name = "MetroSetButton14"
-        Me.MetroSetButton14.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton14.NormalColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.MetroSetButton14.NormalTextColor = System.Drawing.Color.White
-        Me.MetroSetButton14.PressBorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.MetroSetButton14.PressColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.MetroSetButton14.PressTextColor = System.Drawing.Color.White
-        Me.MetroSetButton14.Size = New System.Drawing.Size(93, 41)
-        Me.MetroSetButton14.Style = MetroSet_UI.Enums.Style.Light
-        Me.MetroSetButton14.StyleManager = Nothing
-        Me.MetroSetButton14.TabIndex = 3
-        Me.MetroSetButton14.Text = "Previous"
-        Me.MetroSetButton14.ThemeAuthor = "Narwin"
-        Me.MetroSetButton14.ThemeName = "MetroLite"
         '
         'Form1
         '

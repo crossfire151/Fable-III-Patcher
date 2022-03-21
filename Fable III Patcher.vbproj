@@ -101,6 +101,12 @@
     <Compile Include="CompatibilityHelper.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dependency Check.Designer.vb">
+      <DependentUpon>Dependency Check.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dependency Check.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CompatibilityHelper.resx">
       <DependentUpon>CompatibilityHelper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dependency Check.resx">
+      <DependentUpon>Dependency Check.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
