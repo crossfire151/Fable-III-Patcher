@@ -28,3 +28,5 @@ A Windows Operating sytem of Windows 10 or later must be installed.
 Both 32bit and 64bit OS are supported.
 
 !! WINDOWS ONLY !!
+
+Discord Support Server: [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
