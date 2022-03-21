@@ -12,7 +12,7 @@ This Patcher includes all the required resources so there is no need to download
 
 
 Visit the Releases section to download this patcher, I have conveniently zipped up everything you need. The Patcher will do the rest!
-This should prevent those DOTS in the filenames, this was done buy github during the upload for some strange reason; the zip file should have solved this.
+This should prevent those DOTS in the filenames, this was done by github during the upload for some strange reason; the zip file should have solved this.
 
 
 Version 1.0.0.1
