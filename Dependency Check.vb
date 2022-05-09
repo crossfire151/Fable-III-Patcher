@@ -5,7 +5,7 @@
             ListBox1.Items.Add("Szukanie folderu /resources...")
         ElseIf ProgressBar1.Value = 5 Then
             If Not My.Computer.FileSystem.DirectoryExists(Application.StartupPath & "\resources") Then
-                ListBox1.Items.Add("Folder /resourcesnie został znaleziony.")
+                ListBox1.Items.Add("Folder /resources nie został znaleziony.")
             Else
                 ListBox1.Items.Add("Folder /resources został znaleziony!")
             End If
