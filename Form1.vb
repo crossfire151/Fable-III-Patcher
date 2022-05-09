@@ -54,11 +54,11 @@
     End Sub
 
     Private Sub MetroSetButton9_Click(sender As Object, e As EventArgs) Handles MetroSetButton9.Click
-        MetroSetLabel7.Text = "Unfortunately due to the age of GFWL it doesn't support the latest technology in 2FA. Also unfortunately it also does not support one time passwords or app passwords, we all know how secure 2FA is but in your case you'll need to remove it and use a password instead. Remember to use a maximum of 16 characters in your password as the login password field on the GFWL login panel only supports a max of 16 characters. Have you activated your key on account already, if not then there is some great news, just create a new account and have it only for GFWL that way your personal account stays secure :)"
+        MetroSetLabel7.Text = "Niestety, ze względu na wiek GFWL, nie wspiera ono dwustopniowej weryfikacji (2FA). Nie wspiera ono także haseł jednorazowych i aplikacji. Wszyscy wiemy, jak bezpieczne jest 2FA, ale w tej sytuacji musisz je wyłączyć i w zamian używać hasła. Pamiętaj, by użyć maksymalnie 16 znaków, ponieważ pole hasła w panelu logowania GFWL wspiera maksymalnie 16 znaków. Czy aktywowałeś już grę? Jeśli nie, to świetna wiadomość: po prostu stwórz drugie konto tylko dla GFWL, w taki sposób twoje konto osobiste zostanie bezpieczne :)"
     End Sub
 
     Private Sub MetroSetButton10_Click(sender As Object, e As EventArgs) Handles MetroSetButton10.Click
-        MetroSetLabel7.Text = "Great! Having 2FA is not suported by GFWL due to how outdated it is, so good on you. Are you getting password in incorrect? How long is your password? Does it exceed 16 characters? Unfortunately you'll need to reduce it to at least 16 or less characters (16 preferably for security of course!). But wait! Have you activated already?, if not then stop there; let's save you hassle, let's say you wanted to add 2FA in the future; why not just create a new account and have Fable just for that one email address, then your personal email stays secure! If not then go ahead and continue :) "
+        MetroSetLabel7.Text = "Świetnie! Dwustopniowa weryfikacja (2FA) nie jest wspierana przez GFWL ze względu na jego wiek, więc dobrze dla ciebie. Czy wpisujesz złe hasło? Jak długie ono jest i czy przekracza 16 znaków? Jeśli tak, to niestety musisz je zmniejszyć do 16 znaków lub mniej (oczywiście dla bezpieczeństwa najlepiej, by było ich 16!) Zaczekaj! Czy aktywowałeś już grę? Jeśli nie, to poczekaj; oszczędźmy ci kłopotów, powiedzmy, że chcesz w przyszłości dodać 2FA; Czemu nie stworzyć nowego konta tylko dla Fable? Wtedy twój e-mail będzie bezpieczny! Jeśli nie zamierzać tworzyć nowego konta, to śmiało kontynuuj."
     End Sub
 
     Private Sub MetroSetButton5_Click(sender As Object, e As EventArgs) Handles MetroSetButton5.Click
@@ -67,7 +67,7 @@
     End Sub
 
     Private Sub MetroSetButton1_Click(sender As Object, e As EventArgs) Handles MetroSetButton1.Click
-        FolderBrowserDialog1.Description = "Tell us where you have Fable III installed"
+        FolderBrowserDialog1.Description = "Wskaż, gdzie jest zainstalowane Fable III"
         FolderBrowserDialog1.ShowDialog()
         MetroSetTextBox1.Text = FolderBrowserDialog1.SelectedPath
         MetroSetButton3.Enabled = True
