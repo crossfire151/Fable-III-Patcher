@@ -49,7 +49,7 @@ Both 32bit and 64bit OS are supported.
 
 !! WINDOWS ONLY !!
 
-Discord Support Server: [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
+- Discord Support Server: [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
 
 # Translators
 
