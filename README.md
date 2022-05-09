@@ -57,4 +57,6 @@ As a special thanks I am listing the following Translators (in no specific order
 - SojerManLan (Discord hash removed for privacy) - Polish Translations
 
 
-- Discord Support Server: [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
+# Discord Support Server
+
+[https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
