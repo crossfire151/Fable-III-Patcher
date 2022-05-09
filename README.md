@@ -49,10 +49,12 @@ Both 32bit and 64bit OS are supported.
 
 !! WINDOWS ONLY !!
 
-- Discord Support Server: [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
 
 # Translators
 
 As a special thanks I am listing the following Translators (in no specific order) to this README, this will increase support to those who do not know English fully.
 
 - SojerManLan (Discord hash removed for privacy) - Polish Translations
+
+
+- Discord Support Server: [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
