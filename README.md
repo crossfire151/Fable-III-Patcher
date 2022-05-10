@@ -1,4 +1,4 @@
-# Posish Branch to be merged into "master" with Language option
+# Polish Branch to be merged into "master" with Language option
 
 Contributer: [SojerManLan](https://github.com/SojerManLan)
 
