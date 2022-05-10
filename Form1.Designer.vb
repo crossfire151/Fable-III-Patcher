@@ -221,7 +221,7 @@ Partial Class Form1
         Me.MetroSetButton10.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton10.StyleManager = Nothing
         Me.MetroSetButton10.TabIndex = 1
-        Me.MetroSetButton10.Text = "I do NOT have 2 Factor Authentication enabled on my Live account"
+        Me.MetroSetButton10.Text = "Moje konto LIVE NIE ma włączonej dwustopniowej weryfikacji (2FA)"
         Me.MetroSetButton10.ThemeAuthor = "Narwin"
         Me.MetroSetButton10.ThemeName = "MetroLite"
         '
@@ -247,7 +247,7 @@ Partial Class Form1
         Me.MetroSetButton9.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton9.StyleManager = Nothing
         Me.MetroSetButton9.TabIndex = 0
-        Me.MetroSetButton9.Text = "I have 2 Factor Authentication enabled on my Live account"
+        Me.MetroSetButton9.Text = "Moje konto LIVE MA włączoną dwustopniową weryfikację (2FA)"
         Me.MetroSetButton9.ThemeAuthor = "Narwin"
         Me.MetroSetButton9.ThemeName = "MetroLite"
         '
@@ -287,8 +287,7 @@ Partial Class Form1
         Me.MetroSetLabel6.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel6.StyleManager = Nothing
         Me.MetroSetLabel6.TabIndex = 4
-        Me.MetroSetLabel6.Text = "You are having problems with the in-game create account option, this is the corre" &
-    "ct place to sign up!"
+        Me.MetroSetLabel6.Text = "Masz problemy z założeniem konta nie wychodząc z gry? To jest właściwe miejsce do rejestracji!"
         Me.MetroSetLabel6.ThemeAuthor = "Narwin"
         Me.MetroSetLabel6.ThemeName = "MetroLite"
         '
@@ -302,7 +301,7 @@ Partial Class Form1
         Me.MetroSetLabel5.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel5.StyleManager = Nothing
         Me.MetroSetLabel5.TabIndex = 3
-        Me.MetroSetLabel5.Text = "You are having problems logging in"
+        Me.MetroSetLabel5.Text = "Masz problemy z zalogowaniem się"
         Me.MetroSetLabel5.ThemeAuthor = "Narwin"
         Me.MetroSetLabel5.ThemeName = "MetroLite"
         '
@@ -328,7 +327,7 @@ Partial Class Form1
         Me.MetroSetButton7.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton7.StyleManager = Nothing
         Me.MetroSetButton7.TabIndex = 2
-        Me.MetroSetButton7.Text = "I need to setup an account"
+        Me.MetroSetButton7.Text = "Potrzebuję założyć konto"
         Me.MetroSetButton7.ThemeAuthor = "Narwin"
         Me.MetroSetButton7.ThemeName = "MetroLite"
         '
@@ -354,7 +353,7 @@ Partial Class Form1
         Me.MetroSetButton6.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton6.StyleManager = Nothing
         Me.MetroSetButton6.TabIndex = 1
-        Me.MetroSetButton6.Text = "I already have an account"
+        Me.MetroSetButton6.Text = "Mam już konto"
         Me.MetroSetButton6.ThemeAuthor = "Narwin"
         Me.MetroSetButton6.ThemeName = "MetroLite"
         '
@@ -368,7 +367,7 @@ Partial Class Form1
         Me.MetroSetLabel4.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel4.StyleManager = Nothing
         Me.MetroSetLabel4.TabIndex = 0
-        Me.MetroSetLabel4.Text = "Windows Live ID Login Troubleshooter"
+        Me.MetroSetLabel4.Text = "Rozwiązywanie problemów z zalogowaniem się do Windows Live ID"
         Me.MetroSetLabel4.ThemeAuthor = "Narwin"
         Me.MetroSetLabel4.ThemeName = "MetroLite"
         '
@@ -395,7 +394,7 @@ Partial Class Form1
         Me.MetroSetButton2.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton2.StyleManager = Nothing
         Me.MetroSetButton2.TabIndex = 14
-        Me.MetroSetButton2.Text = "Play Fable III"
+        Me.MetroSetButton2.Text = "Graj w Fable III"
         Me.MetroSetButton2.ThemeAuthor = "Narwin"
         Me.MetroSetButton2.ThemeName = "MetroLite"
         '
@@ -446,7 +445,7 @@ Partial Class Form1
         Me.MetroSetButton11.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton11.StyleManager = Nothing
         Me.MetroSetButton11.TabIndex = 12
-        Me.MetroSetButton11.Text = "Let's get Fable III working on Windows 10 with the power of Compatibility Tools!"
+        Me.MetroSetButton11.Text = "Sprawmy, by Fable III działało na Windows 10 przez narzędzia kompatybilności!"
         Me.MetroSetButton11.ThemeAuthor = "Narwin"
         Me.MetroSetButton11.ThemeName = "MetroLite"
         '
@@ -472,7 +471,7 @@ Partial Class Form1
         Me.MetroSetButton5.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton5.StyleManager = Nothing
         Me.MetroSetButton5.TabIndex = 10
-        Me.MetroSetButton5.Text = "Login troubleshooter"
+        Me.MetroSetButton5.Text = "Rozwiązywanie problemów z zalogowaniem"
         Me.MetroSetButton5.ThemeAuthor = "Narwin"
         Me.MetroSetButton5.ThemeName = "MetroLite"
         '
@@ -499,7 +498,7 @@ Partial Class Form1
         Me.MetroSetButton4.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton4.StyleManager = Nothing
         Me.MetroSetButton4.TabIndex = 9
-        Me.MetroSetButton4.Text = "Begin patching and install a more stable version of GFWL"
+        Me.MetroSetButton4.Text = "Zacznij naprawiać i zainstaluj nowszą wersję GFWL"
         Me.MetroSetButton4.ThemeAuthor = "Narwin"
         Me.MetroSetButton4.ThemeName = "MetroLite"
         '
@@ -513,7 +512,7 @@ Partial Class Form1
         Me.MetroSetLabel3.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel3.StyleManager = Nothing
         Me.MetroSetLabel3.TabIndex = 8
-        Me.MetroSetLabel3.Text = "This is what Steam automatically installs"
+        Me.MetroSetLabel3.Text = "Tą wersję Steam instaluje automatycznie"
         Me.MetroSetLabel3.ThemeAuthor = "Narwin"
         Me.MetroSetLabel3.ThemeName = "MetroLite"
         '
@@ -540,7 +539,7 @@ Partial Class Form1
         Me.MetroSetButton3.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton3.StyleManager = Nothing
         Me.MetroSetButton3.TabIndex = 7
-        Me.MetroSetButton3.Text = "Uninstall Broken GFWL"
+        Me.MetroSetButton3.Text = "Odinstaluj stare GFWL"
         Me.MetroSetButton3.ThemeAuthor = "Narwin"
         Me.MetroSetButton3.ThemeName = "MetroLite"
         '
@@ -567,7 +566,7 @@ Partial Class Form1
         Me.MetroSetButton1.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton1.StyleManager = Nothing
         Me.MetroSetButton1.TabIndex = 3
-        Me.MetroSetButton1.Text = "Browse..."
+        Me.MetroSetButton1.Text = "Szukaj..."
         Me.MetroSetButton1.ThemeAuthor = "Narwin"
         Me.MetroSetButton1.ThemeName = "MetroLite"
         '
@@ -610,7 +609,7 @@ Partial Class Form1
         Me.MetroSetLabel1.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel1.StyleManager = Nothing
         Me.MetroSetLabel1.TabIndex = 1
-        Me.MetroSetLabel1.Text = "Let's Locate Fable III"
+        Me.MetroSetLabel1.Text = "Znajdźmy miejsce instalacji Fable III"
         Me.MetroSetLabel1.ThemeAuthor = "Narwin"
         Me.MetroSetLabel1.ThemeName = "MetroLite"
         '
