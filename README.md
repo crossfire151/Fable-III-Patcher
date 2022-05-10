@@ -58,11 +58,11 @@ As a special thanks I am listing the following Translators (in no specific order
 
 # TO DO LIST - Next RELEASE
 
-[ ]\ Cloud hosting for files
-[ ]\ DLC Installer
-[ ]\ Create preset for Languages (Setting).
-[ ]\ Merge Polish Branch into above preset.
-[ ]\ Hopefully have more translations before this release.
+- [ ] Cloud hosting for files
+- [ ] DLC Installer
+- [ ] Create preset for Languages (Setting).
+- [ ] Merge Polish Branch into above preset.
+- [ ] Hopefully have more translations before this release.
 - Estimated release time 15th, this is an ESTIMATE and may be made earlier or 1-3 days after depending on debugging stages.
 
 
