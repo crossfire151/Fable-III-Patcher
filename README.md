@@ -1,3 +1,7 @@
+# Posish Branch to be merged into "master" with Language option
+
+Contributer: [SojerManLan](https://github.com/SojerManLan)
+
 # Fable-III-Patcher
 An easier much more simple Patcher and troubleshooter included.
 
