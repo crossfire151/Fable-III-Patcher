@@ -58,7 +58,7 @@ As a special thanks I am listing the following Translators (in no specific order
 
 # TO DO LIST - Next RELEASE
 
-- [ ] Cloud hosting for files (Propagating...)
+- [x] Cloud hosting for files [cloud site](https://cloud.crossfire151.xyz/?clouddata=fable3)
 - [ ] DLC Installer
 - [ ] Create preset for Languages (Setting).
 - [ ] Merge Polish Branch into above preset.
