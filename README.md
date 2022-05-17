@@ -35,10 +35,9 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 1.0.0.1
+# Version 1.0.0.2
 
-Added resources self installer, the application will now verify all the dependencies; if they are not found it will then automatically load them for you.
-The resources zip file is no longer required.
+Added Polish Translations thanks to our Polish Translator, name listed below.
 
 If you notice any error popups please copy the error log and create a new Issue above.
 
@@ -59,11 +58,9 @@ As a special thanks I am listing the following Translators (in no specific order
 # TO DO LIST - Next RELEASE
 
 - [x] Cloud hosting for files [cloud site](https://cloud.crossfire151.xyz/?clouddata=fable3)
-- [ ] DLC Installer
-- [ ] Create preset for Languages (Setting).
-- [ ] Merge Polish Branch into above preset.
-- [ ] Hopefully have more translations before this release.
-- Estimated release time 15th, this is an ESTIMATE and may be made earlier or 1-3 days after depending on debugging stages.
+- [ ] DLC Installer - Paused, see Discord for further info.
+- [x] Create preset for Languages (Setting).
+- [x] Merge Polish Branch into above preset.
 
 
 # Discord Support Server
