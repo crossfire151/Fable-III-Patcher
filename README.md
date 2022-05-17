@@ -39,6 +39,9 @@ Before installing the DLC make sure you create a backup of your saves, we don't 
 
 Added Polish Translations thanks to our Polish Translator, name listed below.
 
+
+# INFORMATION
+
 If you notice any error popups please copy the error log and create a new Issue above.
 
 REQUIREMENTS:
