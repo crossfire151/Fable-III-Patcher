@@ -18,17 +18,16 @@ This should prevent those DOTS in the filenames, this was done by github during 
 # Looking for Voluntary Translators!
 
 Currently this Patcher only Supports English.
-As this Patcher grows in the upcoming future this application will need to be translated to support the NEW upcoming DLC Installtion feature.
+As this Patcher grows in the upcoming future this application will need to be translated to support the NEW upcoming DLC Installation feature.
 
 # DECLARATION -> READ ME!
 
 This software will gain in size as it updates,
 The software instelf contains all the relevent dependencies to help Fable 3 run as expected by everyone.
 This software also will contain all the required files for the DLC's, this will noticibily increase the file size of the Fable III Patcher.exe,
-You will notice the size of the file exceed 1GB; this saves everyone having to hunt for the correct working DLC version,
 where I say "working" and "correct", I mean this in literal sence as some guides seem a little confusing to follow as they are not very well
 detailed, I myself admit that I found this a little difficult to get working; this involved a lot of googling to find the best guide.
-The DLC Installer will do all the painful work for you.
+The DLC Installer will do all the painful work for you. The DLC will be downloaded from my cloud, this is incase Microsoft make things worse and delete the content; (I mean come on, who trusts Microsoft (shrug)?).
 
 # BACKUP, BACKUP, BACKUP!!
 
