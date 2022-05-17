@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MetroSetLabel1.Text" xml:space="preserve">
-    <value>1. Kliknij "Zainstalowano" w pasku sortowania, by GFWL i Marketplace pojawiły się na górze.
-2. Odinstaluj zarówno Microsoft Games For Windows Live Redistributable i Microsoft Games For Windows Live Marketplace.
-3. Kliknij "Zakończ", kiedy oba programy zostaną odinstalowane.
+    <value>1. Click the Installed On along the top to bring GFWL and market place to the top.
+2. Uninstall BOTH: Game For Windows - LIVE redistrutable. And: Games for Windows Market Place.
+3. Click done below when finished.
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MetroSetLabel1.Text" xml:space="preserve">
-    <value>1. Znajdź plik Fable3.exe
-2. Kliknij na nim prawym przyciskiem myszy i wybierz "Właściwości".
-3. Kliknij na zakładkę "Zgodność".
-4. Zaznacz "Uruchom ten program w trybie zgodności z:" i upewnij się, że jest wybrany Windows 7.
-5.Kliknij "Zastosuj", a potem "OK".
-Powtórz wyżej wymienione czynności dla pliku FableLauncher.exe
+    <value>1. Locate Fable3.exe
+2. Right-Click it, click Properties.
+3. Click the Compatibility Tab.
+4. Check the box marked "Run this program in compatibity mode for:", make sure it says Windows 7.
+5. Click Apply, then OK.
+Repeat the above but for the FableLauncher.exe instead.
 
-Po wykonaniu tych czynności dla obu plików, kliknij "Zakończ".</value>
+Once complete, click Done below.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -98,7 +98,7 @@ Partial Class CompatibilityHelper
         Me.MetroSetButton1.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton1.StyleManager = Nothing
         Me.MetroSetButton1.TabIndex = 3
-        Me.MetroSetButton1.Text = "Zakończ"
+        Me.MetroSetButton1.Text = "Done"
         Me.MetroSetButton1.ThemeAuthor = "Narwin"
         Me.MetroSetButton1.ThemeName = "MetroLite"
         '

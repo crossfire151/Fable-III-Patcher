@@ -54,6 +54,8 @@ Partial Class Form1
         Me.GWFLInstaller = New System.Windows.Forms.Timer(Me.components)
         Me.MetroSetButton12 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton13 = New MetroSet_UI.Controls.MetroSetButton()
+        Me.MetroSetButton15 = New MetroSet_UI.Controls.MetroSetButton()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.MetroSetPanel1.SuspendLayout()
         Me.MetroSetPanel2.SuspendLayout()
         Me.MetroSetPanel3.SuspendLayout()
@@ -94,6 +96,8 @@ Partial Class Form1
         Me.MetroSetPanel1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.MetroSetPanel1.BorderThickness = 1
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetPanel2)
+        Me.MetroSetPanel1.Controls.Add(Me.LinkLabel1)
+        Me.MetroSetPanel1.Controls.Add(Me.MetroSetButton15)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetButton2)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetProgressBar1)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetButton11)
@@ -129,9 +133,9 @@ Partial Class Form1
         Me.MetroSetPanel2.Controls.Add(Me.MetroSetButton6)
         Me.MetroSetPanel2.Controls.Add(Me.MetroSetLabel4)
         Me.MetroSetPanel2.IsDerivedStyle = True
-        Me.MetroSetPanel2.Location = New System.Drawing.Point(35, 10)
+        Me.MetroSetPanel2.Location = New System.Drawing.Point(23, 10)
         Me.MetroSetPanel2.Name = "MetroSetPanel2"
-        Me.MetroSetPanel2.Size = New System.Drawing.Size(753, 384)
+        Me.MetroSetPanel2.Size = New System.Drawing.Size(752, 387)
         Me.MetroSetPanel2.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetPanel2.StyleManager = Nothing
         Me.MetroSetPanel2.TabIndex = 11
@@ -221,7 +225,7 @@ Partial Class Form1
         Me.MetroSetButton10.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton10.StyleManager = Nothing
         Me.MetroSetButton10.TabIndex = 1
-        Me.MetroSetButton10.Text = "Moje konto LIVE NIE ma włączonej dwustopniowej weryfikacji (2FA)"
+        Me.MetroSetButton10.Text = "I do NOT have 2 Factor Authentication enabled on my Live account"
         Me.MetroSetButton10.ThemeAuthor = "Narwin"
         Me.MetroSetButton10.ThemeName = "MetroLite"
         '
@@ -247,7 +251,7 @@ Partial Class Form1
         Me.MetroSetButton9.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton9.StyleManager = Nothing
         Me.MetroSetButton9.TabIndex = 0
-        Me.MetroSetButton9.Text = "Moje konto LIVE MA włączoną dwustopniową weryfikację (2FA)"
+        Me.MetroSetButton9.Text = "I have 2 Factor Authentication enabled on my Live account"
         Me.MetroSetButton9.ThemeAuthor = "Narwin"
         Me.MetroSetButton9.ThemeName = "MetroLite"
         '
@@ -287,7 +291,8 @@ Partial Class Form1
         Me.MetroSetLabel6.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel6.StyleManager = Nothing
         Me.MetroSetLabel6.TabIndex = 4
-        Me.MetroSetLabel6.Text = "Masz problemy z założeniem konta nie wychodząc z gry? To jest właściwe miejsce do rejestracji!"
+        Me.MetroSetLabel6.Text = "You are having problems with the in-game create account option, this is the corre" &
+    "ct place to sign up!"
         Me.MetroSetLabel6.ThemeAuthor = "Narwin"
         Me.MetroSetLabel6.ThemeName = "MetroLite"
         '
@@ -301,7 +306,7 @@ Partial Class Form1
         Me.MetroSetLabel5.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel5.StyleManager = Nothing
         Me.MetroSetLabel5.TabIndex = 3
-        Me.MetroSetLabel5.Text = "Masz problemy z zalogowaniem się"
+        Me.MetroSetLabel5.Text = "You are having problems logging in"
         Me.MetroSetLabel5.ThemeAuthor = "Narwin"
         Me.MetroSetLabel5.ThemeName = "MetroLite"
         '
@@ -327,7 +332,7 @@ Partial Class Form1
         Me.MetroSetButton7.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton7.StyleManager = Nothing
         Me.MetroSetButton7.TabIndex = 2
-        Me.MetroSetButton7.Text = "Potrzebuję założyć konto"
+        Me.MetroSetButton7.Text = "I need to setup an account"
         Me.MetroSetButton7.ThemeAuthor = "Narwin"
         Me.MetroSetButton7.ThemeName = "MetroLite"
         '
@@ -353,7 +358,7 @@ Partial Class Form1
         Me.MetroSetButton6.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton6.StyleManager = Nothing
         Me.MetroSetButton6.TabIndex = 1
-        Me.MetroSetButton6.Text = "Mam już konto"
+        Me.MetroSetButton6.Text = "I already have an account"
         Me.MetroSetButton6.ThemeAuthor = "Narwin"
         Me.MetroSetButton6.ThemeName = "MetroLite"
         '
@@ -367,7 +372,7 @@ Partial Class Form1
         Me.MetroSetLabel4.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel4.StyleManager = Nothing
         Me.MetroSetLabel4.TabIndex = 0
-        Me.MetroSetLabel4.Text = "Rozwiązywanie problemów z zalogowaniem się do Windows Live ID"
+        Me.MetroSetLabel4.Text = "Windows Live ID Login Troubleshooter"
         Me.MetroSetLabel4.ThemeAuthor = "Narwin"
         Me.MetroSetLabel4.ThemeName = "MetroLite"
         '
@@ -394,7 +399,7 @@ Partial Class Form1
         Me.MetroSetButton2.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton2.StyleManager = Nothing
         Me.MetroSetButton2.TabIndex = 14
-        Me.MetroSetButton2.Text = "Graj w Fable III"
+        Me.MetroSetButton2.Text = "Play Fable III"
         Me.MetroSetButton2.ThemeAuthor = "Narwin"
         Me.MetroSetButton2.ThemeName = "MetroLite"
         '
@@ -445,7 +450,7 @@ Partial Class Form1
         Me.MetroSetButton11.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton11.StyleManager = Nothing
         Me.MetroSetButton11.TabIndex = 12
-        Me.MetroSetButton11.Text = "Sprawmy, by Fable III działało na Windows 10 przez narzędzia kompatybilności!"
+        Me.MetroSetButton11.Text = "Let's get Fable III working on Windows 10 with the power of Compatibility Tools!"
         Me.MetroSetButton11.ThemeAuthor = "Narwin"
         Me.MetroSetButton11.ThemeName = "MetroLite"
         '
@@ -471,7 +476,7 @@ Partial Class Form1
         Me.MetroSetButton5.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton5.StyleManager = Nothing
         Me.MetroSetButton5.TabIndex = 10
-        Me.MetroSetButton5.Text = "Rozwiązywanie problemów z zalogowaniem"
+        Me.MetroSetButton5.Text = "Login troubleshooter"
         Me.MetroSetButton5.ThemeAuthor = "Narwin"
         Me.MetroSetButton5.ThemeName = "MetroLite"
         '
@@ -498,7 +503,7 @@ Partial Class Form1
         Me.MetroSetButton4.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton4.StyleManager = Nothing
         Me.MetroSetButton4.TabIndex = 9
-        Me.MetroSetButton4.Text = "Zacznij naprawiać i zainstaluj nowszą wersję GFWL"
+        Me.MetroSetButton4.Text = "Begin patching and install a more stable version of GFWL"
         Me.MetroSetButton4.ThemeAuthor = "Narwin"
         Me.MetroSetButton4.ThemeName = "MetroLite"
         '
@@ -512,7 +517,7 @@ Partial Class Form1
         Me.MetroSetLabel3.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel3.StyleManager = Nothing
         Me.MetroSetLabel3.TabIndex = 8
-        Me.MetroSetLabel3.Text = "Tą wersję Steam instaluje automatycznie"
+        Me.MetroSetLabel3.Text = "This is what Steam automatically installs"
         Me.MetroSetLabel3.ThemeAuthor = "Narwin"
         Me.MetroSetLabel3.ThemeName = "MetroLite"
         '
@@ -539,7 +544,7 @@ Partial Class Form1
         Me.MetroSetButton3.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton3.StyleManager = Nothing
         Me.MetroSetButton3.TabIndex = 7
-        Me.MetroSetButton3.Text = "Odinstaluj stare GFWL"
+        Me.MetroSetButton3.Text = "Uninstall Broken GFWL"
         Me.MetroSetButton3.ThemeAuthor = "Narwin"
         Me.MetroSetButton3.ThemeName = "MetroLite"
         '
@@ -566,7 +571,7 @@ Partial Class Form1
         Me.MetroSetButton1.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetButton1.StyleManager = Nothing
         Me.MetroSetButton1.TabIndex = 3
-        Me.MetroSetButton1.Text = "Szukaj..."
+        Me.MetroSetButton1.Text = "Browse..."
         Me.MetroSetButton1.ThemeAuthor = "Narwin"
         Me.MetroSetButton1.ThemeName = "MetroLite"
         '
@@ -609,7 +614,7 @@ Partial Class Form1
         Me.MetroSetLabel1.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetLabel1.StyleManager = Nothing
         Me.MetroSetLabel1.TabIndex = 1
-        Me.MetroSetLabel1.Text = "Znajdźmy miejsce instalacji Fable III"
+        Me.MetroSetLabel1.Text = "Let's Locate Fable III"
         Me.MetroSetLabel1.ThemeAuthor = "Narwin"
         Me.MetroSetLabel1.ThemeName = "MetroLite"
         '
@@ -687,6 +692,43 @@ Partial Class Form1
         Me.MetroSetButton13.ThemeAuthor = "Narwin"
         Me.MetroSetButton13.ThemeName = "MetroDark"
         '
+        'MetroSetButton15
+        '
+        Me.MetroSetButton15.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton15.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton15.DisabledForeColor = System.Drawing.Color.Gray
+        Me.MetroSetButton15.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.MetroSetButton15.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton15.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton15.HoverTextColor = System.Drawing.Color.White
+        Me.MetroSetButton15.IsDerivedStyle = True
+        Me.MetroSetButton15.Location = New System.Drawing.Point(629, 379)
+        Me.MetroSetButton15.Name = "MetroSetButton15"
+        Me.MetroSetButton15.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton15.NormalColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton15.NormalTextColor = System.Drawing.Color.White
+        Me.MetroSetButton15.PressBorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton15.PressColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton15.PressTextColor = System.Drawing.Color.White
+        Me.MetroSetButton15.Size = New System.Drawing.Size(165, 38)
+        Me.MetroSetButton15.Style = MetroSet_UI.Enums.Style.Light
+        Me.MetroSetButton15.StyleManager = Nothing
+        Me.MetroSetButton15.TabIndex = 15
+        Me.MetroSetButton15.Text = "DLC Installation"
+        Me.MetroSetButton15.ThemeAuthor = "Narwin"
+        Me.MetroSetButton15.ThemeName = "MetroLite"
+        Me.MetroSetButton15.Visible = False
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(3, 7)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(95, 13)
+        Me.LinkLabel1.TabIndex = 16
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Change Language"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -702,6 +744,7 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fable III - Patcher"
         Me.MetroSetPanel1.ResumeLayout(False)
+        Me.MetroSetPanel1.PerformLayout()
         Me.MetroSetPanel2.ResumeLayout(False)
         Me.MetroSetPanel3.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -738,4 +781,6 @@ Partial Class Form1
     Friend WithEvents MetroSetButton12 As MetroSet_UI.Controls.MetroSetButton
     Friend WithEvents MetroSetButton13 As MetroSet_UI.Controls.MetroSetButton
     Friend WithEvents MetroSetButton14 As MetroSet_UI.Controls.MetroSetButton
+    Friend WithEvents MetroSetButton15 As MetroSet_UI.Controls.MetroSetButton
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class
