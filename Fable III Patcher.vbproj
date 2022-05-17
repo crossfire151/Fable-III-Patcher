@@ -67,7 +67,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroSet UI, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\MetroSet_UI.2.0.0\lib\net45\MetroSet UI.dll</HintPath>
+      <HintPath>E:\Documents\Visual Studio\Projects\Fable III Patcher\bin\Debug\MetroSet UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -107,6 +107,12 @@
     <Compile Include="Dependency Check.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DLC.Designer.vb">
+      <DependentUpon>DLC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DLC.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -135,6 +142,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Startup.Designer.vb">
+      <DependentUpon>Startup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CompatibilityHelper.resx">
@@ -142,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dependency Check.resx">
       <DependentUpon>Dependency Check.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLC.resx">
+      <DependentUpon>DLC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -154,6 +170,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup.resx">
+      <DependentUpon>Startup.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -168,9 +187,18 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Resources\01_Understone.zip" />
+    <None Include="Resources\02_TraitorsKeep.zip" />
+    <None Include="Resources\03_InquisitorsPack.zip" />
+    <None Include="Resources\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip" />
+    <None Include="Resources\gfwlclient.msi" />
+    <None Include="Resources\wllogin_32.msi" />
+    <None Include="Resources\wllogin_64.msi" />
+    <None Include="Resources\xliveredist.msi" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fable3 Logo.ico" />
+    <None Include="Resources\gfwlivesetup.exe" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -184,5 +212,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

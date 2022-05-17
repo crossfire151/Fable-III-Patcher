@@ -40,6 +40,8 @@
     End Sub
 #End Region
 
+    Dim Language = My.Settings.Lang
+
     Private Sub MetroSetButton1_Click(sender As Object, e As EventArgs) Handles MetroSetButton1.Click
         Form1.MetroSetButton3.Enabled = False
         Form1.MetroSetButton4.Enabled = True
@@ -52,5 +54,18 @@
 
     Private Sub MetroSetButton12_Click(sender As Object, e As EventArgs) Handles MetroSetButton12.Click
         WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub GFWL_Uninstall_Helper_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Lang()
+    End Sub
+
+    Public Sub Lang()
+        If Language = "English" Then
+            'DO NOTHING
+        ElseIf Language = "Polish" Then
+            MetroSetButton1.Text = "Zakończ"
+            MetroSetLabel1.Text = "1. Kliknij ""Zainstalowano"" w pasku sortowania, by GFWL i Marketplace pojawiły się na górze." & vbNewLine & "2. Odinstaluj zarówno Microsoft Games For Windows Live Redistributable i Microsoft Games For Windows Live Marketplace." & vbNewLine & "3. Kliknij ""Zakończ"", kiedy oba programy zostaną odinstalowane."
+        End If
     End Sub
 End Class

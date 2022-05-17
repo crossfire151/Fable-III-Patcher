@@ -54,6 +54,8 @@ Partial Class Form1
         Me.GWFLInstaller = New System.Windows.Forms.Timer(Me.components)
         Me.MetroSetButton12 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton13 = New MetroSet_UI.Controls.MetroSetButton()
+        Me.MetroSetButton15 = New MetroSet_UI.Controls.MetroSetButton()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.MetroSetPanel1.SuspendLayout()
         Me.MetroSetPanel2.SuspendLayout()
         Me.MetroSetPanel3.SuspendLayout()
@@ -94,6 +96,8 @@ Partial Class Form1
         Me.MetroSetPanel1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.MetroSetPanel1.BorderThickness = 1
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetPanel2)
+        Me.MetroSetPanel1.Controls.Add(Me.LinkLabel1)
+        Me.MetroSetPanel1.Controls.Add(Me.MetroSetButton15)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetButton2)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetProgressBar1)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetButton11)
@@ -129,9 +133,9 @@ Partial Class Form1
         Me.MetroSetPanel2.Controls.Add(Me.MetroSetButton6)
         Me.MetroSetPanel2.Controls.Add(Me.MetroSetLabel4)
         Me.MetroSetPanel2.IsDerivedStyle = True
-        Me.MetroSetPanel2.Location = New System.Drawing.Point(35, 10)
+        Me.MetroSetPanel2.Location = New System.Drawing.Point(23, 10)
         Me.MetroSetPanel2.Name = "MetroSetPanel2"
-        Me.MetroSetPanel2.Size = New System.Drawing.Size(753, 384)
+        Me.MetroSetPanel2.Size = New System.Drawing.Size(752, 387)
         Me.MetroSetPanel2.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetPanel2.StyleManager = Nothing
         Me.MetroSetPanel2.TabIndex = 11
@@ -688,6 +692,43 @@ Partial Class Form1
         Me.MetroSetButton13.ThemeAuthor = "Narwin"
         Me.MetroSetButton13.ThemeName = "MetroDark"
         '
+        'MetroSetButton15
+        '
+        Me.MetroSetButton15.DisabledBackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton15.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton15.DisabledForeColor = System.Drawing.Color.Gray
+        Me.MetroSetButton15.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.MetroSetButton15.HoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton15.HoverColor = System.Drawing.Color.FromArgb(CType(CType(95, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MetroSetButton15.HoverTextColor = System.Drawing.Color.White
+        Me.MetroSetButton15.IsDerivedStyle = True
+        Me.MetroSetButton15.Location = New System.Drawing.Point(629, 379)
+        Me.MetroSetButton15.Name = "MetroSetButton15"
+        Me.MetroSetButton15.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton15.NormalColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MetroSetButton15.NormalTextColor = System.Drawing.Color.White
+        Me.MetroSetButton15.PressBorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton15.PressColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.MetroSetButton15.PressTextColor = System.Drawing.Color.White
+        Me.MetroSetButton15.Size = New System.Drawing.Size(165, 38)
+        Me.MetroSetButton15.Style = MetroSet_UI.Enums.Style.Light
+        Me.MetroSetButton15.StyleManager = Nothing
+        Me.MetroSetButton15.TabIndex = 15
+        Me.MetroSetButton15.Text = "DLC Installation"
+        Me.MetroSetButton15.ThemeAuthor = "Narwin"
+        Me.MetroSetButton15.ThemeName = "MetroLite"
+        Me.MetroSetButton15.Visible = False
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(3, 7)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(95, 13)
+        Me.LinkLabel1.TabIndex = 16
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Change Language"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -703,6 +744,7 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fable III - Patcher"
         Me.MetroSetPanel1.ResumeLayout(False)
+        Me.MetroSetPanel1.PerformLayout()
         Me.MetroSetPanel2.ResumeLayout(False)
         Me.MetroSetPanel3.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -739,4 +781,6 @@ Partial Class Form1
     Friend WithEvents MetroSetButton12 As MetroSet_UI.Controls.MetroSetButton
     Friend WithEvents MetroSetButton13 As MetroSet_UI.Controls.MetroSetButton
     Friend WithEvents MetroSetButton14 As MetroSet_UI.Controls.MetroSetButton
+    Friend WithEvents MetroSetButton15 As MetroSet_UI.Controls.MetroSetButton
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class
