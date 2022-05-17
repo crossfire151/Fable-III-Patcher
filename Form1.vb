@@ -171,7 +171,7 @@
             MetroSetButton2.Text = "Graj w Fable III"
             MetroSetButton3.Text = "Odinstaluj stare GFWL"
             MetroSetButton4.Text = "Zacznij naprawiać i zainstaluj nowszą wersję GFWL"
-            MetroSetButton5.Text = "Rozwiązywanie problemów z zalogowaniem"
+            MetroSetButton5.Text = "Rozwiązywanie problemów z GFWL"
             MetroSetButton6.Text = "Mam już konto"
             MetroSetButton7.Text = "Potrzebuję założyć konto"
             'BUTTON 8 -> CLOSE BUTTON -> NO TRANSLATION REQURED
@@ -182,10 +182,10 @@
             'MetroSetButton13  -> CLOSE (IGNORE THIS)
             MetroSetButton14.Text = "Powrót"
             MetroSetButton15.Text = "Instalacja DLC"
-            MetroSetLabel1.Text = "Znajdźmy miejsce instalacji Fable III"
+            MetroSetLabel1.Text = "Znajdźmy Fable III"
             'LABEL 2 -> DELETED LABEL (IGNORE THIS)
             MetroSetLabel3.Text = "Tą wersję Steam instaluje automatycznie"
-            MetroSetLabel4.Text = "Rozwiązywanie problemów z zalogowaniem się do Windows Live ID"
+            MetroSetLabel4.Text = "Rozwiązywanie problemów z GFWL"
             MetroSetLabel5.Text = "Masz problemy z zalogowaniem się"
             MetroSetLabel6.Text = "Masz problemy z założeniem konta nie wychodząc z gry? To jest właściwe miejsce do rejestracji!"
             LinkLabel1.Text = "Zmień Język"
