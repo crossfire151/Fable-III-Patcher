@@ -195,4 +195,8 @@
         MetroSetPanel1.Location = New Point(23, 10)
         Dependency_Check.Show()
     End Sub
+
+    Private Sub MetroSetButton15_Click(sender As Object, e As EventArgs) Handles MetroSetButton15.Click
+        DLC.Show()
+    End Sub
 End Class

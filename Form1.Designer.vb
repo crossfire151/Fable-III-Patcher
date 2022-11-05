@@ -85,7 +85,7 @@ Partial Class Form1
         Me.MetroSetTile1.Style = MetroSet_UI.Enums.Style.Light
         Me.MetroSetTile1.StyleManager = Nothing
         Me.MetroSetTile1.TabIndex = 0
-        Me.MetroSetTile1.Text = "Fable III - Patcher"
+        Me.MetroSetTile1.Text = "Fable III Patcher | Installer"
         Me.MetroSetTile1.ThemeAuthor = "Narwin"
         Me.MetroSetTile1.ThemeName = "MetroLite"
         Me.MetroSetTile1.TileAlign = MetroSet_UI.Enums.TileAlign.Topleft
@@ -380,6 +380,8 @@ Partial Class Form1
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Enabled = False
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.Location = New System.Drawing.Point(3, 7)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(95, 13)
@@ -440,6 +442,7 @@ Partial Class Form1
         Me.MetroSetButton2.Text = "Play Fable III"
         Me.MetroSetButton2.ThemeAuthor = "Narwin"
         Me.MetroSetButton2.ThemeName = "MetroLite"
+        Me.MetroSetButton2.Visible = False
         '
         'MetroSetProgressBar1
         '
