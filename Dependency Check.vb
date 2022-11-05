@@ -92,6 +92,7 @@ Public Class Dependency_Check
         ElseIf ProgressBar1.Value = ProgressBar1.Maximum Then
             Timer1.Stop()
             Form1.MetroSetButton1.Enabled = True
+            Form1.MetroSetButton15.Visible = True
             Close()
         End If
     End Sub
