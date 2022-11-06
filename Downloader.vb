@@ -7,7 +7,7 @@ Public Class Downloader
 
     Public Sub FileDownload()
         StatusText.Cursor = Cursors.Default
-        StatusText.Text = "Status: Initializing"
+        StatusText.Text = "Status: Inicjalizacja"
         StatusText.ForeColor = Color.Lime
         DownloadProgress.Visible = True
         download = New WebClient
@@ -19,7 +19,7 @@ Public Class Downloader
         'readdata = My.Computer.FileSystem.ReadAllBytes(Application.StartupPath & "\Downloads\" & RequestedFile.Text)
         DownloadProgress.Value = e.ProgressPercentage
         Percentage.Text = DownloadProgress.Value & "%"
-        StatusText.Text = "Status: Downloading... (" & RequestedFile.Text & ")"
+        StatusText.Text = "Status: Pobieranie... (" & RequestedFile.Text & ")"
         DownloadProgress.Text = DownloadProgress.Value
     End Sub
 
@@ -32,7 +32,7 @@ Public Class Downloader
     Private Sub DownloadProgress_TextChanged(sender As Object, e As EventArgs) Handles DownloadProgress.TextChanged
         If DownloadProgress.Text = DownloadProgress.Maximum Then
             DownloadProgress.Visible = False
-            StatusText.Text = "Status: File:- " & RequestedFile.Text & ", Download Complete!"
+            StatusText.Text = "Status: Plik:- " & RequestedFile.Text & ", pobieranie zakończone!"
             ExitButton.Visible = True
         End If
     End Sub

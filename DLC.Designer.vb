@@ -94,7 +94,7 @@ Partial Class DLC
         Me.LogInThemeContainer1.ShowIcon = True
         Me.LogInThemeContainer1.Size = New System.Drawing.Size(1373, 542)
         Me.LogInThemeContainer1.TabIndex = 0
-        Me.LogInThemeContainer1.Text = "DLC Installer"
+        Me.LogInThemeContainer1.Text = "Instalator DLC"
         '
         'Step5Panel
         '
@@ -125,7 +125,7 @@ Partial Class DLC
         Me.LicDoneButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LicDoneButton.Size = New System.Drawing.Size(82, 51)
         Me.LicDoneButton.TabIndex = 5
-        Me.LicDoneButton.Text = "Done"
+        Me.LicDoneButton.Text = "Zrobione"
         Me.LicDoneButton.Visible = False
         '
         'PictureBox1
@@ -149,7 +149,7 @@ Partial Class DLC
         Me.LogInLabel5.Name = "LogInLabel5"
         Me.LogInLabel5.Size = New System.Drawing.Size(492, 71)
         Me.LogInLabel5.TabIndex = 1
-        Me.LogInLabel5.Text = "Copy all the files in the left box to the right box!"
+        Me.LogInLabel5.Text = "Skopiuj wszystkie pliki z lewej strony na prawą!"
         Me.LogInLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LicenceCopyToLocation
@@ -196,7 +196,7 @@ Partial Class DLC
         Me.LogInLabel4.Name = "LogInLabel4"
         Me.LogInLabel4.Size = New System.Drawing.Size(1343, 44)
         Me.LogInLabel4.TabIndex = 0
-        Me.LogInLabel4.Text = "Step 5 - Licence File Allocation"
+        Me.LogInLabel4.Text = "Krok 5 - Alokacja pliku licencji"
         Me.LogInLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LicencePanel
@@ -241,7 +241,7 @@ Partial Class DLC
         Me.RetryButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.RetryButton.Size = New System.Drawing.Size(100, 30)
         Me.RetryButton.TabIndex = 4
-        Me.RetryButton.Text = "Try Again"
+        Me.RetryButton.Text = "Spróbuj ponownie"
         Me.RetryButton.Visible = False
         '
         'DoneButton
@@ -257,7 +257,7 @@ Partial Class DLC
         Me.DoneButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DoneButton.Size = New System.Drawing.Size(140, 30)
         Me.DoneButton.TabIndex = 3
-        Me.DoneButton.Text = "Done"
+        Me.DoneButton.Text = "Zrobione"
         '
         'LogInLabel3
         '
@@ -270,8 +270,8 @@ Partial Class DLC
         Me.LogInLabel3.Name = "LogInLabel3"
         Me.LogInLabel3.Size = New System.Drawing.Size(344, 30)
         Me.LogInLabel3.TabIndex = 2
-        Me.LogInLabel3.Text = "Enter Your Xbox Gamertag below then click Get." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This will fetch your unique ID. P" &
-    "lease Copy the XUID (HEX) code."
+        Me.LogInLabel3.Text = "Podaj swój Gamertag poniżej i wciśnij 'Get'." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Poda ci to twoje unikalne ID." &
+    "Skopiuj ciąg znaków przy XUID (HEX)."
         Me.LogInLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'XuidGrabber
@@ -296,7 +296,7 @@ Partial Class DLC
         Me.LogInLabel2.Name = "LogInLabel2"
         Me.LogInLabel2.Size = New System.Drawing.Size(862, 33)
         Me.LogInLabel2.TabIndex = 0
-        Me.LogInLabel2.Text = "Licence Setup - XUID Grabber"
+        Me.LogInLabel2.Text = "Konfiguracja licencji - XUID Grabber"
         Me.LogInLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Step4
@@ -313,7 +313,7 @@ Partial Class DLC
         Me.Step4.Name = "Step4"
         Me.Step4.Size = New System.Drawing.Size(658, 203)
         Me.Step4.TabIndex = 4
-        Me.Step4.Text = "Step 4 - Licence File | Setup & Preperation"
+        Me.Step4.Text = "Krok 4 - Plik licencji | Konfiguracja i Przygotowanie"
         Me.Step4.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'LogInButton2
@@ -329,7 +329,7 @@ Partial Class DLC
         Me.LogInButton2.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInButton2.Size = New System.Drawing.Size(624, 30)
         Me.LogInButton2.TabIndex = 2
-        Me.LogInButton2.Text = "Move and appropriate Location for Licence Files"
+        Me.LogInButton2.Text = "Przenieś pliki licencyjne do właściwego miejsca"
         '
         'RenameLicenceButton
         '
@@ -345,7 +345,7 @@ Partial Class DLC
         Me.RenameLicenceButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.RenameLicenceButton.Size = New System.Drawing.Size(624, 30)
         Me.RenameLicenceButton.TabIndex = 1
-        Me.RenameLicenceButton.Text = "Rename Licence File"
+        Me.RenameLicenceButton.Text = "Zmień nazwę pliku licencyjnego"
         '
         'LicenceSetupButton
         '
@@ -360,7 +360,7 @@ Partial Class DLC
         Me.LicenceSetupButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LicenceSetupButton.Size = New System.Drawing.Size(624, 30)
         Me.LicenceSetupButton.TabIndex = 0
-        Me.LicenceSetupButton.Text = "Setup Licence..."
+        Me.LicenceSetupButton.Text = "Przygotuj Licencję..."
         '
         'Step3
         '
@@ -378,7 +378,7 @@ Partial Class DLC
         Me.Step3.Name = "Step3"
         Me.Step3.Size = New System.Drawing.Size(685, 476)
         Me.Step3.TabIndex = 3
-        Me.Step3.Text = "Step 3 - DLC Location | Preperation"
+        Me.Step3.Text = "Step 3 - Lokalizacja DLC | Przygotowanie"
         Me.Step3.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'LogInButton1
@@ -394,7 +394,7 @@ Partial Class DLC
         Me.LogInButton1.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInButton1.Size = New System.Drawing.Size(164, 46)
         Me.LogInButton1.TabIndex = 2
-        Me.LogInButton1.Text = "Next Step"
+        Me.LogInButton1.Text = "Następny krok"
         '
         'Fable3DLCLocation
         '
@@ -448,7 +448,7 @@ Partial Class DLC
         Me.Step2.Name = "Step2"
         Me.Step2.Size = New System.Drawing.Size(641, 87)
         Me.Step2.TabIndex = 1
-        Me.Step2.Text = "Step 2 - Specify Fable 3 Game Location"
+        Me.Step2.Text = "Krok 2 - Wskaż lokalizację Fable III"
         Me.Step2.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'SaveLocationButton
@@ -464,7 +464,7 @@ Partial Class DLC
         Me.SaveLocationButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.SaveLocationButton.Size = New System.Drawing.Size(608, 30)
         Me.SaveLocationButton.TabIndex = 2
-        Me.SaveLocationButton.Text = "Specify Fable II Game Location..."
+        Me.SaveLocationButton.Text = "Wskaż lokalizację Fable III..."
         '
         'Step1
         '
@@ -480,7 +480,7 @@ Partial Class DLC
         Me.Step1.Name = "Step1"
         Me.Step1.Size = New System.Drawing.Size(641, 183)
         Me.Step1.TabIndex = 0
-        Me.Step1.Text = "Step 1 - Download DLC"
+        Me.Step1.Text = "Krok 1 - Pobierz DLC"
         Me.Step1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'DLC4
@@ -498,7 +498,7 @@ Partial Class DLC
         Me.DLC4.Size = New System.Drawing.Size(608, 30)
         Me.DLC4.TabIndex = 3
         Me.DLC4.Tag = "D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip"
-        Me.DLC4.Text = "Download Licence Files"
+        Me.DLC4.Text = "Pobierz pliki licencyjne"
         '
         'DLC3
         '
@@ -515,7 +515,7 @@ Partial Class DLC
         Me.DLC3.Size = New System.Drawing.Size(608, 30)
         Me.DLC3.TabIndex = 2
         Me.DLC3.Tag = "03_InquisitorsPack.zip"
-        Me.DLC3.Text = "Download Inquisitors Pack"
+        Me.DLC3.Text = "Pobierz Paczkę Inkwizytora"
         '
         'DLC2
         '
@@ -532,7 +532,7 @@ Partial Class DLC
         Me.DLC2.Size = New System.Drawing.Size(608, 30)
         Me.DLC2.TabIndex = 1
         Me.DLC2.Tag = "02_TraitorsKeep.zip"
-        Me.DLC2.Text = "Download Traitors Keep Pack"
+        Me.DLC2.Text = "Pobierz Traitor's Keep"
         '
         'DLC1
         '
@@ -548,7 +548,7 @@ Partial Class DLC
         Me.DLC1.Size = New System.Drawing.Size(608, 30)
         Me.DLC1.TabIndex = 0
         Me.DLC1.Tag = "01_Understone.zip"
-        Me.DLC1.Text = "Download Understone Pack"
+        Me.DLC1.Text = "Pobierz Understone"
         '
         'OpenStep5Panel
         '
@@ -569,7 +569,7 @@ Partial Class DLC
         Me.MaximizeBox = False
         Me.Name = "DLC"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Fable 3 | DLC Downloader"
+        Me.Text = "Fable 3 | Pobieranie DLC"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.LogInThemeContainer1.ResumeLayout(False)
         Me.Step5Panel.ResumeLayout(False)

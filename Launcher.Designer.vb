@@ -46,7 +46,7 @@ Partial Class Launcher
         '
         Me.ResetRestartInstallationToolStripMenuItem.Name = "ResetRestartInstallationToolStripMenuItem"
         Me.ResetRestartInstallationToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
-        Me.ResetRestartInstallationToolStripMenuItem.Text = "Reset - Restart Installation"
+        Me.ResetRestartInstallationToolStripMenuItem.Text = "Reset - Instaluj ponownie"
         '
         'SmartLoader
         '
@@ -73,7 +73,7 @@ Partial Class Launcher
         Me.LogInThemeContainer1.ShowIcon = True
         Me.LogInThemeContainer1.Size = New System.Drawing.Size(800, 450)
         Me.LogInThemeContainer1.TabIndex = 0
-        Me.LogInThemeContainer1.Text = "Fable III Patcher | With embeded Launcher"
+        Me.LogInThemeContainer1.Text = "Fable III Patcher | Z wbudowanym launcherem"
         '
         'SmartButton
         '

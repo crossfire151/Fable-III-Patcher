@@ -27,12 +27,12 @@ Public Class DLC
     Private Sub DoneButton_Click(sender As Object, e As EventArgs) Handles DoneButton.Click
         If DoneButton.Text = "Done" Then
             If Clipboard.GetText = "" Then
-                MsgBox("It appears you have not copied anything. This information is required in order to enable usage of the DLC.", MsgBoxStyle.Critical, "Missing information")
+                MsgBox("Zdaje się, że nic nie skopiowałeś. Te ID jest wymagane, by możliwe było korzystanie z DLC.", MsgBoxStyle.Critical, "Brakujące informacje")
             Else
-                MsgBox("Great, here's what we found in your clipboard: " & Clipboard.GetText & ". Please click Confirm if this is correct, if not; please try again.", MsgBoxStyle.Information, "We found this")
-                DoneButton.Text = "Confirm"
+                MsgBox("Świetnie, znaleźliśmy to w schowku: " & Clipboard.GetText & ". Wciśnij 'Potwierdź' jeśli się zgadza, jeśli nie; spróbuj ponownie.", MsgBoxStyle.Information, "To znaleźliśmy")
+                DoneButton.Text = "Potwierdź"
             End If
-        ElseIf DoneButton.Text = "Confirm" Then
+        ElseIf DoneButton.Text = "Potwierdź" Then
             LicenceSetupButton.Enabled = False
             RenameLicenceButton.Enabled = True
             LicencePanel.Visible = False
@@ -41,9 +41,9 @@ Public Class DLC
     End Sub
 
     Private Sub DoneButton_TextChanged(sender As Object, e As EventArgs) Handles DoneButton.TextChanged
-        If DoneButton.Text = "Confirm" Then
+        If DoneButton.Text = "Potwierdź" Then
             RetryButton.Visible = True
-        ElseIf DoneButton.Text = "Done" Then
+        ElseIf DoneButton.Text = "Zrobione" Then
             If RetryButton.Visible = True Then
                 RetryButton.Visible = False
             End If
@@ -92,7 +92,7 @@ Public Class DLC
                 My.Settings.PatchComplete = "1"
                 My.Settings.Save()
                 Form1.Close()
-                Launcher.SmartButton.Text = "Play"
+                Launcher.SmartButton.Text = "Graj"
                 Launcher.BringToFront()
                 Close()
             End If
