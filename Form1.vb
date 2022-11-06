@@ -155,13 +155,6 @@
         Lang()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        My.Settings.Lang = ""
-        My.Settings.Save()
-        Startup.Show()
-        Close()
-    End Sub
-
     Public Sub Lang()
         If My.Settings.Lang = "English" Then
             'DO NOTHING - > Continue load sequence
@@ -188,7 +181,6 @@
             MetroSetLabel4.Text = "Rozwiązywanie problemów z GFWL"
             MetroSetLabel5.Text = "Masz problemy z zalogowaniem się"
             MetroSetLabel6.Text = "Masz problemy z założeniem konta nie wychodząc z gry? To jest właściwe miejsce do rejestracji!"
-            LinkLabel1.Text = "Zmień Język"
         End If
         'Continue Load Sequence:
         MetroSetPanel1.Size = New Point(752, 387)

@@ -24,7 +24,7 @@ Partial Class DLC
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DLC))
-        Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
+        Me.ThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
         Me.Step5Panel = New System.Windows.Forms.Panel()
         Me.LicDoneButton = New Fable_III_Patcher.LogInButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -60,7 +60,7 @@ Partial Class DLC
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.OpenStep5Panel = New System.Windows.Forms.Timer(Me.components)
         Me.CloseStep5Panel = New System.Windows.Forms.Timer(Me.components)
-        Me.LogInThemeContainer1.SuspendLayout()
+        Me.ThemeContainer1.SuspendLayout()
         Me.Step5Panel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LicencePanel.SuspendLayout()
@@ -70,31 +70,31 @@ Partial Class DLC
         Me.Step1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'LogInThemeContainer1
+        'ThemeContainer1
         '
-        Me.LogInThemeContainer1.AllowClose = True
-        Me.LogInThemeContainer1.AllowMaximize = True
-        Me.LogInThemeContainer1.AllowMinimize = True
-        Me.LogInThemeContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.LogInThemeContainer1.Controls.Add(Me.Step5Panel)
-        Me.LogInThemeContainer1.Controls.Add(Me.LicencePanel)
-        Me.LogInThemeContainer1.Controls.Add(Me.Step4)
-        Me.LogInThemeContainer1.Controls.Add(Me.Step3)
-        Me.LogInThemeContainer1.Controls.Add(Me.Step2)
-        Me.LogInThemeContainer1.Controls.Add(Me.Step1)
-        Me.LogInThemeContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogInThemeContainer1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInThemeContainer1.FontSize = 12
-        Me.LogInThemeContainer1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LogInThemeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.LogInThemeContainer1.Name = "LogInThemeContainer1"
-        Me.LogInThemeContainer1.ShowIcon = True
-        Me.LogInThemeContainer1.Size = New System.Drawing.Size(1373, 542)
-        Me.LogInThemeContainer1.TabIndex = 0
-        Me.LogInThemeContainer1.Text = "DLC Installer"
+        Me.ThemeContainer1.AllowClose = True
+        Me.ThemeContainer1.AllowMaximize = True
+        Me.ThemeContainer1.AllowMinimize = True
+        Me.ThemeContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.ThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.ThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.ThemeContainer1.Controls.Add(Me.Step5Panel)
+        Me.ThemeContainer1.Controls.Add(Me.LicencePanel)
+        Me.ThemeContainer1.Controls.Add(Me.Step4)
+        Me.ThemeContainer1.Controls.Add(Me.Step3)
+        Me.ThemeContainer1.Controls.Add(Me.Step2)
+        Me.ThemeContainer1.Controls.Add(Me.Step1)
+        Me.ThemeContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ThemeContainer1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ThemeContainer1.FontSize = 12
+        Me.ThemeContainer1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.ThemeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ThemeContainer1.Name = "ThemeContainer1"
+        Me.ThemeContainer1.ShowIcon = True
+        Me.ThemeContainer1.Size = New System.Drawing.Size(1373, 542)
+        Me.ThemeContainer1.TabIndex = 0
+        Me.ThemeContainer1.Text = "DLC Installer"
         '
         'Step5Panel
         '
@@ -329,7 +329,7 @@ Partial Class DLC
         Me.LogInButton2.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInButton2.Size = New System.Drawing.Size(624, 30)
         Me.LogInButton2.TabIndex = 2
-        Me.LogInButton2.Text = "Move and appropriate Location for Licence Files"
+        Me.LogInButton2.Text = "Move Licence files"
         '
         'RenameLicenceButton
         '
@@ -563,7 +563,7 @@ Partial Class DLC
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1373, 542)
-        Me.Controls.Add(Me.LogInThemeContainer1)
+        Me.Controls.Add(Me.ThemeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -571,7 +571,7 @@ Partial Class DLC
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fable 3 | DLC Downloader"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
-        Me.LogInThemeContainer1.ResumeLayout(False)
+        Me.ThemeContainer1.ResumeLayout(False)
         Me.Step5Panel.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LicencePanel.ResumeLayout(False)
@@ -585,7 +585,7 @@ Partial Class DLC
 
     End Sub
 
-    Friend WithEvents LogInThemeContainer1 As LogInThemeContainer
+    Friend WithEvents ThemeContainer1 As LogInThemeContainer
     Friend WithEvents Step1 As LogInGroupBox
     Friend WithEvents DLC4 As LogInButton
     Friend WithEvents DLC3 As LogInButton

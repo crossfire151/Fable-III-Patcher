@@ -24,40 +24,40 @@ Partial Class Downloader
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Downloader))
-        Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
+        Me.ThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
         Me.ExitButton = New Fable_III_Patcher.LogInButton()
         Me.RequestedFile = New System.Windows.Forms.Label()
         Me.Percentage = New Fable_III_Patcher.LogInLabel()
         Me.DownloadProgress = New Fable_III_Patcher.LogInProgressBar()
         Me.StatusText = New Fable_III_Patcher.LogInLabel()
         Me.DownloadGoStart = New System.Windows.Forms.Timer(Me.components)
-        Me.LogInThemeContainer1.SuspendLayout()
+        Me.ThemeContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'LogInThemeContainer1
+        'ThemeContainer1
         '
-        Me.LogInThemeContainer1.AllowClose = False
-        Me.LogInThemeContainer1.AllowMaximize = False
-        Me.LogInThemeContainer1.AllowMinimize = True
-        Me.LogInThemeContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.LogInThemeContainer1.Controls.Add(Me.ExitButton)
-        Me.LogInThemeContainer1.Controls.Add(Me.RequestedFile)
-        Me.LogInThemeContainer1.Controls.Add(Me.Percentage)
-        Me.LogInThemeContainer1.Controls.Add(Me.DownloadProgress)
-        Me.LogInThemeContainer1.Controls.Add(Me.StatusText)
-        Me.LogInThemeContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogInThemeContainer1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInThemeContainer1.FontSize = 12
-        Me.LogInThemeContainer1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LogInThemeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.LogInThemeContainer1.Name = "LogInThemeContainer1"
-        Me.LogInThemeContainer1.ShowIcon = True
-        Me.LogInThemeContainer1.Size = New System.Drawing.Size(591, 227)
-        Me.LogInThemeContainer1.TabIndex = 0
-        Me.LogInThemeContainer1.Text = "DLC Downloader"
+        Me.ThemeContainer1.AllowClose = False
+        Me.ThemeContainer1.AllowMaximize = False
+        Me.ThemeContainer1.AllowMinimize = True
+        Me.ThemeContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.ThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.ThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.ThemeContainer1.Controls.Add(Me.ExitButton)
+        Me.ThemeContainer1.Controls.Add(Me.RequestedFile)
+        Me.ThemeContainer1.Controls.Add(Me.Percentage)
+        Me.ThemeContainer1.Controls.Add(Me.DownloadProgress)
+        Me.ThemeContainer1.Controls.Add(Me.StatusText)
+        Me.ThemeContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ThemeContainer1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ThemeContainer1.FontSize = 12
+        Me.ThemeContainer1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.ThemeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ThemeContainer1.Name = "ThemeContainer1"
+        Me.ThemeContainer1.ShowIcon = True
+        Me.ThemeContainer1.Size = New System.Drawing.Size(591, 227)
+        Me.ThemeContainer1.TabIndex = 0
+        Me.ThemeContainer1.Text = "DLC Downloader"
         '
         'ExitButton
         '
@@ -135,20 +135,20 @@ Partial Class Downloader
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(591, 227)
         Me.ControlBox = False
-        Me.Controls.Add(Me.LogInThemeContainer1)
+        Me.Controls.Add(Me.ThemeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Downloader"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Downloader"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
-        Me.LogInThemeContainer1.ResumeLayout(False)
-        Me.LogInThemeContainer1.PerformLayout()
+        Me.ThemeContainer1.ResumeLayout(False)
+        Me.ThemeContainer1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents LogInThemeContainer1 As LogInThemeContainer
+    Friend WithEvents ThemeContainer1 As LogInThemeContainer
     Friend WithEvents StatusText As LogInLabel
     Friend WithEvents Percentage As LogInLabel
     Friend WithEvents DownloadProgress As LogInProgressBar

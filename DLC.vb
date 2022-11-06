@@ -25,27 +25,51 @@ Public Class DLC
     End Sub
 
     Private Sub DoneButton_Click(sender As Object, e As EventArgs) Handles DoneButton.Click
-        If DoneButton.Text = "Done" Then
-            If Clipboard.GetText = "" Then
-                MsgBox("It appears you have not copied anything. This information is required in order to enable usage of the DLC.", MsgBoxStyle.Critical, "Missing information")
-            Else
-                MsgBox("Great, here's what we found in your clipboard: " & Clipboard.GetText & ". Please click Confirm if this is correct, if not; please try again.", MsgBoxStyle.Information, "We found this")
-                DoneButton.Text = "Confirm"
+        If My.Settings.Lang = "English" Then
+            If DoneButton.Text = "Done" Then
+                If Clipboard.GetText = "" Then
+                    MsgBox("It appears you have not copied anything. This information is required in order to enable usage of the DLC.", MsgBoxStyle.Critical, "Missing information")
+                Else
+                    MsgBox("Great, here's what we found in your clipboard: " & Clipboard.GetText & ". Please click Confirm if this is correct, if not; please try again.", MsgBoxStyle.Information, "We found this")
+                    DoneButton.Text = "Confirm"
+                End If
+            ElseIf DoneButton.Text = "Confirm" Then
+                LicenceSetupButton.Enabled = False
+                RenameLicenceButton.Enabled = True
+                LicencePanel.Visible = False
             End If
-        ElseIf DoneButton.Text = "Confirm" Then
-            LicenceSetupButton.Enabled = False
-            RenameLicenceButton.Enabled = True
-            LicencePanel.Visible = False
+        ElseIf My.Settings.Lang = "Polish" Then
+            If DoneButton.Text = "Zrobione" Then
+                If Clipboard.GetText = "" Then
+                    MsgBox("Zdaje się, że nic nie skopiowałeś. Te ID jest wymagane, by możliwe było korzystanie z DLC.", MsgBoxStyle.Critical, "Brakujące informacje")
+                Else
+                    MsgBox("Świetnie, znaleźliśmy to w schowku: " & Clipboard.GetText & ". Wciśnij 'Potwierdź' jeśli się zgadza, jeśli nie; spróbuj ponownie.", MsgBoxStyle.Information, "To znaleźliśmy")
+                    DoneButton.Text = "Potwierdź"
+                End If
+            ElseIf DoneButton.Text = "Potwierdź" Then
+                LicenceSetupButton.Enabled = False
+                RenameLicenceButton.Enabled = True
+                LicencePanel.Visible = False
+            End If
         End If
-
     End Sub
 
     Private Sub DoneButton_TextChanged(sender As Object, e As EventArgs) Handles DoneButton.TextChanged
-        If DoneButton.Text = "Confirm" Then
-            RetryButton.Visible = True
-        ElseIf DoneButton.Text = "Done" Then
-            If RetryButton.Visible = True Then
-                RetryButton.Visible = False
+        If My.Settings.Lang = "English" Then
+            If DoneButton.Text = "Confirm" Then
+                RetryButton.Visible = True
+            ElseIf DoneButton.Text = "Done" Then
+                If RetryButton.Visible = True Then
+                    RetryButton.Visible = False
+                End If
+            End If
+        ElseIf My.Settings.Lang = "Polish" Then
+            If DoneButton.Text = "Potwierdź" Then
+                RetryButton.Visible = True
+            ElseIf DoneButton.Text = "Zrobione" Then
+                If RetryButton.Visible = True Then
+                    RetryButton.Visible = False
+                End If
             End If
         End If
     End Sub
@@ -92,11 +116,15 @@ Public Class DLC
                 My.Settings.PatchComplete = "1"
                 My.Settings.Save()
                 Form1.Close()
-                Launcher.SmartButton.Text = "Play"
+                If My.Settings.Lang = "English" Then
+                    Launcher.SmartButton.Text = "Play"
+                ElseIf My.Settings.Lang = "Polish" Then
+                    Launcher.SmartButton.Text = "Graj"
+                End If
                 Launcher.BringToFront()
                 Close()
+                End If
             End If
-        End If
     End Sub
 
     Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
@@ -208,6 +236,40 @@ Public Class DLC
             DLC4.BorderColour = Color.FromArgb(25, 25, 25)
             Step2.Enabled = True
             LogInButton1.BorderColour = Color.Lime
+        End If
+    End Sub
+
+    Private Sub DLC_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Lang()
+    End Sub
+
+    Public Sub Lang()
+        If My.Settings.Lang = "Polish" Then
+            ThemeContainer1.Text = "Instalator DLC"
+            LicDoneButton.Text = "Zrobione"
+            LogInLabel5.Text = "Skopiuj wszystkie pliki z lewej strony na prawą!"
+            LogInLabel4.Text = "Krok 5 - Alokacja pliku licencji"
+            RetryButton.Text = "Spróbuj ponownie"
+            DoneButton.Text = "Zrobione"
+            LogInLabel3.Text = "Podaj swój Gamertag poniżej i wciśnij 'Get'." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Poda ci to twoje unikalne ID." &
+    "Skopiuj ciąg znaków przy XUID (HEX)."
+            LogInLabel2.Text = "Konfiguracja licencji - XUID Grabber"
+            Step4.Text = "Krok 4 - Plik licencji | Konfiguracja i Przygotowanie"
+            LogInButton2.Text = "Przenieś pliki licencyjne do właściwego miejsca"
+            LicenceSetupButton.Text = "Przygotuj Licencję..."
+            Step3.Text = "Step 3 - Lokalizacja DLC | Przygotowanie"
+            LogInButton1.Text = "Następny krok"
+            Step2.Text = "Krok 2 - Wskaż lokalizację Fable III"
+            Step1.Text = "Krok 1 - Pobierz DLC"
+            DLC4.Text = "Pobierz pliki licencyjne"
+            DLC3.Text = "Pobierz Paczkę Inkwizytora"
+            DLC2.Text = "Pobierz Traitor's Keep"
+            Text = "Fable 3 | Pobieranie DLC"
+            RenameLicenceButton.Text = "Zmień nazwę pliku licencyjnego"
+            SaveLocationButton.Text = "Wskaż lokalizację Fable III..."
+            DLC1.Text = "Pobierz Understone"
+            LogInLabel1.Text = "Z lewej strony gdzie są archiwa ZIP, wypakuj je. Do tego rekomenduję WinRARa." & vbNewLine & "Każdy plik osobnie kliknij prawym przyciskiem myszy i użyj opcji WinRARa ""Wypakuj tutaj..." & vbNewLine & "Kiedy wypakujesz już wszystkie archiwa ZIP:
+Przenieś następujące foldery: 01_Understone, 02_TraitorsKeep, 03_InquisitorsPack na prawą stronę." & vbNewLine & "To wszystko co na razie trzeba zrobić, kliknij na przycisk niżej."
         End If
     End Sub
 
