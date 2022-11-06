@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LogInLabel1.Text" xml:space="preserve">
-    <value>In the Boxes below on the left-hand side, extract the .zip files using a extraction wizard. I recommend using WinRAR to do this.
-Right-Click each file and while using WinRAR; click "Extract here...".
+    <value>Z lewej strony gdzie są archiwa ZIP, wypakuj je. Do tego rekomenduję WinRARa.
+Każdy plik osobnie kliknij prawym przyciskiem myszy i użyj opcji WinRARa "Wypakuj tutaj...".
 
-Once you have done all the .zip files:
-Drag and drop the FOLLOWING FILES: 01_Understone, 02_TraitorsKeep, 03_InquisitorsPack. To the box on the right.
+Kiedy wypakujesz już wszystkie archiwa ZIP:
+Przenieś następujące foldery: 01_Understone, 02_TraitorsKeep, 03_InquisitorsPack na prawą stronę.
 
-These are all that's needed to be done at this stage, Click next step below.</value>
+To wszystko co na razie trzeba zrobić, kliknij na przycisk niżej.</value>
   </data>
   <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

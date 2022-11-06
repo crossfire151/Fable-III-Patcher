@@ -124,7 +124,7 @@
     <value>174, 17</value>
   </metadata>
   <data name="LogInRichTextBox1.Text" xml:space="preserve">
-    <value>Fable III Patcher. Created by Crossfire151, This new patcher aims to improve the ability to game with one another online*; This Patcher includes all the free DLC you cannot currently download in-game. This Patcher will guide you to installing this content without the hassle. *Only works PC to PC, playing with console players is not possible.</value>
+    <value>Patcher Fable III. Stworzony przez Crossfire151, Ten patcher ma za cel polepszyć zdolność grania z innymi online; Zawiera on wszystkie DLC, których nie można już pobrać z poziomu gry. Ten patcher pomoże ci je zainstalować bez większego wysiłku.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
