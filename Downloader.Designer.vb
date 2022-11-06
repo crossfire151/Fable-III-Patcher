@@ -57,7 +57,7 @@ Partial Class Downloader
         Me.LogInThemeContainer1.ShowIcon = True
         Me.LogInThemeContainer1.Size = New System.Drawing.Size(591, 227)
         Me.LogInThemeContainer1.TabIndex = 0
-        Me.LogInThemeContainer1.Text = "DLC Downloader"
+        Me.LogInThemeContainer1.Text = "Pobieranie DLC"
         '
         'ExitButton
         '
@@ -72,7 +72,7 @@ Partial Class Downloader
         Me.ExitButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ExitButton.Size = New System.Drawing.Size(189, 48)
         Me.ExitButton.TabIndex = 4
-        Me.ExitButton.Text = "Close Downloader"
+        Me.ExitButton.Text = "Zamknij pobieranie"
         Me.ExitButton.Visible = False
         '
         'RequestedFile
@@ -140,7 +140,7 @@ Partial Class Downloader
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Downloader"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Downloader"
+        Me.Text = "Pobieranie"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.LogInThemeContainer1.ResumeLayout(False)
         Me.LogInThemeContainer1.PerformLayout()
