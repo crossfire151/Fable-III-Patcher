@@ -329,7 +329,7 @@ Partial Class DLC
         Me.LogInButton2.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInButton2.Size = New System.Drawing.Size(624, 30)
         Me.LogInButton2.TabIndex = 2
-        Me.LogInButton2.Text = "Move and appropriate Location for Licence Files"
+        Me.LogInButton2.Text = "Move Licence files"
         '
         'RenameLicenceButton
         '
