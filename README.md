@@ -35,8 +35,9 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 1.0.0.4
+# Version 1.0.0.5
 
+- Added new Translations, Change Language re-enabled.
 - Brand new Launcher.
 - Brand new DLC Installer
 - Brand new DLC Downloader
