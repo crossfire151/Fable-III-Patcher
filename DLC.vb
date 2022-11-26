@@ -25,11 +25,6 @@ Public Class DLC
     Private Sub LogInButton1_Click(sender As Object, e As EventArgs) Handles LogInButton1.Click
         Step3.Enabled = False
         Step4.Enabled = True
-        'NEW AUTO FUNCTION -><> Licence Setup- Auto Click
-        LicencePanel.Visible = True
-        LicencePanel.Size = New Point(918, 426)
-        LicencePanel.Location = New Point(227, 58)
-        LicencePanel.BringToFront()
     End Sub
 
     Private Sub DoneButton_Click(sender As Object, e As EventArgs) Handles DoneButton.Click
@@ -217,16 +212,6 @@ Public Class DLC
             Beep()
             DLC4.Enabled = False
             Step2.Enabled = True
-            'NEW - AutoGO next function ->
-            FolderBrowserDialog1.ShowDialog()
-            If Not FolderBrowserDialog1.SelectedPath = "" Then
-                SaveLocationButton.Tag = FolderBrowserDialog1.SelectedPath
-                SaveLocationButton.Enabled = False
-                My.Computer.FileSystem.CreateDirectory(SaveLocationButton.Tag & "\DLC")
-                Step3.Enabled = True
-                DownloadedFiles.Navigate(Application.StartupPath & "\Downloads")
-                Fable3DLCLocation.Navigate(SaveLocationButton.Tag & "\DLC")
-            End If
         End If
     End Sub
 
