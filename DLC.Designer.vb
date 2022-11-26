@@ -464,7 +464,7 @@ Partial Class DLC
         Me.SaveLocationButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.SaveLocationButton.Size = New System.Drawing.Size(608, 30)
         Me.SaveLocationButton.TabIndex = 2
-        Me.SaveLocationButton.Text = "Specify Fable II Game Location..."
+        Me.SaveLocationButton.Text = "Specify Fable III Game Location..."
         '
         'Step1
         '
