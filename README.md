@@ -35,10 +35,10 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 1.0.0.1
+# Version 2.0.0.3
 
-Added resources self installer, the application will now verify all the dependencies; if they are not found it will then automatically load them for you.
-The resources zip file is no longer required.
+Added new improved DLC Installer.
+Fixed majority of bugs.
 
 If you notice any error popups please copy the error log and create a new Issue above.
 
