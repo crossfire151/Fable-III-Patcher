@@ -1,7 +1,7 @@
 ﻿Public Class Launcher
     Private Sub SmartButton_Click(sender As Object, e As EventArgs) Handles SmartButton.Click
         If SmartButton.Text = "Begin Installation" Then
-            Startup.Show()
+            Form1.Show()
         ElseIf SmartButton.Text = "Play" Then
             System.Diagnostics.Process.Start("steam://rungameid/")
             TopMost = True
