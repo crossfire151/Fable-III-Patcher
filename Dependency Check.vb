@@ -98,12 +98,12 @@ Public Class Dependency_Check
     End Sub
 
     Private Sub Dependency_Check_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Launcher.LanguageButton.Enabled = False
+        Form1.LinkLabel1.Enabled = False
         Lang()
     End Sub
 
     Private Sub Dependency_Check_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Launcher.LanguageButton.Enabled = True
+        Form1.LinkLabel1.Enabled = True
     End Sub
 
     Public Sub Lang()

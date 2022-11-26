@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Fable_III_Patcher.Launcher
+            Me.MainForm = Global.Fable_III_Patcher.Startup
         End Sub
     End Class
 End Namespace

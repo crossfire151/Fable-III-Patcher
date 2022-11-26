@@ -3,6 +3,7 @@ Imports System.Net
 Public Class DLC
 #Region "CloudServer"
     Dim CloudServer As String = "https://cloud.crossfire151.xyz/download/f_files_downloads_33jhuf-_-ih83h2!uhgr7u9g3b/"
+#End Region
     Dim InquisitorPack As String = CloudServer & "4d53090a0ecf000e_INQUISITOR.cab"
     Dim TraitorsKeepPack As String = CloudServer & "4d53090a0ecf0010_TRAITORS.cab"
     Dim UnderstonePack As String = CloudServer & "4d53090a0ecf0000_UNDERSTONE.cab"
@@ -22,54 +23,35 @@ Public Class DLC
     Private Sub LogInButton1_Click(sender As Object, e As EventArgs) Handles LogInButton1.Click
         Step3.Enabled = False
         Step4.Enabled = True
+        'NEW AUTO FUNCTION -><> Licence Setup- Auto Click
+        LicencePanel.Visible = True
+        LicencePanel.Size = New Point(918, 426)
+        LicencePanel.Location = New Point(227, 58)
+        LicencePanel.BringToFront()
     End Sub
 
     Private Sub DoneButton_Click(sender As Object, e As EventArgs) Handles DoneButton.Click
-        If My.Settings.Lang = "English" Then
-            If DoneButton.Text = "Done" Then
-                If Clipboard.GetText = "" Then
-                    MsgBox("It appears you have not copied anything. This information is required in order to enable usage of the DLC.", MsgBoxStyle.Critical, "Missing information")
-                Else
-                    MsgBox("Great, here's what we found in your clipboard: " & Clipboard.GetText & ". Please click Confirm if this is correct, if not; please try again.", MsgBoxStyle.Information, "We found this")
-                    DoneButton.Text = "Confirm"
-                End If
-            ElseIf DoneButton.Text = "Confirm" Then
-                LicenceSetupButton.Enabled = False
-                RenameLicenceButton.Enabled = True
-                LicencePanel.Visible = False
+        If DoneButton.Text = "Done" Then
+            If Clipboard.GetText = "" Then
+                MsgBox("It appears you have not copied anything. This information is required in order to enable usage of the DLC.", MsgBoxStyle.Critical, "Missing information")
+            Else
+                MsgBox("Great, here's what we found in your clipboard: " & Clipboard.GetText & ". Please click Confirm if this is correct, if not; please try again.", MsgBoxStyle.Information, "We found this")
+                DoneButton.Text = "Confirm"
             End If
-        ElseIf My.Settings.Lang = "Polish" Then
-            If DoneButton.Text = "Zrobione" Then
-                If Clipboard.GetText = "" Then
-                    MsgBox("Zdaje się, że nic nie skopiowałeś. Te ID jest wymagane, by możliwe było korzystanie z DLC.", MsgBoxStyle.Critical, "Brakujące informacje")
-                Else
-                    MsgBox("Świetnie, znaleźliśmy to w schowku: " & Clipboard.GetText & ". Wciśnij 'Potwierdź' jeśli się zgadza, jeśli nie; spróbuj ponownie.", MsgBoxStyle.Information, "To znaleźliśmy")
-                    DoneButton.Text = "Potwierdź"
-                End If
-            ElseIf DoneButton.Text = "Potwierdź" Then
-                LicenceSetupButton.Enabled = False
-                RenameLicenceButton.Enabled = True
-                LicencePanel.Visible = False
-            End If
+        ElseIf DoneButton.Text = "Confirm" Then
+            LicenceSetupButton.Enabled = False
+            RenameLicenceButton.Enabled = True
+            LicencePanel.Visible = False
         End If
+
     End Sub
 
     Private Sub DoneButton_TextChanged(sender As Object, e As EventArgs) Handles DoneButton.TextChanged
-        If My.Settings.Lang = "English" Then
-            If DoneButton.Text = "Confirm" Then
-                RetryButton.Visible = True
-            ElseIf DoneButton.Text = "Done" Then
-                If RetryButton.Visible = True Then
-                    RetryButton.Visible = False
-                End If
-            End If
-        ElseIf My.Settings.Lang = "Polish" Then
-            If DoneButton.Text = "Potwierdź" Then
-                RetryButton.Visible = True
-            ElseIf DoneButton.Text = "Zrobione" Then
-                If RetryButton.Visible = True Then
-                    RetryButton.Visible = False
-                End If
+        If DoneButton.Text = "Confirm" Then
+            RetryButton.Visible = True
+        ElseIf DoneButton.Text = "Done" Then
+            If RetryButton.Visible = True Then
+                RetryButton.Visible = False
             End If
         End If
     End Sub
@@ -88,7 +70,15 @@ Public Class DLC
     Private Sub RenameLicenceButton_Click(sender As Object, e As EventArgs) Handles RenameLicenceButton.Click
         Dim FileLoc As String = Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\0009XXXXXXXXXXX.LIC"
         Dim ToRename As String = Clipboard.GetText & ".LIC"
-        My.Computer.FileSystem.RenameFile(FileLoc, ToRename)
+        If My.Computer.FileSystem.FileExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\" & ToRename) Then
+            Beep()
+        Else
+            Try
+                My.Computer.FileSystem.RenameFile(FileLoc, ToRename)
+            Catch ex As Exception
+
+            End Try
+        End If
         RenameLicenceButton.Enabled = False
     End Sub
 
@@ -98,7 +88,7 @@ Public Class DLC
         If Step5Progress.Value = Step5Progress.Maximum Then
             OpenStep5Panel.Stop()
             LicenceCopyFromLocation.Navigate(Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
-            LicenceCopyToLocation.Navigate("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
+            LicenceCopyToLocation.Navigate("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
         End If
     End Sub
 
@@ -116,15 +106,11 @@ Public Class DLC
                 My.Settings.PatchComplete = "1"
                 My.Settings.Save()
                 Form1.Close()
-                If My.Settings.Lang = "English" Then
-                    Launcher.SmartButton.Text = "Play"
-                ElseIf My.Settings.Lang = "Polish" Then
-                    Launcher.SmartButton.Text = "Graj"
-                End If
+                Launcher.SmartButton.Text = "Play"
                 Launcher.BringToFront()
                 Close()
-                End If
             End If
+        End If
     End Sub
 
     Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
@@ -141,40 +127,40 @@ Public Class DLC
     End Sub
 
     Public Sub Phase1()
-        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\%USERNAME%\AppData\Local\Microsoft\") Then
-            My.Computer.FileSystem.CreateDirectory("C:\Users\%USERNAME%\AppData\Local\Microsoft\")
+        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\") Then
+            My.Computer.FileSystem.CreateDirectory("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\")
         End If
         Phase2()
     End Sub
 
     Public Sub Phase2()
-        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\") Then
-            My.Computer.FileSystem.CreateDirectory("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\")
+        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\") Then
+            My.Computer.FileSystem.CreateDirectory("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\")
         End If
         Phase3()
     End Sub
     Public Sub Phase3()
-        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\") Then
-            My.Computer.FileSystem.CreateDirectory("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\")
+        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\") Then
+            My.Computer.FileSystem.CreateDirectory("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\")
         End If
         Phase4()
     End Sub
     Public Sub Phase4()
-        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\4D53090A\") Then
-            My.Computer.FileSystem.CreateDirectory("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\4D53090A\")
+        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\") Then
+            My.Computer.FileSystem.CreateDirectory("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\")
         End If
         Phase5()
     End Sub
     Public Sub Phase5()
-        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\") Then
-            My.Computer.FileSystem.CreateDirectory("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\")
+        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\") Then
+            My.Computer.FileSystem.CreateDirectory("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\")
         End If
         Phase6()
     End Sub
 
     Public Sub Phase6()
-        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\") Then
-            My.Computer.FileSystem.CreateDirectory("C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
+        If Not My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\") Then
+            My.Computer.FileSystem.CreateDirectory("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
         End If
         Allocation()
     End Sub
@@ -236,44 +222,76 @@ Public Class DLC
             DLC4.BorderColour = Color.FromArgb(25, 25, 25)
             Step2.Enabled = True
             LogInButton1.BorderColour = Color.Lime
+            'NEW - AutoGO next function ->
+            FolderBrowserDialog1.ShowDialog()
+            If Not FolderBrowserDialog1.SelectedPath = "" Then
+                SaveLocationButton.Tag = FolderBrowserDialog1.SelectedPath
+                SaveLocationButton.Enabled = False
+                My.Computer.FileSystem.CreateDirectory(SaveLocationButton.Tag & "\DLC")
+                Step3.Enabled = True
+                DownloadedFiles.Navigate(Application.StartupPath & "\Downloads")
+                Fable3DLCLocation.Navigate(SaveLocationButton.Tag & "\DLC")
+            End If
         End If
     End Sub
 
     Private Sub DLC_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Lang()
+        BuildUserList()
     End Sub
 
-    Public Sub Lang()
-        If My.Settings.Lang = "Polish" Then
-            ThemeContainer1.Text = "Instalator DLC"
-            LicDoneButton.Text = "Zrobione"
-            LogInLabel5.Text = "Skopiuj wszystkie pliki z lewej strony na prawą!"
-            LogInLabel4.Text = "Krok 5 - Alokacja pliku licencji"
-            RetryButton.Text = "Spróbuj ponownie"
-            DoneButton.Text = "Zrobione"
-            LogInLabel3.Text = "Podaj swój Gamertag poniżej i wciśnij 'Get'." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Poda ci to twoje unikalne ID." &
-    "Skopiuj ciąg znaków przy XUID (HEX)."
-            LogInLabel2.Text = "Konfiguracja licencji - XUID Grabber"
-            Step4.Text = "Krok 4 - Plik licencji | Konfiguracja i Przygotowanie"
-            LogInButton2.Text = "Przenieś pliki licencyjne do właściwego miejsca"
-            LicenceSetupButton.Text = "Przygotuj Licencję..."
-            Step3.Text = "Step 3 - Lokalizacja DLC | Przygotowanie"
-            LogInButton1.Text = "Następny krok"
-            Step2.Text = "Krok 2 - Wskaż lokalizację Fable III"
-            Step1.Text = "Krok 1 - Pobierz DLC"
-            DLC4.Text = "Pobierz pliki licencyjne"
-            DLC3.Text = "Pobierz Paczkę Inkwizytora"
-            DLC2.Text = "Pobierz Traitor's Keep"
-            Text = "Fable 3 | Pobieranie DLC"
-            RenameLicenceButton.Text = "Zmień nazwę pliku licencyjnego"
-            SaveLocationButton.Text = "Wskaż lokalizację Fable III..."
-            DLC1.Text = "Pobierz Understone"
-            LogInLabel1.Text = "Z lewej strony gdzie są archiwa ZIP, wypakuj je. Do tego rekomenduję WinRARa." & vbNewLine & "Każdy plik osobnie kliknij prawym przyciskiem myszy i użyj opcji WinRARa ""Wypakuj tutaj..." & vbNewLine & "Kiedy wypakujesz już wszystkie archiwa ZIP:
-Przenieś następujące foldery: 01_Understone, 02_TraitorsKeep, 03_InquisitorsPack na prawą stronę." & vbNewLine & "To wszystko co na razie trzeba zrobić, kliknij na przycisk niżej."
+    Public Sub BuildUserList()
+        InitialSetupTimerOPEN.Start()
+        Dim grabusers() As String = IO.Directory.GetDirectories("C:\Users", "*")
+        Dim users As String
+        ComboBox1.Items.Add("Select One*")
+        ComboBox1.SelectedIndex = 0
+        For Each users In grabusers
+            ComboBox1.Items.Add(users.Replace("C:\Users\", ""))
+        Next
+    End Sub
+
+    Private Sub InitialSetupTimer_Tick(sender As Object, e As EventArgs) Handles InitialSetupTimerOPEN.Tick
+        UserProgressBar.Increment(1)
+        UsernameSetup.Size = New Point(880, UserProgressBar.Value)
+        If UserProgressBar.Value = UserProgressBar.Maximum Then
+            InitialSetupTimerOPEN.Stop()
+            If Not My.Settings.username = "" Then
+                InitialSetupTimerCLOSE.Start()
+            End If
         End If
     End Sub
 
-#End Region
-    'C:\Users\%USERNAME%\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\
-    'C:\Users\%USERNAME%\Saved Games\Lionhead Studios\Fable 3 - as reference
+    Private Sub InitialSetupTimerCLOSE_Tick(sender As Object, e As EventArgs) Handles InitialSetupTimerCLOSE.Tick
+        UserProgressBar.Value -= 1
+        UsernameSetup.Size = New Point(880, UserProgressBar.Value)
+        If UserProgressBar.Value = UserProgressBar.Minimum Then
+            InitialSetupTimerCLOSE.Stop()
+            Step1.Enabled = True
+            ChangeUsernameButton.Visible = True
+        End If
+    End Sub
+
+    Private Sub ChangeUsernameButton_Click(sender As Object, e As EventArgs) Handles ChangeUsernameButton.Click
+        ComboBox1.SelectedIndex = 0
+        InitialSetupTimerOPEN.Start()
+        ChangeUsernameButton.Visible = False
+    End Sub
+
+    Private Sub UsernameSaveButton_Click(sender As Object, e As EventArgs) Handles UsernameSaveButton.Click
+        MsgBox(ComboBox1.SelectedItem)
+        My.Settings.username = ComboBox1.SelectedItem
+        My.Settings.Save()
+        InitialSetupTimerCLOSE.Start()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        If ComboBox1.SelectedIndex = 0 Then
+            UsernameSaveButton.Enabled = False
+        ElseIf Not ComboBox1.SelectedIndex = 0 Then
+            UsernameSaveButton.Enabled = True
+        End If
+    End Sub
+
+    'C:\Users\" & USERNAME & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\
+    'C:\Users\" & USERNAME & "\Saved Games\Lionhead Studios\Fable 3 - as reference
 End Class

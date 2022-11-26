@@ -35,14 +35,12 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 1.0.0.5
+# Version 1.0.0.1
 
-- Added new Translations, Change Language re-enabled.
-- Brand new Launcher.
-- Brand new DLC Installer
-- Brand new DLC Downloader
-- New Theme*
-*excluding the GFWL installer.
+Added resources self installer, the application will now verify all the dependencies; if they are not found it will then automatically load them for you.
+The resources zip file is no longer required.
+
+If you notice any error popups please copy the error log and create a new Issue above.
 
 REQUIREMENTS:
 

@@ -229,6 +229,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fable3 Logo.ico" />
+    <None Include="Resources\Discord_icon.png" />
+    <None Include="Resources\Splash.png" />
     <None Include="Resources\chevron.png" />
     <None Include="Resources\Fable3.jpg" />
     <None Include="Resources\gfwlivesetup.exe" />

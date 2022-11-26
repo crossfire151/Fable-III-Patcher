@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
@@ -38,6 +38,7 @@ Partial Class Form1
         Me.MetroSetButton7 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton6 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetLabel4 = New MetroSet_UI.Controls.MetroSetLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.MetroSetButton15 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton2 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetProgressBar1 = New MetroSet_UI.Controls.MetroSetProgressBar()
@@ -95,6 +96,7 @@ Partial Class Form1
         Me.MetroSetPanel1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.MetroSetPanel1.BorderThickness = 1
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetPanel2)
+        Me.MetroSetPanel1.Controls.Add(Me.LinkLabel1)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetButton15)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetButton2)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetProgressBar1)
@@ -374,6 +376,18 @@ Partial Class Form1
         Me.MetroSetLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.MetroSetLabel4.ThemeAuthor = "Narwin"
         Me.MetroSetLabel4.ThemeName = "MetroLite"
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Enabled = False
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Location = New System.Drawing.Point(3, 7)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(95, 13)
+        Me.LinkLabel1.TabIndex = 16
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Change Language"
         '
         'MetroSetButton15
         '
@@ -734,6 +748,7 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fable III - Patcher"
         Me.MetroSetPanel1.ResumeLayout(False)
+        Me.MetroSetPanel1.PerformLayout()
         Me.MetroSetPanel2.ResumeLayout(False)
         Me.MetroSetPanel3.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -771,4 +786,5 @@ Partial Class Form1
     Friend WithEvents MetroSetButton13 As MetroSet_UI.Controls.MetroSetButton
     Friend WithEvents MetroSetButton14 As MetroSet_UI.Controls.MetroSetButton
     Friend WithEvents MetroSetButton15 As MetroSet_UI.Controls.MetroSetButton
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class
