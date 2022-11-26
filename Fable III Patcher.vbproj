@@ -122,6 +122,12 @@
     <Compile Include="DLC.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DLCdeleteConfirmation.Designer.vb">
+      <DependentUpon>DLCdeleteConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DLCdeleteConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Downloader.Designer.vb">
       <DependentUpon>Downloader.vb</DependentUpon>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DLC.resx">
       <DependentUpon>DLC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLCdeleteConfirmation.resx">
+      <DependentUpon>DLCdeleteConfirmation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Downloader.resx">
       <DependentUpon>Downloader.vb</DependentUpon>

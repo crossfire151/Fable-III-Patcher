@@ -1,5 +1,7 @@
 ﻿Imports System.Data.Common
 Imports System.Net
+Imports Microsoft.VisualBasic.FileIO
+
 Public Class DLC
 #Region "CloudServer"
     Dim CloudServer As String = "https://cloud.crossfire151.xyz/download/f_files_downloads_33jhuf-_-ih83h2!uhgr7u9g3b/"
@@ -70,14 +72,15 @@ Public Class DLC
     Private Sub RenameLicenceButton_Click(sender As Object, e As EventArgs) Handles RenameLicenceButton.Click
         Dim FileLoc As String = Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\0009XXXXXXXXXXX.LIC"
         Dim ToRename As String = Clipboard.GetText & ".LIC"
-        If My.Computer.FileSystem.FileExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\" & ToRename) Then
-            Beep()
+        If My.Computer.FileSystem.FileExists(FileLoc) Then
+            My.Computer.FileSystem.RenameFile(FileLoc, ToRename)
         Else
-            Try
-                My.Computer.FileSystem.RenameFile(FileLoc, ToRename)
-            Catch ex As Exception
-
-            End Try
+            MsgBox("Unable to locate downloaded licence file inside folder: \Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB. Application will now Delete this folder, if this happens on a regular occurrance Please re-download it. You'll need to delete: D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip then click restart.", MsgBoxStyle.Critical, "Missing File")
+            My.Computer.FileSystem.DeleteDirectory(Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\", DeleteDirectoryOption.DeleteAllContents)
+            RenameLicenceButton.Enabled = False
+            Step4.Enabled = False
+            Step3.Enabled = True
+            MsgBox("Please Extract D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip, then try again with the rename function. Click Next to continue.", MsgBoxStyle.Information, "Important information")
         End If
         RenameLicenceButton.Enabled = False
     End Sub
@@ -177,9 +180,7 @@ Public Class DLC
         Else
             Beep()
             DLC1.Enabled = False
-            DLC1.BorderColour = Color.FromArgb(25, 25, 25)
             DLC2.Enabled = True
-            DLC2.BorderColour = Color.Lime
         End If
     End Sub
 
@@ -191,9 +192,7 @@ Public Class DLC
         Else
             Beep()
             DLC2.Enabled = False
-            DLC2.BorderColour = Color.FromArgb(25, 25, 25)
             DLC3.Enabled = True
-            DLC3.BorderColour = Color.Lime
         End If
     End Sub
 
@@ -205,9 +204,7 @@ Public Class DLC
         Else
             Beep()
             DLC3.Enabled = False
-            DLC3.BorderColour = Color.FromArgb(25, 25, 25)
             DLC4.Enabled = True
-            DLC4.BorderColour = Color.Lime
         End If
     End Sub
 
@@ -219,9 +216,7 @@ Public Class DLC
         Else
             Beep()
             DLC4.Enabled = False
-            DLC4.BorderColour = Color.FromArgb(25, 25, 25)
             Step2.Enabled = True
-            LogInButton1.BorderColour = Color.Lime
             'NEW - AutoGO next function ->
             FolderBrowserDialog1.ShowDialog()
             If Not FolderBrowserDialog1.SelectedPath = "" Then
@@ -235,7 +230,7 @@ Public Class DLC
         End If
     End Sub
 
-    Private Sub DLC_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub DLC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BuildUserList()
     End Sub
 
@@ -255,10 +250,13 @@ Public Class DLC
         UsernameSetup.Size = New Point(880, UserProgressBar.Value)
         If UserProgressBar.Value = UserProgressBar.Maximum Then
             InitialSetupTimerOPEN.Stop()
-            If Not My.Settings.username = "" Then
-                InitialSetupTimerCLOSE.Start()
+            If My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC") Then
+                DeleteDLCCheckBox.Visible = True
             End If
-        End If
+            If Not My.Settings.username = "" Then
+                    InitialSetupTimerCLOSE.Start()
+                End If
+            End If
     End Sub
 
     Private Sub InitialSetupTimerCLOSE_Tick(sender As Object, e As EventArgs) Handles InitialSetupTimerCLOSE.Tick
@@ -272,16 +270,21 @@ Public Class DLC
     End Sub
 
     Private Sub ChangeUsernameButton_Click(sender As Object, e As EventArgs) Handles ChangeUsernameButton.Click
+        My.Settings.username = ""
+        My.Settings.Save()
         ComboBox1.SelectedIndex = 0
         InitialSetupTimerOPEN.Start()
         ChangeUsernameButton.Visible = False
     End Sub
 
     Private Sub UsernameSaveButton_Click(sender As Object, e As EventArgs) Handles UsernameSaveButton.Click
-        MsgBox(ComboBox1.SelectedItem)
-        My.Settings.username = ComboBox1.SelectedItem
-        My.Settings.Save()
-        InitialSetupTimerCLOSE.Start()
+        If DeleteDLCCheckBox.Checked = True Then
+            DLCdeleteConfirmation.show()
+        ElseIf DeleteDLCCheckBox.Checked = False Then
+            My.Settings.username = ComboBox1.SelectedItem
+            My.Settings.Save()
+            InitialSetupTimerCLOSE.Start()
+        End If
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
@@ -290,6 +293,63 @@ Public Class DLC
         ElseIf Not ComboBox1.SelectedIndex = 0 Then
             UsernameSaveButton.Enabled = True
         End If
+    End Sub
+
+    Private Sub DLC1_EnabledChanged(sender As Object, e As EventArgs) Handles DLC1.EnabledChanged
+        If DLC1.Enabled = True Then
+            DLC1.BorderColour = Color.Lime
+        ElseIf DLC1.Enabled = False Then
+            DLC1.BorderColour = Color.FromArgb(25, 25, 25)
+        End If
+    End Sub
+
+    Private Sub DLC2_EnabledChanged(sender As Object, e As EventArgs) Handles DLC2.EnabledChanged
+        If DLC2.Enabled = True Then
+            DLC2.BorderColour = Color.Lime
+            DLC1.BorderColour = Color.FromArgb(25, 25, 25)
+        ElseIf DLC2.Enabled = False Then
+            DLC2.BorderColour = Color.FromArgb(25, 25, 25)
+        End If
+    End Sub
+
+    Private Sub DLC3_EnabledChanged(sender As Object, e As EventArgs) Handles DLC3.EnabledChanged
+        If DLC3.Enabled = True Then
+            DLC3.BorderColour = Color.Lime
+            DLC2.BorderColour = Color.FromArgb(25, 25, 25)
+        ElseIf DLC3.Enabled = False Then
+            Dim color As Color = Color.FromArgb(25, 25, 25)
+            DLC3.BorderColour = color
+        End If
+    End Sub
+
+    Private Sub DLC4_EnabledChanged(sender As Object, e As EventArgs) Handles DLC4.EnabledChanged
+        If DLC4.Enabled = True Then
+            DLC4.BorderColour = Color.Lime
+            DLC3.BorderColour = Color.FromArgb(25, 25, 25)
+        ElseIf DLC4.Enabled = False Then
+            DLC4.BorderColour = Color.FromArgb(25, 25, 25)
+        End If
+    End Sub
+
+    Private Sub RenameLicenceButton_EnabledChanged(sender As Object, e As EventArgs) Handles RenameLicenceButton.EnabledChanged
+        If RenameLicenceButton.Enabled = True Then
+            RenameLicenceButton.BorderColour = Color.Lime
+        ElseIf RenameLicenceButton.Enabled = False Then
+            RenameLicenceButton.BorderColour = Color.FromArgb(25, 25, 25)
+            DLC4.BorderColour = Color.FromArgb(25, 25, 25)
+        End If
+    End Sub
+
+    Private Sub LogInButton2_EnabledChanged(sender As Object, e As EventArgs) Handles LogInButton2.EnabledChanged
+        If LogInButton2.Enabled = True Then
+            LogInButton2.BorderColour = Color.Lime
+        ElseIf LogInButton2.Enabled = False Then
+            LogInButton2.BorderColour = Color.FromArgb(25, 25, 25)
+        End If
+    End Sub
+
+    Private Sub LogInButton3_Click(sender As Object, e As EventArgs) Handles RestartButton.Click
+        Launcher.RecallDLC()
     End Sub
 
     'C:\Users\" & USERNAME & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\

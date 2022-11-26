@@ -24,12 +24,20 @@ Partial Class DLC
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DLC))
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.OpenStep5Panel = New System.Windows.Forms.Timer(Me.components)
+        Me.CloseStep5Panel = New System.Windows.Forms.Timer(Me.components)
+        Me.InitialSetupTimerOPEN = New System.Windows.Forms.Timer(Me.components)
+        Me.InitialSetupTimerCLOSE = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
+        Me.RestartButton = New Fable_III_Patcher.LogInButton()
+        Me.ChangeUsernameButton = New Fable_III_Patcher.LogInButton()
         Me.UsernameSetup = New System.Windows.Forms.Panel()
-        Me.UserProgressBar = New System.Windows.Forms.ProgressBar()
+        Me.DeleteDLCCheckBox = New Fable_III_Patcher.LogInCheckBox()
         Me.UsernameSaveButton = New Fable_III_Patcher.LogInButton()
         Me.ComboBox1 = New Fable_III_Patcher.LogInComboBox()
         Me.LogInLabel6 = New Fable_III_Patcher.LogInLabel()
+        Me.UserProgressBar = New System.Windows.Forms.ProgressBar()
         Me.Step5Panel = New System.Windows.Forms.Panel()
         Me.LicDoneButton = New Fable_III_Patcher.LogInButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -62,12 +70,6 @@ Partial Class DLC
         Me.DLC3 = New Fable_III_Patcher.LogInButton()
         Me.DLC2 = New Fable_III_Patcher.LogInButton()
         Me.DLC1 = New Fable_III_Patcher.LogInButton()
-        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.OpenStep5Panel = New System.Windows.Forms.Timer(Me.components)
-        Me.CloseStep5Panel = New System.Windows.Forms.Timer(Me.components)
-        Me.InitialSetupTimerOPEN = New System.Windows.Forms.Timer(Me.components)
-        Me.InitialSetupTimerCLOSE = New System.Windows.Forms.Timer(Me.components)
-        Me.ChangeUsernameButton = New Fable_III_Patcher.LogInButton()
         Me.LogInThemeContainer1.SuspendLayout()
         Me.UsernameSetup.SuspendLayout()
         Me.Step5Panel.SuspendLayout()
@@ -79,6 +81,22 @@ Partial Class DLC
         Me.Step1.SuspendLayout()
         Me.SuspendLayout()
         '
+        'OpenStep5Panel
+        '
+        Me.OpenStep5Panel.Interval = 1
+        '
+        'CloseStep5Panel
+        '
+        Me.CloseStep5Panel.Interval = 1
+        '
+        'InitialSetupTimerOPEN
+        '
+        Me.InitialSetupTimerOPEN.Interval = 1
+        '
+        'InitialSetupTimerCLOSE
+        '
+        Me.InitialSetupTimerCLOSE.Interval = 1
+        '
         'LogInThemeContainer1
         '
         Me.LogInThemeContainer1.AllowClose = True
@@ -88,8 +106,9 @@ Partial Class DLC
         Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.LogInThemeContainer1.Controls.Add(Me.ChangeUsernameButton)
         Me.LogInThemeContainer1.Controls.Add(Me.UsernameSetup)
+        Me.LogInThemeContainer1.Controls.Add(Me.RestartButton)
+        Me.LogInThemeContainer1.Controls.Add(Me.ChangeUsernameButton)
         Me.LogInThemeContainer1.Controls.Add(Me.Step5Panel)
         Me.LogInThemeContainer1.Controls.Add(Me.LicencePanel)
         Me.LogInThemeContainer1.Controls.Add(Me.Step4)
@@ -107,8 +126,40 @@ Partial Class DLC
         Me.LogInThemeContainer1.TabIndex = 0
         Me.LogInThemeContainer1.Text = "DLC Installer"
         '
+        'RestartButton
+        '
+        Me.RestartButton.BackColor = System.Drawing.Color.Transparent
+        Me.RestartButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.RestartButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.RestartButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RestartButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.RestartButton.Location = New System.Drawing.Point(578, 41)
+        Me.RestartButton.Name = "RestartButton"
+        Me.RestartButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.RestartButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RestartButton.Size = New System.Drawing.Size(75, 30)
+        Me.RestartButton.TabIndex = 5
+        Me.RestartButton.Text = "Restart"
+        '
+        'ChangeUsernameButton
+        '
+        Me.ChangeUsernameButton.BackColor = System.Drawing.Color.Transparent
+        Me.ChangeUsernameButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.ChangeUsernameButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.ChangeUsernameButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ChangeUsernameButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.ChangeUsernameButton.Location = New System.Drawing.Point(1263, 37)
+        Me.ChangeUsernameButton.Name = "ChangeUsernameButton"
+        Me.ChangeUsernameButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.ChangeUsernameButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ChangeUsernameButton.Size = New System.Drawing.Size(105, 26)
+        Me.ChangeUsernameButton.TabIndex = 4
+        Me.ChangeUsernameButton.Text = "Change Username"
+        Me.ChangeUsernameButton.Visible = False
+        '
         'UsernameSetup
         '
+        Me.UsernameSetup.Controls.Add(Me.DeleteDLCCheckBox)
         Me.UsernameSetup.Controls.Add(Me.UsernameSaveButton)
         Me.UsernameSetup.Controls.Add(Me.ComboBox1)
         Me.UsernameSetup.Controls.Add(Me.LogInLabel6)
@@ -119,14 +170,20 @@ Partial Class DLC
         Me.UsernameSetup.Size = New System.Drawing.Size(880, 0)
         Me.UsernameSetup.TabIndex = 3
         '
-        'UserProgressBar
+        'DeleteDLCCheckBox
         '
-        Me.UserProgressBar.Location = New System.Drawing.Point(381, 102)
-        Me.UserProgressBar.Maximum = 142
-        Me.UserProgressBar.Name = "UserProgressBar"
-        Me.UserProgressBar.Size = New System.Drawing.Size(100, 23)
-        Me.UserProgressBar.TabIndex = 3
-        Me.UserProgressBar.Visible = False
+        Me.DeleteDLCCheckBox.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.DeleteDLCCheckBox.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.DeleteDLCCheckBox.Checked = False
+        Me.DeleteDLCCheckBox.CheckedColour = System.Drawing.Color.FromArgb(CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(174, Byte), Integer))
+        Me.DeleteDLCCheckBox.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DeleteDLCCheckBox.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DeleteDLCCheckBox.Location = New System.Drawing.Point(518, 99)
+        Me.DeleteDLCCheckBox.Name = "DeleteDLCCheckBox"
+        Me.DeleteDLCCheckBox.Size = New System.Drawing.Size(100, 22)
+        Me.DeleteDLCCheckBox.TabIndex = 4
+        Me.DeleteDLCCheckBox.Text = "Delete DLC"
+        Me.DeleteDLCCheckBox.Visible = False
         '
         'UsernameSaveButton
         '
@@ -175,6 +232,15 @@ Partial Class DLC
         Me.LogInLabel6.Size = New System.Drawing.Size(245, 27)
         Me.LogInLabel6.TabIndex = 0
         Me.LogInLabel6.Text = "Select your Username"
+        '
+        'UserProgressBar
+        '
+        Me.UserProgressBar.Location = New System.Drawing.Point(381, 102)
+        Me.UserProgressBar.Maximum = 142
+        Me.UserProgressBar.Name = "UserProgressBar"
+        Me.UserProgressBar.Size = New System.Drawing.Size(100, 23)
+        Me.UserProgressBar.TabIndex = 3
+        Me.UserProgressBar.Visible = False
         '
         'Step5Panel
         '
@@ -619,7 +685,7 @@ Partial Class DLC
         '
         Me.DLC1.BackColor = System.Drawing.Color.Transparent
         Me.DLC1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.DLC1.BorderColour = System.Drawing.Color.Lime
+        Me.DLC1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.DLC1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DLC1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.DLC1.Location = New System.Drawing.Point(17, 40)
@@ -630,38 +696,6 @@ Partial Class DLC
         Me.DLC1.TabIndex = 0
         Me.DLC1.Tag = "01_Understone.zip"
         Me.DLC1.Text = "Download Understone Pack"
-        '
-        'OpenStep5Panel
-        '
-        Me.OpenStep5Panel.Interval = 1
-        '
-        'CloseStep5Panel
-        '
-        Me.CloseStep5Panel.Interval = 1
-        '
-        'InitialSetupTimerOPEN
-        '
-        Me.InitialSetupTimerOPEN.Interval = 1
-        '
-        'InitialSetupTimerCLOSE
-        '
-        Me.InitialSetupTimerCLOSE.Interval = 1
-        '
-        'ChangeUsernameButton
-        '
-        Me.ChangeUsernameButton.BackColor = System.Drawing.Color.Transparent
-        Me.ChangeUsernameButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.ChangeUsernameButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.ChangeUsernameButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ChangeUsernameButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.ChangeUsernameButton.Location = New System.Drawing.Point(1263, 37)
-        Me.ChangeUsernameButton.Name = "ChangeUsernameButton"
-        Me.ChangeUsernameButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.ChangeUsernameButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ChangeUsernameButton.Size = New System.Drawing.Size(105, 26)
-        Me.ChangeUsernameButton.TabIndex = 4
-        Me.ChangeUsernameButton.Text = "Change Username"
-        Me.ChangeUsernameButton.Visible = False
         '
         'DLC
         '
@@ -736,4 +770,6 @@ Partial Class DLC
     Friend WithEvents InitialSetupTimerOPEN As Timer
     Friend WithEvents InitialSetupTimerCLOSE As Timer
     Friend WithEvents ChangeUsernameButton As LogInButton
+    Friend WithEvents DeleteDLCCheckBox As LogInCheckBox
+    Friend WithEvents RestartButton As LogInButton
 End Class

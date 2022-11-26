@@ -1,4 +1,5 @@
-﻿Public Class Launcher
+﻿Imports System.Threading
+Public Class Launcher
     Private Sub SmartButton_Click(sender As Object, e As EventArgs) Handles SmartButton.Click
         If SmartButton.Text = "Begin Installation" Then
             Form1.Show()
@@ -36,6 +37,12 @@
                 MTUwarn.Visible = False
             End If
         End If
+    End Sub
+
+    Public Sub RecallDLC()
+        DLC.Close()
+        thread.sleep(200)
+        DLC.Show()
     End Sub
 
     Private Sub SmartLoader_Tick(sender As Object, e As EventArgs) Handles SmartLoader.Tick
