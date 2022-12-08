@@ -30,14 +30,14 @@ Partial Class DLC
         Me.InitialSetupTimerOPEN = New System.Windows.Forms.Timer(Me.components)
         Me.InitialSetupTimerCLOSE = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
-        Me.RestartButton = New Fable_III_Patcher.LogInButton()
-        Me.ChangeUsernameButton = New Fable_III_Patcher.LogInButton()
         Me.UsernameSetup = New System.Windows.Forms.Panel()
         Me.DeleteDLCCheckBox = New Fable_III_Patcher.LogInCheckBox()
         Me.UsernameSaveButton = New Fable_III_Patcher.LogInButton()
         Me.ComboBox1 = New Fable_III_Patcher.LogInComboBox()
         Me.LogInLabel6 = New Fable_III_Patcher.LogInLabel()
         Me.UserProgressBar = New System.Windows.Forms.ProgressBar()
+        Me.RestartButton = New Fable_III_Patcher.LogInButton()
+        Me.ChangeUsernameButton = New Fable_III_Patcher.LogInButton()
         Me.Step5Panel = New System.Windows.Forms.Panel()
         Me.LicDoneButton = New Fable_III_Patcher.LogInButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -126,37 +126,6 @@ Partial Class DLC
         Me.LogInThemeContainer1.TabIndex = 0
         Me.LogInThemeContainer1.Text = "DLC Installer"
         '
-        'RestartButton
-        '
-        Me.RestartButton.BackColor = System.Drawing.Color.Transparent
-        Me.RestartButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.RestartButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.RestartButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RestartButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.RestartButton.Location = New System.Drawing.Point(578, 41)
-        Me.RestartButton.Name = "RestartButton"
-        Me.RestartButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.RestartButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RestartButton.Size = New System.Drawing.Size(75, 30)
-        Me.RestartButton.TabIndex = 5
-        Me.RestartButton.Text = "Restart"
-        '
-        'ChangeUsernameButton
-        '
-        Me.ChangeUsernameButton.BackColor = System.Drawing.Color.Transparent
-        Me.ChangeUsernameButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.ChangeUsernameButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.ChangeUsernameButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ChangeUsernameButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.ChangeUsernameButton.Location = New System.Drawing.Point(1263, 37)
-        Me.ChangeUsernameButton.Name = "ChangeUsernameButton"
-        Me.ChangeUsernameButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.ChangeUsernameButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ChangeUsernameButton.Size = New System.Drawing.Size(105, 26)
-        Me.ChangeUsernameButton.TabIndex = 4
-        Me.ChangeUsernameButton.Text = "Change Username"
-        Me.ChangeUsernameButton.Visible = False
-        '
         'UsernameSetup
         '
         Me.UsernameSetup.Controls.Add(Me.DeleteDLCCheckBox)
@@ -183,7 +152,6 @@ Partial Class DLC
         Me.DeleteDLCCheckBox.Size = New System.Drawing.Size(100, 22)
         Me.DeleteDLCCheckBox.TabIndex = 4
         Me.DeleteDLCCheckBox.Text = "Delete DLC"
-        Me.DeleteDLCCheckBox.Visible = False
         '
         'UsernameSaveButton
         '
@@ -241,6 +209,37 @@ Partial Class DLC
         Me.UserProgressBar.Size = New System.Drawing.Size(100, 23)
         Me.UserProgressBar.TabIndex = 3
         Me.UserProgressBar.Visible = False
+        '
+        'RestartButton
+        '
+        Me.RestartButton.BackColor = System.Drawing.Color.Transparent
+        Me.RestartButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.RestartButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.RestartButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RestartButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.RestartButton.Location = New System.Drawing.Point(578, 41)
+        Me.RestartButton.Name = "RestartButton"
+        Me.RestartButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.RestartButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RestartButton.Size = New System.Drawing.Size(75, 30)
+        Me.RestartButton.TabIndex = 5
+        Me.RestartButton.Text = "Restart"
+        '
+        'ChangeUsernameButton
+        '
+        Me.ChangeUsernameButton.BackColor = System.Drawing.Color.Transparent
+        Me.ChangeUsernameButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.ChangeUsernameButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.ChangeUsernameButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ChangeUsernameButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.ChangeUsernameButton.Location = New System.Drawing.Point(1263, 37)
+        Me.ChangeUsernameButton.Name = "ChangeUsernameButton"
+        Me.ChangeUsernameButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.ChangeUsernameButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ChangeUsernameButton.Size = New System.Drawing.Size(105, 26)
+        Me.ChangeUsernameButton.TabIndex = 4
+        Me.ChangeUsernameButton.Text = "Change Username"
+        Me.ChangeUsernameButton.Visible = False
         '
         'Step5Panel
         '
