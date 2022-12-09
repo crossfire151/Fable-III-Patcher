@@ -37,7 +37,7 @@ Before installing the DLC make sure you create a backup of your saves, we don't 
 
 # Version 2.0.0.5
 
-Fixed Installation process.
+Fixed Licence Installation process.
 
 # Issues
 
