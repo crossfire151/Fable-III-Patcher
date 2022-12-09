@@ -35,10 +35,9 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 2.0.0.3
+# Version 2.0.0.5
 
-Added new improved DLC Installer.
-Fixed majority of bugs.
+Fixed Installation process.
 
 If you notice any error popups please copy the error log and create a new Issue above.
 
