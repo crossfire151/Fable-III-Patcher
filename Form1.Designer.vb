@@ -56,6 +56,7 @@ Partial Class Form1
         Me.GWFLInstaller = New System.Windows.Forms.Timer(Me.components)
         Me.MetroSetButton12 = New MetroSet_UI.Controls.MetroSetButton()
         Me.MetroSetButton13 = New MetroSet_UI.Controls.MetroSetButton()
+        Me.DLCskip = New Fable_III_Patcher.LogInButton()
         Me.MetroSetPanel1.SuspendLayout()
         Me.MetroSetPanel2.SuspendLayout()
         Me.MetroSetPanel3.SuspendLayout()
@@ -109,6 +110,7 @@ Partial Class Form1
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetTextBox1)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetLabel1)
         Me.MetroSetPanel1.Controls.Add(Me.MetroSetDivider1)
+        Me.MetroSetPanel1.Controls.Add(Me.DLCskip)
         Me.MetroSetPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MetroSetPanel1.IsDerivedStyle = True
         Me.MetroSetPanel1.Location = New System.Drawing.Point(0, 27)
@@ -733,6 +735,22 @@ Partial Class Form1
         Me.MetroSetButton13.ThemeAuthor = "Narwin"
         Me.MetroSetButton13.ThemeName = "MetroDark"
         '
+        'DLCskip
+        '
+        Me.DLCskip.BackColor = System.Drawing.Color.Transparent
+        Me.DLCskip.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.DLCskip.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.DLCskip.Enabled = False
+        Me.DLCskip.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DLCskip.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.DLCskip.Location = New System.Drawing.Point(497, 379)
+        Me.DLCskip.Name = "DLCskip"
+        Me.DLCskip.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.DLCskip.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DLCskip.Size = New System.Drawing.Size(126, 38)
+        Me.DLCskip.TabIndex = 4
+        Me.DLCskip.Text = "Skip DLC Installation"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -787,4 +805,5 @@ Partial Class Form1
     Friend WithEvents MetroSetButton14 As MetroSet_UI.Controls.MetroSetButton
     Friend WithEvents MetroSetButton15 As MetroSet_UI.Controls.MetroSetButton
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents DLCskip As LogInButton
 End Class
