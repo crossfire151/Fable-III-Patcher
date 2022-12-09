@@ -39,13 +39,17 @@ Before installing the DLC make sure you create a backup of your saves, we don't 
 
 Fixed Installation process.
 
+# Issues
+
 If you notice any error popups please copy the error log and create a new Issue above.
 
-REQUIREMENTS:
+# REQUIREMENTS
 
 A Windows Operating sytem of Windows 10 or later must be installed.
 Both 32bit and 64bit OS are supported.
 
 !! WINDOWS ONLY !!
 
-Discord Support Server: [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
+# Discord Support
+
+[https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
