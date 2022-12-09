@@ -14,6 +14,9 @@ This Patcher includes all the required resources so there is no need to download
 Visit the Releases section to download this patcher, I have conveniently zipped up everything you need. The Patcher will do the rest!
 This should prevent those DOTS in the filenames, this was done by github during the upload for some strange reason; the zip file should have solved this.
 
+# Setup Tutorial Video
+
+[https://cloud.crossfire151.xyz/tutorial.php](https://cloud.crossfire151.xyz/tutorial.php)
 
 # Looking for Voluntary Translators!
 
@@ -35,10 +38,9 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 2.0.0.3
+# Version 2.0.0.4
 
-Added new improved DLC Installer.
-Fixed majority of bugs.
+Minor Bug fixes.
 
 If you notice any error popups please copy the error log and create a new Issue above.
 
@@ -48,5 +50,7 @@ A Windows Operating sytem of Windows 10 or later must be installed.
 Both 32bit and 64bit OS are supported.
 
 !! WINDOWS ONLY !!
+
+# Discord Support
 
 Discord Support Server: [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
