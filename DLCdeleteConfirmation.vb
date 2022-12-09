@@ -12,6 +12,8 @@ Public Class DLCdeleteConfirmation
         Catch ex As Exception
 
         End Try
+        My.Settings.username = DLC.ComboBox1.SelectedItem
+        My.Settings.Save()
         Hide()
         MsgBox("Old DLC installation has been deleted. Please continue with the installation.", MsgBoxStyle.Information, "DLC Deleted")
         DLC.InitialSetupTimerCLOSE.Start()
