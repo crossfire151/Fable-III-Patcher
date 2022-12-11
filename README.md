@@ -52,7 +52,7 @@ Both 32bit and 64bit OS are supported.
 
 # Translators
 
-| Username  | Translation Language |
+| Contributor  | Translation Language |
 | ------------- | ------------- |
 | SojerManLan  | Polish  |
 
