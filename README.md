@@ -50,11 +50,5 @@ Both 32bit and 64bit OS are supported.
 
 !! WINDOWS ONLY !!
 
-<details><summary>Our Translators</summary>
-<p>
-SojerManLan - Polish Translator
-</p>
-</details>
-
 # Discord Support Server
 [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
