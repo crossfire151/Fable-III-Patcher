@@ -24,6 +24,7 @@ Public Class Launcher
         ElseIf My.Settings.PatchComplete = "1" Then
             SmartButton.Text = "Play"
         End If
+        WebInfo.Navigate("https://cloud.crossfire151.xyz/Fable-III/?version=" & Application.ProductVersion)
         StartupTimer.Start()
     End Sub
 
@@ -132,5 +133,12 @@ Public Class Launcher
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         System.Diagnostics.Process.Start("https://discord.gg/nQRsMxZ3Ha")
+    End Sub
+
+    Private Sub WebInfo_DocumentTitleChanged(sender As Object, e As EventArgs) Handles WebInfo.DocumentTitleChanged
+        If WebInfo.Document.Title = "https://github.com/crossfire151/Fable-III-Patcher/releases/tag/release" Then
+            WebInfo.Refresh()
+            System.Diagnostics.Process.Start("https://github.com/crossfire151/Fable-III-Patcher/releases/tag/release")
+        End If
     End Sub
 End Class

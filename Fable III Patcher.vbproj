@@ -238,6 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fable3 Logo.ico" />
+    <None Include="Resources\NEW-Software-Logo.png" />
     <None Include="Resources\Discord_icon.png" />
     <None Include="Resources\Splash.png" />
     <None Include="Resources\chevron.png" />

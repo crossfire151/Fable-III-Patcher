@@ -113,9 +113,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Splash() As System.Drawing.Bitmap
+        Friend ReadOnly Property NEW_Software_Logo() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Splash", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("NEW-Software-Logo", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
