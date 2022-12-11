@@ -35,9 +35,9 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 2.0.0.6
+# Version 2.0.0.7
 
-Added DLC Skip button to primary installer.
+Minor changes to project to reflect loss of our recent translator 🙁
 
 # Issues
 
