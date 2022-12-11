@@ -199,4 +199,12 @@
     Private Sub MetroSetButton15_Click(sender As Object, e As EventArgs) Handles MetroSetButton15.Click
         DLC.Show()
     End Sub
+
+    Private Sub LogInButton1_Click(sender As Object, e As EventArgs) Handles DLCskip.Click
+        My.Settings.PatchComplete = "1"
+        My.Settings.Save()
+        Launcher.SmartButton.Text = "Play"
+        Launcher.BringToFront()
+        Close()
+    End Sub
 End Class

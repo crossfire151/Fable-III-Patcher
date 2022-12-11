@@ -3,7 +3,7 @@
         ComboBox1.SelectedIndex = 0
         If Not My.Settings.Lang = "" Then
             Hide()
-            Form1.Show()
+            Launcher.Show()
             Close()
         End If
     End Sub
@@ -11,7 +11,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         My.Settings.Lang = ComboBox1.SelectedItem
         My.Settings.Save()
-        Form1.Show()
+        Launcher.Show()
         Close()
     End Sub
 

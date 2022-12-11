@@ -93,6 +93,7 @@ Public Class Dependency_Check
             Timer1.Stop()
             Form1.MetroSetButton1.Enabled = True
             Form1.MetroSetButton15.Visible = True
+            Form1.DLCskip.Enabled = True
             Close()
         End If
     End Sub

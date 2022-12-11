@@ -11,5 +11,8 @@
     <Setting Name="data" Type="System.String" Scope="Application">
       <Value Profile="(Default)">f_files_downloads_33jhuf-_-ih83h2!uhgr7u9g3b</Value>
     </Setting>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

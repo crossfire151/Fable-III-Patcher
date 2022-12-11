@@ -122,6 +122,12 @@
     <Compile Include="DLC.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DLCdeleteConfirmation.Designer.vb">
+      <DependentUpon>DLCdeleteConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DLCdeleteConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Downloader.Designer.vb">
       <DependentUpon>Downloader.vb</DependentUpon>
     </Compile>
@@ -183,6 +189,9 @@
     <EmbeddedResource Include="DLC.resx">
       <DependentUpon>DLC.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DLCdeleteConfirmation.resx">
+      <DependentUpon>DLCdeleteConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Downloader.resx">
       <DependentUpon>Downloader.vb</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +238,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fable3 Logo.ico" />
+    <None Include="Resources\Discord_icon.png" />
+    <None Include="Resources\Splash.png" />
     <None Include="Resources\chevron.png" />
     <None Include="Resources\Fable3.jpg" />
     <None Include="Resources\gfwlivesetup.exe" />
