@@ -18,7 +18,7 @@ This should prevent those DOTS in the filenames, this was done by github during 
 # Looking for Voluntary Translators!
 
 Currently this Patcher only Supports English.
-As this Patcher grows in the upcoming future this application will need to be translated to support the NEW upcoming DLC Installtion feature.
+As this Patcher grows in the upcoming future this application will need to be translated to support more of the community.
 
 # DECLARATION -> READ ME!
 
