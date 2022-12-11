@@ -57,4 +57,5 @@ Both 32bit and 64bit OS are supported.
 | SojerManLan  | Polish (retired)  |
 
 # Discord Support Server
-[https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
+[https://discord.gg/K4ghT6nzBR](https://discord.gg/K4ghT6nzBR)
+recently updated.
