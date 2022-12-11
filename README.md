@@ -54,7 +54,7 @@ Both 32bit and 64bit OS are supported.
 
 | Contributor  | Translation Language |
 | ------------- | ------------- |
-| SojerManLan  | Polish  |
+| SojerManLan  | Polish (retired)  |
 
 # Discord Support Server
 [https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
