@@ -40,7 +40,7 @@ Before installing the DLC make sure you create a backup of your saves, we don't 
 - Added ability to maximize the DLC Installation window; as reported by some users the screen appears off and doesn't appear 100% visible, this should resolve this issue.
 - Added the option to navigate backwards in the DLC Drag file feature if the user accidentally navigates into another folder.
 - Moved the DLC Delete option to the main screen of the DLC Installation window.
-- The DLC Deletion option now clears the \Downloads folder within the Pathcher to correct any mistakes made.
+- The DLC Deletion option now clears the \Downloads folder within the Patcher to correct any mistakes made.
 
 # Issues
 
