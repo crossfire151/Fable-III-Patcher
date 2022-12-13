@@ -18,7 +18,7 @@ This should prevent those DOTS in the filenames, this was done by github during 
 # Looking for Voluntary Translators!
 
 Currently this Patcher only Supports English.
-As this Patcher grows in the upcoming future this application will need to be translated to support more of the community.
+As this Patcher grows in the upcoming future this application will need to be translated to support the NEW upcoming DLC Installtion feature.
 
 # DECLARATION -> READ ME!
 
@@ -35,10 +35,9 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 2.0.0.8
+# Version 2.0.0.6
 
-Improved Launcher with new Logo and About section.
-If any updates are release the About section will let you know!
+Added DLC Skip button to primary installer.
 
 # Issues
 
@@ -51,12 +50,5 @@ Both 32bit and 64bit OS are supported.
 
 !! WINDOWS ONLY !!
 
-# Translators
-
-| Contributor  | Translation Language |
-| ------------- | ------------- |
-| SojerManLan  | Polish (retired)  |
-
 # Discord Support Server
-[https://discord.gg/K4ghT6nzBR](https://discord.gg/K4ghT6nzBR)
-recently updated.
+[https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)

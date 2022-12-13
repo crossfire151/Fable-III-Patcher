@@ -31,7 +31,6 @@ Partial Class DLC
         Me.InitialSetupTimerCLOSE = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
         Me.UsernameSetup = New System.Windows.Forms.Panel()
-        Me.DeleteDLCCheckBox = New Fable_III_Patcher.LogInCheckBox()
         Me.UsernameSaveButton = New Fable_III_Patcher.LogInButton()
         Me.ComboBox1 = New Fable_III_Patcher.LogInComboBox()
         Me.LogInLabel6 = New Fable_III_Patcher.LogInLabel()
@@ -58,6 +57,8 @@ Partial Class DLC
         Me.RenameLicenceButton = New Fable_III_Patcher.LogInButton()
         Me.LicenceSetupButton = New Fable_III_Patcher.LogInButton()
         Me.Step3 = New Fable_III_Patcher.LogInGroupBox()
+        Me.DLCgoBack = New Fable_III_Patcher.LogInButton()
+        Me.DownloadedFilesgoBack = New Fable_III_Patcher.LogInButton()
         Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
         Me.Fable3DLCLocation = New System.Windows.Forms.WebBrowser()
         Me.DownloadedFiles = New System.Windows.Forms.WebBrowser()
@@ -70,6 +71,7 @@ Partial Class DLC
         Me.DLC3 = New Fable_III_Patcher.LogInButton()
         Me.DLC2 = New Fable_III_Patcher.LogInButton()
         Me.DLC1 = New Fable_III_Patcher.LogInButton()
+        Me.DLCdeleteButton = New Fable_III_Patcher.LogInButton()
         Me.LogInThemeContainer1.SuspendLayout()
         Me.UsernameSetup.SuspendLayout()
         Me.Step5Panel.SuspendLayout()
@@ -128,7 +130,6 @@ Partial Class DLC
         '
         'UsernameSetup
         '
-        Me.UsernameSetup.Controls.Add(Me.DeleteDLCCheckBox)
         Me.UsernameSetup.Controls.Add(Me.UsernameSaveButton)
         Me.UsernameSetup.Controls.Add(Me.ComboBox1)
         Me.UsernameSetup.Controls.Add(Me.LogInLabel6)
@@ -138,20 +139,6 @@ Partial Class DLC
         Me.UsernameSetup.Name = "UsernameSetup"
         Me.UsernameSetup.Size = New System.Drawing.Size(880, 0)
         Me.UsernameSetup.TabIndex = 3
-        '
-        'DeleteDLCCheckBox
-        '
-        Me.DeleteDLCCheckBox.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.DeleteDLCCheckBox.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.DeleteDLCCheckBox.Checked = False
-        Me.DeleteDLCCheckBox.CheckedColour = System.Drawing.Color.FromArgb(CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(174, Byte), Integer))
-        Me.DeleteDLCCheckBox.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DeleteDLCCheckBox.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DeleteDLCCheckBox.Location = New System.Drawing.Point(518, 99)
-        Me.DeleteDLCCheckBox.Name = "DeleteDLCCheckBox"
-        Me.DeleteDLCCheckBox.Size = New System.Drawing.Size(100, 22)
-        Me.DeleteDLCCheckBox.TabIndex = 4
-        Me.DeleteDLCCheckBox.Text = "Delete DLC"
         '
         'UsernameSaveButton
         '
@@ -510,6 +497,8 @@ Partial Class DLC
         'Step3
         '
         Me.Step3.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.Step3.Controls.Add(Me.DLCgoBack)
+        Me.Step3.Controls.Add(Me.DownloadedFilesgoBack)
         Me.Step3.Controls.Add(Me.LogInButton1)
         Me.Step3.Controls.Add(Me.Fable3DLCLocation)
         Me.Step3.Controls.Add(Me.DownloadedFiles)
@@ -525,6 +514,36 @@ Partial Class DLC
         Me.Step3.TabIndex = 3
         Me.Step3.Text = "Step 3 - DLC Location | Preperation"
         Me.Step3.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        '
+        'DLCgoBack
+        '
+        Me.DLCgoBack.BackColor = System.Drawing.Color.Transparent
+        Me.DLCgoBack.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.DLCgoBack.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.DLCgoBack.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DLCgoBack.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.DLCgoBack.Location = New System.Drawing.Point(582, 393)
+        Me.DLCgoBack.Name = "DLCgoBack"
+        Me.DLCgoBack.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.DLCgoBack.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DLCgoBack.Size = New System.Drawing.Size(94, 30)
+        Me.DLCgoBack.TabIndex = 4
+        Me.DLCgoBack.Text = "Previous Folder"
+        '
+        'DownloadedFilesgoBack
+        '
+        Me.DownloadedFilesgoBack.BackColor = System.Drawing.Color.Transparent
+        Me.DownloadedFilesgoBack.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.DownloadedFilesgoBack.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.DownloadedFilesgoBack.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DownloadedFilesgoBack.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.DownloadedFilesgoBack.Location = New System.Drawing.Point(11, 391)
+        Me.DownloadedFilesgoBack.Name = "DownloadedFilesgoBack"
+        Me.DownloadedFilesgoBack.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.DownloadedFilesgoBack.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DownloadedFilesgoBack.Size = New System.Drawing.Size(94, 30)
+        Me.DownloadedFilesgoBack.TabIndex = 3
+        Me.DownloadedFilesgoBack.Text = "Previous Folder"
         '
         'LogInButton1
         '
@@ -614,6 +633,7 @@ Partial Class DLC
         'Step1
         '
         Me.Step1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.Step1.Controls.Add(Me.DLCdeleteButton)
         Me.Step1.Controls.Add(Me.DLC4)
         Me.Step1.Controls.Add(Me.DLC3)
         Me.Step1.Controls.Add(Me.DLC2)
@@ -696,6 +716,21 @@ Partial Class DLC
         Me.DLC1.Tag = "01_Understone.zip"
         Me.DLC1.Text = "Download Understone Pack"
         '
+        'DLCdeleteButton
+        '
+        Me.DLCdeleteButton.BackColor = System.Drawing.Color.Transparent
+        Me.DLCdeleteButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DLCdeleteButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.DLCdeleteButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DLCdeleteButton.HoverColour = System.Drawing.Color.Red
+        Me.DLCdeleteButton.Location = New System.Drawing.Point(409, -4)
+        Me.DLCdeleteButton.Name = "DLCdeleteButton"
+        Me.DLCdeleteButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.DLCdeleteButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DLCdeleteButton.Size = New System.Drawing.Size(151, 30)
+        Me.DLCdeleteButton.TabIndex = 6
+        Me.DLCdeleteButton.Text = "Delete Download Content"
+        '
         'DLC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -704,7 +739,6 @@ Partial Class DLC
         Me.Controls.Add(Me.LogInThemeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
         Me.Name = "DLC"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fable 3 | DLC Downloader"
@@ -769,6 +803,8 @@ Partial Class DLC
     Friend WithEvents InitialSetupTimerOPEN As Timer
     Friend WithEvents InitialSetupTimerCLOSE As Timer
     Friend WithEvents ChangeUsernameButton As LogInButton
-    Friend WithEvents DeleteDLCCheckBox As LogInCheckBox
     Friend WithEvents RestartButton As LogInButton
+    Friend WithEvents DLCgoBack As LogInButton
+    Friend WithEvents DownloadedFilesgoBack As LogInButton
+    Friend WithEvents DLCdeleteButton As LogInButton
 End Class

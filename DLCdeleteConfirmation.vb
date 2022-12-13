@@ -2,7 +2,6 @@
 
 Public Class DLCdeleteConfirmation
     Private Sub NoButton_Click(sender As Object, e As EventArgs) Handles NoButton.Click
-        DLC.DeleteDLCCheckBox.Checked = False
         Close()
     End Sub
 
@@ -12,11 +11,18 @@ Public Class DLCdeleteConfirmation
         Catch ex As Exception
 
         End Try
-        My.Settings.username = DLC.ComboBox1.SelectedItem
-        My.Settings.Save()
+        Try
+            My.Computer.FileSystem.DeleteDirectory(Application.StartupPath & "\Downloads", DeleteDirectoryOption.DeleteAllContents)
+        Catch ex As Exception
+
+        End Try
         Hide()
         MsgBox("Old DLC installation has been deleted. Please continue with the installation.", MsgBoxStyle.Information, "DLC Deleted")
-        DLC.InitialSetupTimerCLOSE.Start()
+        Try
+            My.Computer.FileSystem.CreateDirectory(Application.StartupPath & "\Downloads")
+        Catch ex As Exception
+
+        End Try
         Close()
     End Sub
 End Class

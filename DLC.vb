@@ -235,9 +235,6 @@ Public Class DLC
         UsernameSetup.Size = New Point(880, UserProgressBar.Value)
         If UserProgressBar.Value = UserProgressBar.Maximum Then
             InitialSetupTimerOPEN.Stop()
-            If My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC") Then
-                DeleteDLCCheckBox.Visible = True
-            End If
             If Not My.Settings.username = "" Then
                     InitialSetupTimerCLOSE.Start()
                 End If
@@ -263,13 +260,9 @@ Public Class DLC
     End Sub
 
     Private Sub UsernameSaveButton_Click(sender As Object, e As EventArgs) Handles UsernameSaveButton.Click
-        If DeleteDLCCheckBox.Checked = True Then
-            DLCdeleteConfirmation.show()
-        ElseIf DeleteDLCCheckBox.Checked = False Then
-            My.Settings.username = ComboBox1.SelectedItem
-            My.Settings.Save()
-            InitialSetupTimerCLOSE.Start()
-        End If
+        My.Settings.username = ComboBox1.SelectedItem
+        My.Settings.Save()
+        InitialSetupTimerCLOSE.Start()
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
@@ -335,6 +328,26 @@ Public Class DLC
 
     Private Sub LogInButton3_Click(sender As Object, e As EventArgs) Handles RestartButton.Click
         Launcher.RecallDLC()
+    End Sub
+
+    Private Sub DownloadedFilesgoBack_Click(sender As Object, e As EventArgs) Handles DownloadedFilesgoBack.Click
+        If DownloadedFiles.CanGoBack Then
+            DownloadedFiles.GoBack()
+        Else
+            Beep()
+        End If
+    End Sub
+
+    Private Sub DLCgoBack_Click(sender As Object, e As EventArgs) Handles DLCgoBack.Click
+        If Fable3DLCLocation.CanGoBack Then
+            Fable3DLCLocation.GoBack()
+        Else
+            Beep()
+        End If
+    End Sub
+
+    Private Sub DLCdeleteButton_Click(sender As Object, e As EventArgs) Handles DLCdeleteButton.Click
+        DLCdeleteConfirmation.Show()
     End Sub
 
     'C:\Users\" & USERNAME & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\

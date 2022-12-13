@@ -24,9 +24,10 @@ Partial Class DLCdeleteConfirmation
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DLCdeleteConfirmation))
         Me.DLCdeleteThemeContainer = New Fable_III_Patcher.LogInThemeContainer()
-        Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
-        Me.YesButton = New Fable_III_Patcher.LogInButton()
         Me.NoButton = New Fable_III_Patcher.LogInButton()
+        Me.YesButton = New Fable_III_Patcher.LogInButton()
+        Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
+        Me.LogInLabel2 = New Fable_III_Patcher.LogInLabel()
         Me.DLCdeleteThemeContainer.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,6 +40,7 @@ Partial Class DLCdeleteConfirmation
         Me.DLCdeleteThemeContainer.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.DLCdeleteThemeContainer.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.DLCdeleteThemeContainer.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.DLCdeleteThemeContainer.Controls.Add(Me.LogInLabel2)
         Me.DLCdeleteThemeContainer.Controls.Add(Me.NoButton)
         Me.DLCdeleteThemeContainer.Controls.Add(Me.YesButton)
         Me.DLCdeleteThemeContainer.Controls.Add(Me.LogInLabel1)
@@ -53,18 +55,20 @@ Partial Class DLCdeleteConfirmation
         Me.DLCdeleteThemeContainer.TabIndex = 0
         Me.DLCdeleteThemeContainer.Text = "DLC Delete Confirmation"
         '
-        'LogInLabel1
+        'NoButton
         '
-        Me.LogInLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LogInLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.LogInLabel1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel1.Location = New System.Drawing.Point(69, 40)
-        Me.LogInLabel1.Name = "LogInLabel1"
-        Me.LogInLabel1.Size = New System.Drawing.Size(266, 58)
-        Me.LogInLabel1.TabIndex = 1
-        Me.LogInLabel1.Text = "Are you sure you want to Delete your OLD DLC installation?"
-        Me.LogInLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.NoButton.BackColor = System.Drawing.Color.Transparent
+        Me.NoButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.NoButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.NoButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.NoButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.NoButton.Location = New System.Drawing.Point(213, 85)
+        Me.NoButton.Name = "NoButton"
+        Me.NoButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.NoButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.NoButton.Size = New System.Drawing.Size(121, 35)
+        Me.NoButton.TabIndex = 3
+        Me.NoButton.Text = "No, Cancel"
         '
         'YesButton
         '
@@ -73,7 +77,7 @@ Partial Class DLCdeleteConfirmation
         Me.YesButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.YesButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.YesButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.YesButton.Location = New System.Drawing.Point(59, 98)
+        Me.YesButton.Location = New System.Drawing.Point(59, 85)
         Me.YesButton.Name = "YesButton"
         Me.YesButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.YesButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -81,20 +85,32 @@ Partial Class DLCdeleteConfirmation
         Me.YesButton.TabIndex = 2
         Me.YesButton.Text = "Yes"
         '
-        'NoButton
+        'LogInLabel1
         '
-        Me.NoButton.BackColor = System.Drawing.Color.Transparent
-        Me.NoButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.NoButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.NoButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NoButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.NoButton.Location = New System.Drawing.Point(213, 98)
-        Me.NoButton.Name = "NoButton"
-        Me.NoButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.NoButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NoButton.Size = New System.Drawing.Size(121, 35)
-        Me.NoButton.TabIndex = 3
-        Me.NoButton.Text = "No, Cancel"
+        Me.LogInLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LogInLabel1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel1.Location = New System.Drawing.Point(69, 34)
+        Me.LogInLabel1.Name = "LogInLabel1"
+        Me.LogInLabel1.Size = New System.Drawing.Size(266, 51)
+        Me.LogInLabel1.TabIndex = 1
+        Me.LogInLabel1.Text = "Are you sure you want to Delete your OLD DLC installation?"
+        Me.LogInLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LogInLabel2
+        '
+        Me.LogInLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LogInLabel2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.LogInLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.LogInLabel2.Location = New System.Drawing.Point(8, 127)
+        Me.LogInLabel2.Name = "LogInLabel2"
+        Me.LogInLabel2.Size = New System.Drawing.Size(377, 32)
+        Me.LogInLabel2.TabIndex = 4
+        Me.LogInLabel2.Text = "Please note: this will also delete all downloaded DLC within the \Downloads folde" &
+    "r."
+        Me.LogInLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'DLCdeleteConfirmation
         '
@@ -117,4 +133,5 @@ Partial Class DLCdeleteConfirmation
     Friend WithEvents NoButton As LogInButton
     Friend WithEvents YesButton As LogInButton
     Friend WithEvents LogInLabel1 As LogInLabel
+    Friend WithEvents LogInLabel2 As LogInLabel
 End Class
