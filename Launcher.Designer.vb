@@ -34,7 +34,6 @@ Partial Class Launcher
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.WebInfo = New System.Windows.Forms.WebBrowser()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.LogInRichTextBox1 = New Fable_III_Patcher.LogInRichTextBox()
         Me.LoadingLabel = New Fable_III_Patcher.LogInLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -43,6 +42,7 @@ Partial Class Launcher
         Me.StatusLabel = New Fable_III_Patcher.LogInLabel()
         Me.SmartButton = New Fable_III_Patcher.LogInButtonWithProgress()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.LogInThemeContainer1.SuspendLayout()
         Me.LogInTabControl1.SuspendLayout()
@@ -153,25 +153,13 @@ Partial Class Launcher
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.TabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TabPage2.Controls.Add(Me.LogInRichTextBox1)
+        Me.TabPage2.Controls.Add(Me.LogInLabel1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 36)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(260, 285)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Information"
-        '
-        'LogInRichTextBox1
-        '
-        Me.LogInRichTextBox1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LogInRichTextBox1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.LogInRichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogInRichTextBox1.Location = New System.Drawing.Point(3, 3)
-        Me.LogInRichTextBox1.Name = "LogInRichTextBox1"
-        Me.LogInRichTextBox1.Size = New System.Drawing.Size(252, 277)
-        Me.LogInRichTextBox1.TabIndex = 0
-        Me.LogInRichTextBox1.Text = resources.GetString("LogInRichTextBox1.Text")
-        Me.LogInRichTextBox1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'LoadingLabel
         '
@@ -271,6 +259,19 @@ Partial Class Launcher
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'LogInLabel1
+        '
+        Me.LogInLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LogInLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LogInLabel1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel1.Location = New System.Drawing.Point(3, 3)
+        Me.LogInLabel1.Name = "LogInLabel1"
+        Me.LogInLabel1.Size = New System.Drawing.Size(252, 277)
+        Me.LogInLabel1.TabIndex = 0
+        Me.LogInLabel1.Text = resources.GetString("LogInLabel1.Text")
+        '
         'Launcher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -299,7 +300,6 @@ Partial Class Launcher
 
     Friend WithEvents LogInThemeContainer1 As LogInThemeContainer
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents LogInRichTextBox1 As LogInRichTextBox
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents ResetRestartInstallationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SmartButton As LogInButtonWithProgress
@@ -316,4 +316,5 @@ Partial Class Launcher
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents WebInfo As WebBrowser
+    Friend WithEvents LogInLabel1 As LogInLabel
 End Class
