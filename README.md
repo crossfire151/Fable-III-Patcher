@@ -54,4 +54,4 @@ Both 32bit and 64bit OS are supported.
 !! WINDOWS ONLY !!
 
 # Discord Support Server
-[https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)
+Sorry due to server inactivity and the project appear's to be dead due to lack of publicity; The Discord as been temporarily disbanded.
