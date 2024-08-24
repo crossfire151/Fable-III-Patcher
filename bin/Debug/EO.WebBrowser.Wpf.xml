@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>EO.WebBrowser.Wpf</name>
+  </assembly>
+  <members>
+    <member name="T:EO.Wpf.WebViewHost">
+      <summary>
+            Provides the base class for a control that hosts a <see cref="T:EO.Wpf.WebView" />.
+            </summary>
+    </member>
+    <member name="F:EO.Wpf.WebViewHost.AutoProcessCmdKeysProperty">
+      <summary>
+            Identifies the <see cref="P:EO.Wpf.WebViewHost.AutoProcessCmdKeys" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:EO.Wpf.WebViewHost.AutoProcessCmdKeys">
+      <summary>
+            Gets or sets whether to automatically process shortcut keys.
+            </summary>
+      <remarks>
+            By default, the WebControl class auotmatically processes shortcut keys
+            in your Windows application such as shortcut key for a menu item. Set
+            this property to false if this is not desired (for example, the Web page
+            wish to handle certain shortcut keys).
+            </remarks>
+    </member>
+    <member name="P:EO.Wpf.WebViewHost.IsReady">
+      <summary>
+            Gets a value indicating whether the underlying <see cref="T:EO.WebBrowser.WebView" /> is ready.
+            </summary>
+    </member>
+    <member name="E:EO.Wpf.WebViewHost.IsReadyChanged">
+      <summary>
+            Occurs when <see cref="P:EO.Wpf.WebViewHost.IsReady" /> is changed.
+            </summary>
+    </member>
+    <member name="M:EO.Wpf.WebViewHost.Dispose">
+      <summary>
+            Destroy the <see cref="T:EO.Wpf.WebControl" /> and freeup resources used by it.
+            </summary>
+    </member>
+    <member name="T:EO.Wpf.WebView">
+      <summary>
+            An alias for <see cref="T:EO.WebBrowser.WebView">EO.WebBrowser.WebView</see>.
+            </summary>
+    </member>
+    <member name="T:EO.Wpf.WebControl">
+      <summary>
+            A WPF control that provides a thin wrapper to the <see cref="T:EO.WebBrowser.WebView" /> class.
+            </summary>
+    </member>
+    <member name="P:EO.Wpf.WebControl.WebView">
+      <summary>
+            Gets or sets the associated <see cref="T:EO.WebBrowser.WebView" /> object.
+            </summary>
+    </member>
+    <member name="T:EO.WebBrowser.Wpf.Properties.Resources">
+      <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.Wpf.Properties.Resources.ResourceManager">
+      <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.Wpf.Properties.Resources.Culture">
+      <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+    </member>
+  </members>
+</doc>
