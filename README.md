@@ -1,3 +1,11 @@
+# August 2024 Update
+Everything is now full automated.
+
+Added Web Support & Discord Support | These are remotely managed so if you don't see them it means they are under developement.
+
+Major bug fixes causing invalid error's.
+Installer has been improved, now fully automated to make the install process more user friendly and less confusing!
+
 # Fable-III-Patcher
 An easier much more simple Patcher and troubleshooter included.
 
