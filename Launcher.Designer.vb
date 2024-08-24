@@ -37,12 +37,12 @@ Partial Class Launcher
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.WebInfo = New System.Windows.Forms.WebBrowser()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SmartLoader = New System.Windows.Forms.Timer(Me.components)
         Me.GetReadyClose = New System.Windows.Forms.Timer(Me.components)
         Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
         Me.LogInThemeContainer1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.LogInTabControl1.SuspendLayout()
@@ -126,7 +126,7 @@ Partial Class Launcher
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.Discord, Me.SupportButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(4, 530)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(367, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(171, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -217,6 +217,19 @@ Partial Class Launcher
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Information"
         '
+        'LogInLabel1
+        '
+        Me.LogInLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LogInLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LogInLabel1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel1.Location = New System.Drawing.Point(3, 3)
+        Me.LogInLabel1.Name = "LogInLabel1"
+        Me.LogInLabel1.Size = New System.Drawing.Size(225, 366)
+        Me.LogInLabel1.TabIndex = 0
+        Me.LogInLabel1.Text = resources.GetString("LogInLabel1.Text")
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.Fable_III_Patcher.My.Resources.Resources.Fable3
@@ -241,19 +254,6 @@ Partial Class Launcher
         'StartupTimer
         '
         Me.StartupTimer.Interval = 6000
-        '
-        'LogInLabel1
-        '
-        Me.LogInLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LogInLabel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogInLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.LogInLabel1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel1.Location = New System.Drawing.Point(3, 3)
-        Me.LogInLabel1.Name = "LogInLabel1"
-        Me.LogInLabel1.Size = New System.Drawing.Size(225, 366)
-        Me.LogInLabel1.TabIndex = 0
-        Me.LogInLabel1.Text = resources.GetString("LogInLabel1.Text")
         '
         'Launcher
         '
