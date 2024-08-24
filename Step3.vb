@@ -52,6 +52,8 @@ Public Class Step3
             If Form1.Visible = True Then
                 Form1.Close()
             End If
+            My.Settings.PatchComplete = "1"
+            My.Settings.Save()
             Close()
         End If
     End Sub
