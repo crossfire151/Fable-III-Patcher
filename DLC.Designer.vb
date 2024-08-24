@@ -37,14 +37,6 @@ Partial Class DLC
         Me.UserProgressBar = New System.Windows.Forms.ProgressBar()
         Me.RestartButton = New Fable_III_Patcher.LogInButton()
         Me.ChangeUsernameButton = New Fable_III_Patcher.LogInButton()
-        Me.Step5Panel = New System.Windows.Forms.Panel()
-        Me.LicDoneButton = New Fable_III_Patcher.LogInButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.LogInLabel5 = New Fable_III_Patcher.LogInLabel()
-        Me.LicenceCopyToLocation = New System.Windows.Forms.WebBrowser()
-        Me.LicenceCopyFromLocation = New System.Windows.Forms.WebBrowser()
-        Me.LicenceAllocationClose = New Fable_III_Patcher.LogInButton()
-        Me.LogInLabel4 = New Fable_III_Patcher.LogInLabel()
         Me.LicencePanel = New System.Windows.Forms.Panel()
         Me.xuidPanelClose = New Fable_III_Patcher.LogInButton()
         Me.RetryButton = New Fable_III_Patcher.LogInButton()
@@ -52,6 +44,13 @@ Partial Class DLC
         Me.LogInLabel3 = New Fable_III_Patcher.LogInLabel()
         Me.XuidGrabber = New System.Windows.Forms.WebBrowser()
         Me.LogInLabel2 = New Fable_III_Patcher.LogInLabel()
+        Me.Step5Panel = New System.Windows.Forms.Panel()
+        Me.LicDoneButton = New Fable_III_Patcher.LogInButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LogInLabel5 = New Fable_III_Patcher.LogInLabel()
+        Me.LicenceCopyToLocation = New System.Windows.Forms.WebBrowser()
+        Me.LicenceCopyFromLocation = New System.Windows.Forms.WebBrowser()
+        Me.LicenceAllocationClose = New Fable_III_Patcher.LogInButton()
         Me.Step4 = New Fable_III_Patcher.LogInGroupBox()
         Me.LogInButton2 = New Fable_III_Patcher.LogInButton()
         Me.RenameLicenceButton = New Fable_III_Patcher.LogInButton()
@@ -59,7 +58,6 @@ Partial Class DLC
         Me.Step3 = New Fable_III_Patcher.LogInGroupBox()
         Me.DLCgoBack = New Fable_III_Patcher.LogInButton()
         Me.DownloadedFilesgoBack = New Fable_III_Patcher.LogInButton()
-        Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
         Me.Fable3DLCLocation = New System.Windows.Forms.WebBrowser()
         Me.DownloadedFiles = New System.Windows.Forms.WebBrowser()
         Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
@@ -67,16 +65,20 @@ Partial Class DLC
         Me.Step2 = New Fable_III_Patcher.LogInGroupBox()
         Me.SaveLocationButton = New Fable_III_Patcher.LogInButton()
         Me.Step1 = New Fable_III_Patcher.LogInGroupBox()
+        Me.DLCdeleteButton = New Fable_III_Patcher.LogInButton()
         Me.DLC4 = New Fable_III_Patcher.LogInButton()
         Me.DLC3 = New Fable_III_Patcher.LogInButton()
         Me.DLC2 = New Fable_III_Patcher.LogInButton()
         Me.DLC1 = New Fable_III_Patcher.LogInButton()
-        Me.DLCdeleteButton = New Fable_III_Patcher.LogInButton()
+        Me.LogInLabel4 = New Fable_III_Patcher.LogInLabel()
+        Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
+        Me.LogInButton3 = New Fable_III_Patcher.LogInButton()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.LogInThemeContainer1.SuspendLayout()
         Me.UsernameSetup.SuspendLayout()
+        Me.LicencePanel.SuspendLayout()
         Me.Step5Panel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.LicencePanel.SuspendLayout()
         Me.Step4.SuspendLayout()
         Me.Step3.SuspendLayout()
         Me.Step2.SuspendLayout()
@@ -111,8 +113,8 @@ Partial Class DLC
         Me.LogInThemeContainer1.Controls.Add(Me.UsernameSetup)
         Me.LogInThemeContainer1.Controls.Add(Me.RestartButton)
         Me.LogInThemeContainer1.Controls.Add(Me.ChangeUsernameButton)
-        Me.LogInThemeContainer1.Controls.Add(Me.Step5Panel)
         Me.LogInThemeContainer1.Controls.Add(Me.LicencePanel)
+        Me.LogInThemeContainer1.Controls.Add(Me.Step5Panel)
         Me.LogInThemeContainer1.Controls.Add(Me.Step4)
         Me.LogInThemeContainer1.Controls.Add(Me.Step3)
         Me.LogInThemeContainer1.Controls.Add(Me.Step2)
@@ -211,6 +213,7 @@ Partial Class DLC
         Me.RestartButton.Size = New System.Drawing.Size(75, 30)
         Me.RestartButton.TabIndex = 5
         Me.RestartButton.Text = "Restart"
+        Me.RestartButton.Visible = False
         '
         'ChangeUsernameButton
         '
@@ -228,109 +231,6 @@ Partial Class DLC
         Me.ChangeUsernameButton.Text = "Change Username"
         Me.ChangeUsernameButton.Visible = False
         '
-        'Step5Panel
-        '
-        Me.Step5Panel.Controls.Add(Me.LicDoneButton)
-        Me.Step5Panel.Controls.Add(Me.PictureBox1)
-        Me.Step5Panel.Controls.Add(Me.LogInLabel5)
-        Me.Step5Panel.Controls.Add(Me.LicenceCopyToLocation)
-        Me.Step5Panel.Controls.Add(Me.LicenceCopyFromLocation)
-        Me.Step5Panel.Controls.Add(Me.LicenceAllocationClose)
-        Me.Step5Panel.Controls.Add(Me.LogInLabel4)
-        Me.Step5Panel.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Step5Panel.Location = New System.Drawing.Point(0, 565)
-        Me.Step5Panel.MaximumSize = New System.Drawing.Size(1373, 542)
-        Me.Step5Panel.Name = "Step5Panel"
-        Me.Step5Panel.Size = New System.Drawing.Size(1373, 0)
-        Me.Step5Panel.TabIndex = 3
-        '
-        'LicDoneButton
-        '
-        Me.LicDoneButton.BackColor = System.Drawing.Color.Transparent
-        Me.LicDoneButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LicDoneButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.LicDoneButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LicDoneButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.LicDoneButton.Location = New System.Drawing.Point(645, 489)
-        Me.LicDoneButton.Name = "LicDoneButton"
-        Me.LicDoneButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.LicDoneButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LicDoneButton.Size = New System.Drawing.Size(82, 51)
-        Me.LicDoneButton.TabIndex = 5
-        Me.LicDoneButton.Text = "Done"
-        Me.LicDoneButton.Visible = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.Fable_III_Patcher.My.Resources.Resources.chevron
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(610, 171)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(144, 312)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
-        '
-        'LogInLabel5
-        '
-        Me.LogInLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.LogInLabel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LogInLabel5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.LogInLabel5.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(232, Byte), Integer))
-        Me.LogInLabel5.Location = New System.Drawing.Point(421, 90)
-        Me.LogInLabel5.Name = "LogInLabel5"
-        Me.LogInLabel5.Size = New System.Drawing.Size(492, 71)
-        Me.LogInLabel5.TabIndex = 1
-        Me.LogInLabel5.Text = "Copy all the files in the left box to the right box!"
-        Me.LogInLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LicenceCopyToLocation
-        '
-        Me.LicenceCopyToLocation.Location = New System.Drawing.Point(760, 171)
-        Me.LicenceCopyToLocation.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.LicenceCopyToLocation.Name = "LicenceCopyToLocation"
-        Me.LicenceCopyToLocation.ScriptErrorsSuppressed = True
-        Me.LicenceCopyToLocation.Size = New System.Drawing.Size(377, 315)
-        Me.LicenceCopyToLocation.TabIndex = 3
-        '
-        'LicenceCopyFromLocation
-        '
-        Me.LicenceCopyFromLocation.Location = New System.Drawing.Point(227, 171)
-        Me.LicenceCopyFromLocation.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.LicenceCopyFromLocation.Name = "LicenceCopyFromLocation"
-        Me.LicenceCopyFromLocation.ScriptErrorsSuppressed = True
-        Me.LicenceCopyFromLocation.Size = New System.Drawing.Size(377, 314)
-        Me.LicenceCopyFromLocation.TabIndex = 2
-        '
-        'LicenceAllocationClose
-        '
-        Me.LicenceAllocationClose.BackColor = System.Drawing.Color.Transparent
-        Me.LicenceAllocationClose.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LicenceAllocationClose.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.LicenceAllocationClose.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LicenceAllocationClose.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.LicenceAllocationClose.Location = New System.Drawing.Point(1341, 3)
-        Me.LicenceAllocationClose.Name = "LicenceAllocationClose"
-        Me.LicenceAllocationClose.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.LicenceAllocationClose.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LicenceAllocationClose.Size = New System.Drawing.Size(29, 30)
-        Me.LicenceAllocationClose.TabIndex = 1
-        Me.LicenceAllocationClose.Text = "×"
-        '
-        'LogInLabel4
-        '
-        Me.LogInLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.LogInLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LogInLabel4.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogInLabel4.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel4.Location = New System.Drawing.Point(9, 34)
-        Me.LogInLabel4.Name = "LogInLabel4"
-        Me.LogInLabel4.Size = New System.Drawing.Size(1343, 44)
-        Me.LogInLabel4.TabIndex = 0
-        Me.LogInLabel4.Text = "Step 5 - Licence File Allocation"
-        Me.LogInLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'LicencePanel
         '
         Me.LicencePanel.Controls.Add(Me.xuidPanelClose)
@@ -339,7 +239,7 @@ Partial Class DLC
         Me.LicencePanel.Controls.Add(Me.LogInLabel3)
         Me.LicencePanel.Controls.Add(Me.XuidGrabber)
         Me.LicencePanel.Controls.Add(Me.LogInLabel2)
-        Me.LicencePanel.Location = New System.Drawing.Point(676, 556)
+        Me.LicencePanel.Location = New System.Drawing.Point(676, 561)
         Me.LicencePanel.Name = "LicencePanel"
         Me.LicencePanel.Size = New System.Drawing.Size(24, 21)
         Me.LicencePanel.TabIndex = 5
@@ -419,17 +319,108 @@ Partial Class DLC
         '
         'LogInLabel2
         '
+        Me.LogInLabel2.AutoSize = True
         Me.LogInLabel2.BackColor = System.Drawing.Color.Transparent
         Me.LogInLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LogInLabel2.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogInLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LogInLabel2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(16, Byte), Integer))
-        Me.LogInLabel2.Location = New System.Drawing.Point(17, 16)
+        Me.LogInLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel2.Location = New System.Drawing.Point(287, 60)
         Me.LogInLabel2.Name = "LogInLabel2"
-        Me.LogInLabel2.Size = New System.Drawing.Size(862, 33)
-        Me.LogInLabel2.TabIndex = 0
-        Me.LogInLabel2.Text = "Licence Setup - XUID Grabber"
+        Me.LogInLabel2.Size = New System.Drawing.Size(346, 32)
+        Me.LogInLabel2.TabIndex = 2
+        Me.LogInLabel2.Text = "Enter Your Xbox Gamertag below then click Get." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This will fetch your unique ID. P" &
+    "lease Copy the XUID (HEX) code."
         Me.LogInLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Step5Panel
+        '
+        Me.Step5Panel.Controls.Add(Me.LicDoneButton)
+        Me.Step5Panel.Controls.Add(Me.PictureBox1)
+        Me.Step5Panel.Controls.Add(Me.LogInLabel5)
+        Me.Step5Panel.Controls.Add(Me.LicenceCopyToLocation)
+        Me.Step5Panel.Controls.Add(Me.LicenceCopyFromLocation)
+        Me.Step5Panel.Controls.Add(Me.LicenceAllocationClose)
+        Me.Step5Panel.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Step5Panel.Location = New System.Drawing.Point(0, 565)
+        Me.Step5Panel.MaximumSize = New System.Drawing.Size(1373, 542)
+        Me.Step5Panel.Name = "Step5Panel"
+        Me.Step5Panel.Size = New System.Drawing.Size(1373, 0)
+        Me.Step5Panel.TabIndex = 3
+        Me.Step5Panel.Visible = False
+        '
+        'LicDoneButton
+        '
+        Me.LicDoneButton.BackColor = System.Drawing.Color.Transparent
+        Me.LicDoneButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LicDoneButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LicDoneButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LicDoneButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LicDoneButton.Location = New System.Drawing.Point(645, 489)
+        Me.LicDoneButton.Name = "LicDoneButton"
+        Me.LicDoneButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LicDoneButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LicDoneButton.Size = New System.Drawing.Size(82, 51)
+        Me.LicDoneButton.TabIndex = 5
+        Me.LicDoneButton.Text = "Done"
+        Me.LicDoneButton.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.Fable_III_Patcher.My.Resources.Resources.chevron
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(610, 171)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(144, 312)
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
+        '
+        'LogInLabel5
+        '
+        Me.LogInLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LogInLabel5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LogInLabel5.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(232, Byte), Integer))
+        Me.LogInLabel5.Location = New System.Drawing.Point(421, 90)
+        Me.LogInLabel5.Name = "LogInLabel5"
+        Me.LogInLabel5.Size = New System.Drawing.Size(492, 71)
+        Me.LogInLabel5.TabIndex = 1
+        Me.LogInLabel5.Text = "Copy all the files in the left box to the right box!"
+        Me.LogInLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LicenceCopyToLocation
+        '
+        Me.LicenceCopyToLocation.Location = New System.Drawing.Point(760, 171)
+        Me.LicenceCopyToLocation.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.LicenceCopyToLocation.Name = "LicenceCopyToLocation"
+        Me.LicenceCopyToLocation.ScriptErrorsSuppressed = True
+        Me.LicenceCopyToLocation.Size = New System.Drawing.Size(377, 315)
+        Me.LicenceCopyToLocation.TabIndex = 3
+        '
+        'LicenceCopyFromLocation
+        '
+        Me.LicenceCopyFromLocation.Location = New System.Drawing.Point(227, 171)
+        Me.LicenceCopyFromLocation.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.LicenceCopyFromLocation.Name = "LicenceCopyFromLocation"
+        Me.LicenceCopyFromLocation.ScriptErrorsSuppressed = True
+        Me.LicenceCopyFromLocation.Size = New System.Drawing.Size(377, 314)
+        Me.LicenceCopyFromLocation.TabIndex = 2
+        '
+        'LicenceAllocationClose
+        '
+        Me.LicenceAllocationClose.BackColor = System.Drawing.Color.Transparent
+        Me.LicenceAllocationClose.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LicenceAllocationClose.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LicenceAllocationClose.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LicenceAllocationClose.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LicenceAllocationClose.Location = New System.Drawing.Point(1341, 3)
+        Me.LicenceAllocationClose.Name = "LicenceAllocationClose"
+        Me.LicenceAllocationClose.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LicenceAllocationClose.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LicenceAllocationClose.Size = New System.Drawing.Size(29, 30)
+        Me.LicenceAllocationClose.TabIndex = 1
+        Me.LicenceAllocationClose.Text = "×"
         '
         'Step4
         '
@@ -447,6 +438,7 @@ Partial Class DLC
         Me.Step4.TabIndex = 4
         Me.Step4.Text = "Step 4 - Licence File | Setup & Preperation"
         Me.Step4.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Step4.Visible = False
         '
         'LogInButton2
         '
@@ -455,13 +447,13 @@ Partial Class DLC
         Me.LogInButton2.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.LogInButton2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInButton2.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.LogInButton2.Location = New System.Drawing.Point(17, 192)
+        Me.LogInButton2.Location = New System.Drawing.Point(709, 351)
         Me.LogInButton2.Name = "LogInButton2"
         Me.LogInButton2.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.LogInButton2.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInButton2.Size = New System.Drawing.Size(624, 30)
-        Me.LogInButton2.TabIndex = 2
-        Me.LogInButton2.Text = "Move Licence files"
+        Me.LogInButton2.Size = New System.Drawing.Size(100, 30)
+        Me.LogInButton2.TabIndex = 4
+        Me.LogInButton2.Text = "Try Again"
         '
         'RenameLicenceButton
         '
@@ -499,7 +491,6 @@ Partial Class DLC
         Me.Step3.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.Step3.Controls.Add(Me.DLCgoBack)
         Me.Step3.Controls.Add(Me.DownloadedFilesgoBack)
-        Me.Step3.Controls.Add(Me.LogInButton1)
         Me.Step3.Controls.Add(Me.Fable3DLCLocation)
         Me.Step3.Controls.Add(Me.DownloadedFiles)
         Me.Step3.Controls.Add(Me.LogInLabel1)
@@ -514,6 +505,7 @@ Partial Class DLC
         Me.Step3.TabIndex = 3
         Me.Step3.Text = "Step 3 - DLC Location | Preperation"
         Me.Step3.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Step3.Visible = False
         '
         'DLCgoBack
         '
@@ -544,21 +536,6 @@ Partial Class DLC
         Me.DownloadedFilesgoBack.Size = New System.Drawing.Size(94, 30)
         Me.DownloadedFilesgoBack.TabIndex = 3
         Me.DownloadedFilesgoBack.Text = "Previous Folder"
-        '
-        'LogInButton1
-        '
-        Me.LogInButton1.BackColor = System.Drawing.Color.Transparent
-        Me.LogInButton1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LogInButton1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.LogInButton1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInButton1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.LogInButton1.Location = New System.Drawing.Point(260, 393)
-        Me.LogInButton1.Name = "LogInButton1"
-        Me.LogInButton1.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.LogInButton1.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInButton1.Size = New System.Drawing.Size(164, 28)
-        Me.LogInButton1.TabIndex = 2
-        Me.LogInButton1.Text = "Next Step"
         '
         'Fable3DLCLocation
         '
@@ -614,6 +591,7 @@ Partial Class DLC
         Me.Step2.TabIndex = 1
         Me.Step2.Text = "Step 2 - Specify Fable 3 Game Location"
         Me.Step2.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Step2.Visible = False
         '
         'SaveLocationButton
         '
@@ -648,6 +626,22 @@ Partial Class DLC
         Me.Step1.TabIndex = 0
         Me.Step1.Text = "Step 1 - Download DLC"
         Me.Step1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Step1.Visible = False
+        '
+        'DLCdeleteButton
+        '
+        Me.DLCdeleteButton.BackColor = System.Drawing.Color.Transparent
+        Me.DLCdeleteButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DLCdeleteButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.DLCdeleteButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DLCdeleteButton.HoverColour = System.Drawing.Color.Red
+        Me.DLCdeleteButton.Location = New System.Drawing.Point(409, -4)
+        Me.DLCdeleteButton.Name = "DLCdeleteButton"
+        Me.DLCdeleteButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.DLCdeleteButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DLCdeleteButton.Size = New System.Drawing.Size(151, 30)
+        Me.DLCdeleteButton.TabIndex = 6
+        Me.DLCdeleteButton.Text = "Delete Download Content"
         '
         'DLC4
         '
@@ -716,20 +710,60 @@ Partial Class DLC
         Me.DLC1.Tag = "01_Understone.zip"
         Me.DLC1.Text = "Download Understone Pack"
         '
-        'DLCdeleteButton
+        'LogInLabel4
         '
-        Me.DLCdeleteButton.BackColor = System.Drawing.Color.Transparent
-        Me.DLCdeleteButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DLCdeleteButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.DLCdeleteButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DLCdeleteButton.HoverColour = System.Drawing.Color.Red
-        Me.DLCdeleteButton.Location = New System.Drawing.Point(409, -4)
-        Me.DLCdeleteButton.Name = "DLCdeleteButton"
-        Me.DLCdeleteButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.DLCdeleteButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DLCdeleteButton.Size = New System.Drawing.Size(151, 30)
-        Me.DLCdeleteButton.TabIndex = 6
-        Me.DLCdeleteButton.Text = "Delete Download Content"
+        Me.LogInLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LogInLabel4.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogInLabel4.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(16, Byte), Integer))
+        Me.LogInLabel4.Location = New System.Drawing.Point(17, 16)
+        Me.LogInLabel4.Name = "LogInLabel4"
+        Me.LogInLabel4.Size = New System.Drawing.Size(862, 33)
+        Me.LogInLabel4.TabIndex = 0
+        Me.LogInLabel4.Text = "Licence Setup - XUID Grabber"
+        Me.LogInLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LogInButton1
+        '
+        Me.LogInButton1.BackColor = System.Drawing.Color.Transparent
+        Me.LogInButton1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInButton1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LogInButton1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LogInButton1.Location = New System.Drawing.Point(884, 3)
+        Me.LogInButton1.Name = "LogInButton1"
+        Me.LogInButton1.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInButton1.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton1.Size = New System.Drawing.Size(33, 30)
+        Me.LogInButton1.TabIndex = 5
+        Me.LogInButton1.Text = "×"
+        '
+        'LogInButton3
+        '
+        Me.LogInButton3.BackColor = System.Drawing.Color.Transparent
+        Me.LogInButton3.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInButton3.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LogInButton3.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton3.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LogInButton3.Location = New System.Drawing.Point(389, 388)
+        Me.LogInButton3.Name = "LogInButton3"
+        Me.LogInButton3.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInButton3.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton3.Size = New System.Drawing.Size(140, 30)
+        Me.LogInButton3.TabIndex = 3
+        Me.LogInButton3.Text = "Done"
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(145, 108)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
+        Me.WebBrowser1.ScrollBarsEnabled = False
+        Me.WebBrowser1.Size = New System.Drawing.Size(664, 273)
+        Me.WebBrowser1.TabIndex = 1
+        Me.WebBrowser1.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
         'DLC
         '
@@ -746,10 +780,10 @@ Partial Class DLC
         Me.LogInThemeContainer1.ResumeLayout(False)
         Me.UsernameSetup.ResumeLayout(False)
         Me.UsernameSetup.PerformLayout()
-        Me.Step5Panel.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LicencePanel.ResumeLayout(False)
         Me.LicencePanel.PerformLayout()
+        Me.Step5Panel.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Step4.ResumeLayout(False)
         Me.Step3.ResumeLayout(False)
         Me.Step3.PerformLayout()
@@ -774,14 +808,7 @@ Partial Class DLC
     Friend WithEvents DownloadedFiles As WebBrowser
     Friend WithEvents LogInLabel1 As LogInLabel
     Friend WithEvents LogInButton1 As LogInButton
-    Friend WithEvents LicencePanel As Panel
-    Friend WithEvents DoneButton As LogInButton
-    Friend WithEvents LogInLabel3 As LogInLabel
-    Friend WithEvents XuidGrabber As WebBrowser
-    Friend WithEvents LogInLabel2 As LogInLabel
     Friend WithEvents LicenceSetupButton As LogInButton
-    Friend WithEvents RetryButton As LogInButton
-    Friend WithEvents xuidPanelClose As LogInButton
     Friend WithEvents RenameLicenceButton As LogInButton
     Friend WithEvents Step5Panel As Panel
     Friend WithEvents LogInButton2 As LogInButton
@@ -807,4 +834,13 @@ Partial Class DLC
     Friend WithEvents DLCgoBack As LogInButton
     Friend WithEvents DownloadedFilesgoBack As LogInButton
     Friend WithEvents DLCdeleteButton As LogInButton
+    Friend WithEvents LicencePanel As Panel
+    Friend WithEvents xuidPanelClose As LogInButton
+    Friend WithEvents RetryButton As LogInButton
+    Friend WithEvents DoneButton As LogInButton
+    Friend WithEvents LogInLabel3 As LogInLabel
+    Friend WithEvents XuidGrabber As WebBrowser
+    Friend WithEvents LogInLabel2 As LogInLabel
+    Friend WithEvents LogInButton3 As LogInButton
+    Friend WithEvents WebBrowser1 As WebBrowser
 End Class

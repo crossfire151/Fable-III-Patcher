@@ -1,4 +1,5 @@
-﻿Imports System.Net
+﻿Imports System.ComponentModel
+Imports System.Net
 
 Public Class Downloader
     Public WithEvents download As WebClient
@@ -33,7 +34,9 @@ Public Class Downloader
         If DownloadProgress.Text = DownloadProgress.Maximum Then
             DownloadProgress.Visible = False
             StatusText.Text = "Status: File:- " & RequestedFile.Text & ", Download Complete!"
-            ExitButton.Visible = True
+            'ExitButton.Visible = True
+            DownloadProgress.Value = 0
+            prepexit.start()
         End If
     End Sub
 
@@ -57,5 +60,24 @@ Public Class Downloader
     Private Sub DownloadGoStart_Tick(sender As Object, e As EventArgs) Handles DownloadGoStart.Tick
         DownloadGoStart.Stop()
         FileDownload()
+    End Sub
+
+    Private Sub Prepexit_Tick(sender As Object, e As EventArgs) Handles Prepexit.Tick
+        ProgressBar1.Value -= 1
+        If ProgressBar1.Value = ProgressBar1.Minimum Then
+            Close()
+        End If
+    End Sub
+
+    Private Sub Downloader_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        If S1.LogInProgressBar1.Value = S1.LogInProgressBar1.Maximum Then
+            S1.Timer2.Start()
+        Else
+            If S1.ProgressBar1.Value = 6 Then
+                S1.Timer2.Start()
+            Else
+                S1.Timer1.Start()
+            End If
+        End If
     End Sub
 End Class

@@ -35,12 +35,9 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 2.0.0.9
+# Version 2.0.0.6
 
-- Added ability to maximize the DLC Installation window; as reported by some users the screen appears off and doesn't appear 100% visible, this should resolve this issue.
-- Added the option to navigate backwards in the DLC Drag file feature if the user accidentally navigates into another folder.
-- Moved the DLC Delete option to the main screen of the DLC Installation window.
-- The DLC Deletion option now clears the \Downloads folder within the Patcher to correct any mistakes made.
+Added DLC Skip button to primary installer.
 
 # Issues
 
@@ -54,6 +51,4 @@ Both 32bit and 64bit OS are supported.
 !! WINDOWS ONLY !!
 
 # Discord Support Server
-Sorry due to server inactivity and the project appear's to be dead due to lack of publicity; The Discord as been temporarily disbanded.
-
-:- [https://discord.gg/cRDxnH6gFu](https://discord.gg/cRDxnH6gFu) | Invites Paused until further notice.
+[https://discord.gg/nQRsMxZ3Ha](https://discord.gg/nQRsMxZ3Ha)

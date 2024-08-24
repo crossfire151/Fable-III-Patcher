@@ -75,6 +75,21 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EO.Base">
+      <HintPath>..\..\.resources\.DLL files\EO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Web">
+      <HintPath>..\..\.resources\.DLL files\EO.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser">
+      <HintPath>..\..\.resources\.DLL files\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser.Wpf">
+      <HintPath>..\..\.resources\.DLL files\EO.WebBrowser.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebEngine">
+      <HintPath>..\..\.resources\.DLL files\EO.WebEngine.dll</HintPath>
+    </Reference>
     <Reference Include="MetroSet UI, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>E:\Documents\Visual Studio\Projects\Fable III Patcher\bin\Debug\MetroSet UI.dll</HintPath>
     </Reference>
@@ -175,6 +190,24 @@
     <Compile Include="Startup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="S1.Designer.vb">
+      <DependentUpon>S1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="S1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Step2.Designer.vb">
+      <DependentUpon>Step2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Step2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Step3.Designer.vb">
+      <DependentUpon>Step3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Step3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="theme.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -212,6 +245,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Startup.resx">
       <DependentUpon>Startup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S1.resx">
+      <DependentUpon>S1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Step2.resx">
+      <DependentUpon>Step2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Step3.resx">
+      <DependentUpon>Step3.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

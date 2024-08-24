@@ -90,8 +90,12 @@
     End Sub
 
     Private Sub MetroSetButton3_Click(sender As Object, e As EventArgs) Handles MetroSetButton3.Click
-        System.Diagnostics.Process.Start("appwiz.cpl") '
         GFWL_Uninstall_Helper.Show()
+        If My.Computer.Info.OSFullName.Contains("Windows 11") Then
+            System.Diagnostics.Process.Start("ms-settings:appsfeatures")
+        Else
+            System.Diagnostics.Process.Start("appwiz.cpl") '
+        End If
     End Sub
 
     Private Sub MetroSetButton4_Click(sender As Object, e As EventArgs) Handles MetroSetButton4.Click

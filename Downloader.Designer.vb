@@ -24,15 +24,21 @@ Partial Class Downloader
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Downloader))
+        Me.DownloadGoStart = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.ExitButton = New Fable_III_Patcher.LogInButton()
         Me.RequestedFile = New System.Windows.Forms.Label()
         Me.Percentage = New Fable_III_Patcher.LogInLabel()
         Me.DownloadProgress = New Fable_III_Patcher.LogInProgressBar()
         Me.StatusText = New Fable_III_Patcher.LogInLabel()
-        Me.DownloadGoStart = New System.Windows.Forms.Timer(Me.components)
+        Me.Prepexit = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'DownloadGoStart
+        '
+        Me.DownloadGoStart.Interval = 5000
         '
         'LogInThemeContainer1
         '
@@ -43,6 +49,7 @@ Partial Class Downloader
         Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.LogInThemeContainer1.Controls.Add(Me.ProgressBar1)
         Me.LogInThemeContainer1.Controls.Add(Me.ExitButton)
         Me.LogInThemeContainer1.Controls.Add(Me.RequestedFile)
         Me.LogInThemeContainer1.Controls.Add(Me.Percentage)
@@ -58,6 +65,16 @@ Partial Class Downloader
         Me.LogInThemeContainer1.Size = New System.Drawing.Size(591, 227)
         Me.LogInThemeContainer1.TabIndex = 0
         Me.LogInThemeContainer1.Text = "DLC Downloader"
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(464, 192)
+        Me.ProgressBar1.Maximum = 5
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
+        Me.ProgressBar1.TabIndex = 1
+        Me.ProgressBar1.Value = 5
+        Me.ProgressBar1.Visible = False
         '
         'ExitButton
         '
@@ -125,9 +142,9 @@ Partial Class Downloader
         Me.StatusText.TabIndex = 0
         Me.StatusText.Text = "Status:"
         '
-        'DownloadGoStart
+        'Prepexit
         '
-        Me.DownloadGoStart.Interval = 5000
+        Me.Prepexit.Interval = 1000
         '
         'Downloader
         '
@@ -155,4 +172,6 @@ Partial Class Downloader
     Friend WithEvents RequestedFile As Label
     Friend WithEvents ExitButton As LogInButton
     Friend WithEvents DownloadGoStart As Timer
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Prepexit As Timer
 End Class

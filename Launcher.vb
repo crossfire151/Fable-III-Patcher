@@ -12,38 +12,32 @@ Public Class Launcher
         End If
     End Sub
 
-    Private Sub ResetRestartInstallationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetRestartInstallationToolStripMenuItem.Click
-        My.Settings.PatchComplete = "0"
-        My.Settings.Save()
-        SmartButton.Text = "Begin Installation"
-    End Sub
-
     Private Sub Launcher_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If My.Settings.PatchComplete = "0" Then
             SmartButton.Text = "Begin Installation"
         ElseIf My.Settings.PatchComplete = "1" Then
             SmartButton.Text = "Play"
         End If
-        WebInfo.Navigate("https://cloud.crossfire151.xyz/Fable-III/?version=" & Application.ProductVersion)
+        WebInfo.Navigate("https://cloud.crossfire151.xyz/Fable-III/Fable-III.php?version=" & Application.ProductVersion)
         StartupTimer.Start()
-    End Sub
-
-    Private Sub SmartButton_TextChanged(sender As Object, e As EventArgs) Handles SmartButton.TextChanged
-        If SmartButton.Text = "Play" Or SmartButton.Text = "Launching" Then
-            SmartButton.ContextMenuStrip = ContextMenuStrip1
-            ContextMenuStrip1.Enabled = True
-            MTUwarn.Visible = True
-        Else
-            If MTUwarn.Visible = True Then
-                MTUwarn.Visible = False
-            End If
-        End If
     End Sub
 
     Public Sub RecallDLC()
         DLC.Close()
-        thread.sleep(200)
+        Thread.Sleep(200)
         DLC.Show()
+    End Sub
+
+    Private Sub SmartButton_TextChanged(sender As Object, e As EventArgs)
+        'If SmartButton.Text = "Play" Or SmartButton.Text = "Launching" Then
+        'SmartButton.ContextMenuStrip = ContextMenuStrip1
+        'ContextMenuStrip1.Enabled = True
+        'MTUwarn.Visible = True
+        ' Else
+        'If MTUwarn.Visible = True Then
+        'MTUwarn.Visible = False
+        'End If
+        'End If
     End Sub
 
     Private Sub SmartLoader_Tick(sender As Object, e As EventArgs) Handles SmartLoader.Tick
@@ -126,13 +120,17 @@ Public Class Launcher
 
     Private Sub StartupTimer_Tick(sender As Object, e As EventArgs) Handles StartupTimer.Tick
         StartupTimer.Stop()
-        PictureBox2.Visible = False
+        'PictureBox2.Visible = False
         SmartButton.Visible = True
         LoadingLabel.Visible = False
+        Timer1.Start()
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-        System.Diagnostics.Process.Start("https://discord.gg/nQRsMxZ3Ha")
+        My.Settings.PatchComplete = "0"
+        My.Settings.Save()
+        SmartButton.Text = "Begin Installation"
+        Form1.Show()
     End Sub
 
     Private Sub WebInfo_DocumentTitleChanged(sender As Object, e As EventArgs) Handles WebInfo.DocumentTitleChanged
@@ -140,5 +138,31 @@ Public Class Launcher
             WebInfo.Refresh()
             System.Diagnostics.Process.Start("https://github.com/crossfire151/Fable-III-Patcher/releases/tag/release")
         End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Timer1.Stop()
+        WebInfo.Navigate("https://cloud.crossfire151.xyz/Fable-III/Fable-III.php?version=" & Application.ProductVersion)
+        If WebInfo.DocumentTitle.Contains("DiscordHelp:Enabled") Then
+            Discord.Visible = True
+        End If
+        If WebInfo.DocumentTitle.Contains("DiscordHelp:Disabled") Then
+            Discord.Visible = False
+        End If
+        If WebInfo.DocumentTitle.Contains("WebSupport:Enabled") Then
+            SupportButton.Visible = True
+        End If
+        If WebInfo.DocumentTitle.Contains("WebSupport:Disabled") Then
+            SupportButton.Visible = False
+        End If
+        Timer1.Start()
+    End Sub
+
+    Private Sub Discord_Click(sender As Object, e As EventArgs) Handles Discord.Click
+        System.Diagnostics.Process.Start("https://cloud.crossfire151.xyz/Fable-III/Support?get=Discord")
+    End Sub
+
+    Private Sub SupportButton_Click(sender As Object, e As EventArgs) Handles SupportButton.Click
+        System.Diagnostics.Process.Start("https://cloud.crossfire151.xyz/Fable-III/Support?get=WebSupport")
     End Sub
 End Class

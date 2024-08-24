@@ -204,6 +204,7 @@ Partial Class GFWL_Uninstall_Helper
         Me.Name = "GFWL_Uninstall_Helper"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GFWL Uninstall - Helper"
+        Me.TopMost = True
         Me.MetroSetPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

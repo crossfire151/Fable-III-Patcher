@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Fable III Patcher")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("HP")>
+<Assembly: AssemblyDescription("Enabling play in the now....")>
+<Assembly: AssemblyCompany("Crossfire151")>
 <Assembly: AssemblyProduct("Fable III Patcher")>
-<Assembly: AssemblyCopyright("Copyright © HP 2022")>
+<Assembly: AssemblyCopyright("Copyright © Crossfire151 2024")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -32,4 +32,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")>
 
 <Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("2.0.0.8")>
+<Assembly: AssemblyFileVersion("3.0.0.0")>

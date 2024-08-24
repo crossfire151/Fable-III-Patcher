@@ -246,8 +246,10 @@ Public Class DLC
         UsernameSetup.Size = New Point(880, UserProgressBar.Value)
         If UserProgressBar.Value = UserProgressBar.Minimum Then
             InitialSetupTimerCLOSE.Stop()
-            Step1.Enabled = True
+            'Step1.Enabled = True
             ChangeUsernameButton.Visible = True
+            S1.Show()
+            S1.BringToFront()
         End If
     End Sub
 
@@ -348,6 +350,22 @@ Public Class DLC
 
     Private Sub DLCdeleteButton_Click(sender As Object, e As EventArgs) Handles DLCdeleteButton.Click
         DLCdeleteConfirmation.Show()
+    End Sub
+
+    Private Sub Fable3DLCLocation_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles Fable3DLCLocation.DocumentCompleted
+
+    End Sub
+
+    Private Sub DownloadedFiles_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles DownloadedFiles.DocumentCompleted
+
+    End Sub
+
+    Private Sub LogInLabel1_Click(sender As Object, e As EventArgs) Handles LogInLabel1.Click
+
+    End Sub
+
+    Private Sub Step5Progress_Click(sender As Object, e As EventArgs) Handles Step5Progress.Click
+
     End Sub
 
     'C:\Users\" & USERNAME & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\
