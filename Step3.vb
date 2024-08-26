@@ -14,18 +14,18 @@ Public Class Step3
         ElseIf DoneButton.Text = "Confirm" Then
             Dim FileLoc As String = Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\0009XXXXXXXXXXX.LIC"
             Dim ToRename As String = Clipboard.GetText & ".LIC"
-            If My.Computer.FileSystem.FileExists(FileLoc) Then
-                My.Computer.FileSystem.RenameFile(FileLoc, ToRename)
+            ' If My.Computer.FileSystem.FileExists(FileLoc) Then
+            My.Computer.FileSystem.RenameFile(FileLoc, ToRename)
                 MsgBox("Licence file successfully updated! - Final stage, assign licence files. Click OK to start!", MsgBoxStyle.Information)
                 ClosePane1.Start()
-            Else
-                MsgBox("Unable to locate downloaded licence file inside folder: \Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB. Application will now Delete this folder, if this happens on a regular occurrance Please re-download it. You'll need to delete: D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip then click restart.", MsgBoxStyle.Critical, "Missing File")
-                My.Computer.FileSystem.DeleteDirectory(Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\", DeleteDirectoryOption.DeleteAllContents)
-                MsgBox("Restarting Installation with Fresh files, press OK to continue.", MsgBoxStyle.Information, "Important information")
-                S1.Show()
-                Close()
+                ' Else
+                '    MsgBox("Unable to locate downloaded licence file inside folder: \Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB. Application will now Delete this folder, if this happens on a regular occurrance Please re-download it. You'll need to delete: D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip then click restart.", MsgBoxStyle.Critical, "Missing File")
+                '    My.Computer.FileSystem.DeleteDirectory(Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\", DeleteDirectoryOption.DeleteAllContents)
+                '    MsgBox("Restarting Installation with Fresh files, press OK to continue.", MsgBoxStyle.Information, "Important information")
+                '    S1.Show()
+                '    Close()
+                'End If
             End If
-        End If
     End Sub
 
     Private Sub LicenceCopyFromLocation_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles LicenceCopyFromLocation.DocumentCompleted
