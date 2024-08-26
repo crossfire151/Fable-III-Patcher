@@ -22,6 +22,7 @@ Partial Class Step2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Step2))
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
         Me.DLCgoBack = New Fable_III_Patcher.LogInButton()
@@ -31,6 +32,7 @@ Partial Class Step2
         Me.DownloadedFiles = New System.Windows.Forms.WebBrowser()
         Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
         Me.Step5Progress = New System.Windows.Forms.ProgressBar()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -146,6 +148,9 @@ Partial Class Step2
         Me.Step5Progress.TabIndex = 14
         Me.Step5Progress.Visible = False
         '
+        'Timer1
+        '
+        '
         'Step2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -171,4 +176,5 @@ Partial Class Step2
     Friend WithEvents DownloadedFiles As WebBrowser
     Friend WithEvents LogInLabel1 As LogInLabel
     Friend WithEvents Step5Progress As ProgressBar
+    Friend WithEvents Timer1 As Timer
 End Class
