@@ -184,11 +184,11 @@ Partial Class DLC
         Me.LogInLabel6.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogInLabel6.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel6.Location = New System.Drawing.Point(318, 5)
+        Me.LogInLabel6.Location = New System.Drawing.Point(197, 16)
         Me.LogInLabel6.Name = "LogInLabel6"
-        Me.LogInLabel6.Size = New System.Drawing.Size(245, 27)
+        Me.LogInLabel6.Size = New System.Drawing.Size(492, 27)
         Me.LogInLabel6.TabIndex = 0
-        Me.LogInLabel6.Text = "Select your Username"
+        Me.LogInLabel6.Text = "Select your Windows user Account Username"
         '
         'UserProgressBar
         '

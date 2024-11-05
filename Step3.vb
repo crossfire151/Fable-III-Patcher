@@ -1,6 +1,6 @@
 ﻿Imports Microsoft.VisualBasic.FileIO
 Imports EO.WebBrowser
-
+Imports System.Threading
 
 Public Class Step3
     Private Sub DoneButton_Click(sender As Object, e As EventArgs) Handles DoneButton.Click
@@ -54,6 +54,8 @@ Public Class Step3
             End If
             My.Settings.PatchComplete = "1"
             My.Settings.Save()
+            My.Settings.CurrentStep = ""
+            My.Settings.Save()
             Close()
         End If
     End Sub
@@ -64,8 +66,12 @@ Public Class Step3
         If ProgressBar1.Value = ProgressBar1.Maximum Then
             OpenPane2.Stop()
             LicenceCopyFromLocation.Navigate(Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
+            If Not My.Computer.FileSystem.DirectoryExists("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\") Then
+                My.Computer.FileSystem.CreateDirectory("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
+            End If
+            Thread.Sleep(100) 'Allows the application to create the above folder for FABLE to work.
             LicenceCopyToLocation.Navigate("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
-        End If
+            End If
     End Sub
 
     Private Sub OpenPane1_Tick(sender As Object, e As EventArgs) Handles OpenPane1.Tick

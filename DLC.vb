@@ -248,12 +248,13 @@ Public Class DLC
             InitialSetupTimerCLOSE.Stop()
             'Step1.Enabled = True
             ChangeUsernameButton.Visible = True
-            S1.Show()
-            S1.BringToFront()
+            StageChecker.show()
         End If
     End Sub
 
     Private Sub ChangeUsernameButton_Click(sender As Object, e As EventArgs) Handles ChangeUsernameButton.Click
+        S1.Close()
+        Downloader.Close()
         My.Settings.username = ""
         My.Settings.Save()
         ComboBox1.SelectedIndex = 0

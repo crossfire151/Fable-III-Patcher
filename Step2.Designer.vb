@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Step2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,11 @@ Partial Class Step2
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Step2))
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
         Me.DLCgoBack = New Fable_III_Patcher.LogInButton()
         Me.DownloadedFilesgoBack = New Fable_III_Patcher.LogInButton()
@@ -32,9 +33,11 @@ Partial Class Step2
         Me.DownloadedFiles = New System.Windows.Forms.WebBrowser()
         Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
         Me.Step5Progress = New System.Windows.Forms.ProgressBar()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Timer1
+        '
         '
         'LogInThemeContainer1
         '
@@ -147,9 +150,6 @@ Partial Class Step2
         Me.Step5Progress.Size = New System.Drawing.Size(100, 23)
         Me.Step5Progress.TabIndex = 14
         Me.Step5Progress.Visible = False
-        '
-        'Timer1
-        '
         '
         'Step2
         '

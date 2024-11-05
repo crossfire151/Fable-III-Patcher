@@ -6,7 +6,9 @@
     End Sub
 
     Private Sub LogInButton1_Click(sender As Object, e As EventArgs) Handles LogInButton1.Click
-        step3.show()
+        Step3.Show()
+        My.Settings.CurrentStep = "Step3"
+        My.Settings.Save()
         Close()
     End Sub
 

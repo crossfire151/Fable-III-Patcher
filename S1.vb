@@ -94,8 +94,10 @@ Public Class S1
                 DLC.SaveLocationButton.Tag = DLC.FolderBrowserDialog1.SelectedPath
                 DLC.SaveLocationButton.Enabled = False
                 My.Computer.FileSystem.CreateDirectory(DLC.SaveLocationButton.Tag & "\DLC")
-                DLC.Step3.Enabled = True
-                Step2.Show()
+                    DLC.Step3.Enabled = True
+                    My.Settings.CurrentStep = "Step2"
+                    My.Settings.Save()
+                    Step2.Show()
                 Close()
             End If
         End If
