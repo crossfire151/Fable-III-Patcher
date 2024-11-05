@@ -1,10 +1,10 @@
-# August 2024 Update
-Everything is now full automated.
+# November 2024 Update
 
-Added Web Support & Discord Support | These are remotely managed so if you don't see them it means they are under developement.
+1. Fixed a bug effecting the DLC installation, installation now works as expected.
+2. Added in a Installation tracker, if for any reason you need to exit the application after a mistake in the installation to correct any files during the installation. If you return to restart the app the installer will magically return to the previous step.
+3. Minor improvements to overall design.
 
-Major bug fixes causing invalid error's.
-Installer has been improved, now fully automated to make the install process more user friendly and less confusing!
+4. Video Guide of installation process now available on YouTube! - [https://youtu.be/Cu3hsWSDrPc](https://youtu.be/Cu3hsWSDrPc)
 
 # Fable-III-Patcher
 An easier much more simple Patcher and troubleshooter included.
