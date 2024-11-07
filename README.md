@@ -1,11 +1,3 @@
-# November 2024 Update
-
-1. Fixed a bug effecting the DLC installation, installation now works as expected.
-2. Added in a Installation tracker, if for any reason you need to exit the application after a mistake in the installation to correct any files during the installation. If you return to restart the app the installer will magically return to the previous step.
-3. Minor improvements to overall design.
-
-4. Video Guide of installation process now available on YouTube! - [https://youtu.be/Cu3hsWSDrPc](https://youtu.be/Cu3hsWSDrPc)
-
 # Fable-III-Patcher
 An easier much more simple Patcher and troubleshooter included.
 
