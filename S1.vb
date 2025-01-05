@@ -91,8 +91,10 @@ Public Class S1
             MsgBox("Please locate Fable III Installation directory to continue...", MsgBoxStyle.Information)
             DLC.FolderBrowserDialog1.ShowDialog()
             If Not DLC.FolderBrowserDialog1.SelectedPath = "" Then
-                DLC.SaveLocationButton.Tag = DLC.FolderBrowserDialog1.SelectedPath
-                DLC.SaveLocationButton.Enabled = False
+                    DLC.SaveLocationButton.Tag = DLC.FolderBrowserDialog1.SelectedPath
+                    My.Settings.FableLocation = DLC.FolderBrowserDialog1.SelectedPath
+                    My.Settings.Save()
+                    DLC.SaveLocationButton.Enabled = False
                 My.Computer.FileSystem.CreateDirectory(DLC.SaveLocationButton.Tag & "\DLC")
                     DLC.Step3.Enabled = True
                     My.Settings.CurrentStep = "Step2"

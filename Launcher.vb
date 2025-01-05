@@ -128,6 +128,8 @@ Public Class Launcher
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         My.Settings.PatchComplete = "0"
+        My.Settings.CurrentStep = ""
+        My.Settings.FableLocation = ""
         My.Settings.Save()
         SmartButton.Text = "Begin Installation"
         Form1.Show()

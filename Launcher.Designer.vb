@@ -24,6 +24,10 @@ Partial Class Launcher
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Launcher))
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.SmartLoader = New System.Windows.Forms.Timer(Me.components)
+        Me.GetReadyClose = New System.Windows.Forms.Timer(Me.components)
+        Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
         Me.LoadingLabel = New Fable_III_Patcher.LogInLabel()
         Me.SmartButton = New Fable_III_Patcher.LogInButtonWithProgress()
@@ -39,10 +43,6 @@ Partial Class Launcher
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.SmartLoader = New System.Windows.Forms.Timer(Me.components)
-        Me.GetReadyClose = New System.Windows.Forms.Timer(Me.components)
-        Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.LogInTabControl1.SuspendLayout()
@@ -50,6 +50,21 @@ Partial Class Launcher
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 5000
+        '
+        'SmartLoader
+        '
+        '
+        'GetReadyClose
+        '
+        Me.GetReadyClose.Interval = 8000
+        '
+        'StartupTimer
+        '
+        Me.StartupTimer.Interval = 6000
         '
         'LogInThemeContainer1
         '
@@ -197,6 +212,7 @@ Partial Class Launcher
         'WebInfo
         '
         Me.WebInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebInfo.IsWebBrowserContextMenuEnabled = False
         Me.WebInfo.Location = New System.Drawing.Point(3, 3)
         Me.WebInfo.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebInfo.Name = "WebInfo"
@@ -239,21 +255,6 @@ Partial Class Launcher
         Me.PictureBox1.Size = New System.Drawing.Size(625, 414)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 5000
-        '
-        'SmartLoader
-        '
-        '
-        'GetReadyClose
-        '
-        Me.GetReadyClose.Interval = 8000
-        '
-        'StartupTimer
-        '
-        Me.StartupTimer.Interval = 6000
         '
         'Launcher
         '

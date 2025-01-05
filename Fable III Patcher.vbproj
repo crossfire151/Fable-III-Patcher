@@ -98,6 +98,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -119,12 +120,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompatibilityHelper.Designer.vb">
-      <DependentUpon>CompatibilityHelper.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CompatibilityHelper.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Dependency Check.Designer.vb">
       <DependentUpon>Dependency Check.vb</DependentUpon>
     </Compile>
@@ -219,9 +214,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CompatibilityHelper.resx">
-      <DependentUpon>CompatibilityHelper.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dependency Check.resx">
       <DependentUpon>Dependency Check.vb</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +281,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fable3 Logo.ico" />
+    <None Include="Resources\voice-complete.wav" />
     <None Include="Resources\NEW-Software-Logo.png" />
     <None Include="Resources\Discord_icon.png" />
     <None Include="Resources\Splash.png" />

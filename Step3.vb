@@ -7,15 +7,11 @@ Public Class Step3
         If DoneButton.Text = "Done" Then
             If Clipboard.GetText = "" Then
                 MsgBox("It appears you have not copied anything. This information is required in order to enable usage of the DLC.", MsgBoxStyle.Critical, "Missing information")
-            Else
-                MsgBox("Great, here's what we found in your clipboard: " & Clipboard.GetText & ". Please click Confirm if this is correct, if not; please try again.", MsgBoxStyle.Information, "We found this")
-                DoneButton.Text = "Confirm"
-            End If
-        ElseIf DoneButton.Text = "Confirm" Then
-            Dim FileLoc As String = Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\0009XXXXXXXXXXX.LIC"
-            Dim ToRename As String = Clipboard.GetText & ".LIC"
-            ' If My.Computer.FileSystem.FileExists(FileLoc) Then
-            My.Computer.FileSystem.RenameFile(FileLoc, ToRename)
+            ElseIf Not Clipboard.GetText = "" Then
+                Dim FileLoc As String = Application.StartupPath & "\Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\0009XXXXXXXXXXX.LIC"
+                Dim ToRename As String = Clipboard.GetText & ".LIC"
+                ' If My.Computer.FileSystem.FileExists(FileLoc) Then
+                My.Computer.FileSystem.RenameFile(FileLoc, ToRename)
                 MsgBox("Licence file successfully updated! - Final stage, assign licence files. Click OK to start!", MsgBoxStyle.Information)
                 ClosePane1.Start()
                 ' Else
@@ -26,6 +22,7 @@ Public Class Step3
                 '    Close()
                 'End If
             End If
+        End If
     End Sub
 
     Private Sub LicenceCopyFromLocation_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles LicenceCopyFromLocation.DocumentCompleted

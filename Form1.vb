@@ -120,7 +120,8 @@
             Installer.Start()
         ElseIf MetroSetProgressBar1.Value = 100 Then
             Installer.Stop()
-            MetroSetButton11.Enabled = True
+            'MetroSetButton11.Enabled = True
+            MetroSetButton2.Enabled = True
         End If
     End Sub
 
@@ -134,9 +135,9 @@
         End If
     End Sub
 
-    Private Sub MetroSetButton11_Click(sender As Object, e As EventArgs) Handles MetroSetButton11.Click
+    Private Sub MetroSetButton11_Click(sender As Object, e As EventArgs)
         System.Diagnostics.Process.Start(MetroSetTextBox1.Text)
-        CompatibilityHelper.Show()
+        'CompatibilityHelper.Show()
     End Sub
 
     Private Sub MetroSetButton2_Click_1(sender As Object, e As EventArgs) Handles MetroSetButton2.Click
@@ -181,7 +182,6 @@
             'BUTTON 8 -> CLOSE BUTTON -> NO TRANSLATION REQURED
             MetroSetButton9.Text = "Moje konto LIVE MA włączoną dwustopniową weryfikację (2FA)"
             MetroSetButton10.Text = "Moje konto LIVE NIE ma włączonej dwustopniowej weryfikacji (2FA)"
-            MetroSetButton11.Text = "Sprawmy, by Fable III działało na Windows 10 przez narzędzia kompatybilności!"
             'MetroSetButton12  -> MINIMIZE (IGNORE THIS)
             'MetroSetButton13  -> CLOSE (IGNORE THIS)
             MetroSetButton14.Text = "Powrót"
