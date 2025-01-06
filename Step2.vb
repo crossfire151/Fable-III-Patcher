@@ -138,7 +138,7 @@ Public Class Step2
                 My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\02_TraitorsKeep", My.Settings.FableLocation & "\DLC\")
             ElseIf LogInRadialProgressBar1.Value = 8 Then
                 ExtractStatus.Text = "Copying Data to DLC Directory - 03_InquisitorsPack.zip..."
-                My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\03_InquisitorsPack", My.Settings.FableLocation & "\DLC\")
+                My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\03_InquisitorsPack", My.Settings.FableLocation & "\DLC\03_InquisitorsPack")
             ElseIf LogInRadialProgressBar1.Value = 20 Then
                 ExtractStatus.Text = "Cleaning Up..."
                 Extraction.Interval = 10
