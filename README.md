@@ -35,9 +35,9 @@ The DLC Installer will do all the painful work for you.
 Before installing the DLC make sure you create a backup of your saves, we don't want any corruptions!
 
 
-# Version 2.0.0.6
+# Patch Notes
 
-Added DLC Skip button to primary installer.
+[https://cloud.crossfire151.xyz/Fable-III/Support/help/viewforum.php?f=7&i=1](https://cloud.crossfire151.xyz/Fable-III/Support/help/viewforum.php?f=7&i=1)
 
 # Issues
 
