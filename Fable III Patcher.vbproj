@@ -144,11 +144,11 @@
     <Compile Include="Downloader.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="SetupInstaller.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="SetupInstaller.Designer.vb">
+      <DependentUpon>SetupInstaller.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GFWL Uninstall Helper.Designer.vb">
@@ -226,8 +226,8 @@
     <EmbeddedResource Include="Downloader.resx">
       <DependentUpon>Downloader.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="SetupInstaller.resx">
+      <DependentUpon>SetupInstaller.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GFWL Uninstall Helper.resx">
       <DependentUpon>GFWL Uninstall Helper.vb</DependentUpon>

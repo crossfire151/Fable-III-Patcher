@@ -43,8 +43,8 @@
     Dim Language = My.Settings.Lang
 
     Private Sub MetroSetButton1_Click(sender As Object, e As EventArgs) Handles MetroSetButton1.Click
-        Form1.MetroSetButton3.Enabled = False
-        Form1.MetroSetButton4.Enabled = True
+        SetupInstaller.MetroSetButton3.Enabled = False
+        SetupInstaller.MetroSetButton4.Enabled = True
         Close()
     End Sub
 

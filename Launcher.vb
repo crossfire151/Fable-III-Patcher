@@ -2,7 +2,7 @@
 Public Class Launcher
     Private Sub SmartButton_Click(sender As Object, e As EventArgs) Handles SmartButton.Click
         If SmartButton.Text = "Begin Installation" Then
-            Form1.Show()
+            SetupInstaller.Show()
         ElseIf SmartButton.Text = "Play" Then
             System.Diagnostics.Process.Start("steam://rungameid/")
             TopMost = True
@@ -126,19 +126,15 @@ Public Class Launcher
         Timer1.Start()
     End Sub
 
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-        My.Settings.PatchComplete = "0"
-        My.Settings.CurrentStep = ""
-        My.Settings.FableLocation = ""
-        My.Settings.Save()
-        SmartButton.Text = "Begin Installation"
-        Form1.Show()
-    End Sub
-
     Private Sub WebInfo_DocumentTitleChanged(sender As Object, e As EventArgs) Handles WebInfo.DocumentTitleChanged
-        If WebInfo.Document.Title = "https://github.com/crossfire151/Fable-III-Patcher/releases/tag/release" Then
+        If WebInfo.Document.Title.Contains("https://github.com/crossfire151/Fable-III-Patcher/releases/tag/release") Then
             WebInfo.Refresh()
             System.Diagnostics.Process.Start("https://github.com/crossfire151/Fable-III-Patcher/releases/tag/release")
+        End If
+        If WebInfo.DocumentTitle.Contains("HotFix::READY") Then
+            HotFixButton.Visible = True
+        ElseIf Not WebInfo.DocumentTitle.Contains("HotFix::READY") Then
+            HotFixButton.Visible = False
         End If
     End Sub
 
@@ -166,5 +162,32 @@ Public Class Launcher
 
     Private Sub SupportButton_Click(sender As Object, e As EventArgs) Handles SupportButton.Click
         System.Diagnostics.Process.Start("https://cloud.crossfire151.xyz/Fable-III/Support?get=WebSupport")
+    End Sub
+
+    Private Sub ResetApplicationToDefaultsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetApplicationToDefaultsToolStripMenuItem.Click
+        My.Settings.PatchComplete = "0"
+        My.Settings.CurrentStep = ""
+        My.Settings.FableLocation = ""
+        My.Settings.Save()
+        SmartButton.Text = "Begin Installation"
+        SetupInstaller.Show()
+    End Sub
+
+    Private Sub ViewPatchNotesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewPatchNotesToolStripMenuItem.Click
+        System.Diagnostics.Process.Start("https://cloud.crossfire151.xyz/Fable-III/Support/help/viewforum.php?f=7&i=1")
+    End Sub
+
+    Private Sub LogInButton2_Click(sender As Object, e As EventArgs) Handles LogInButton2.Click
+        LogInGroupBox1.Visible = False
+    End Sub
+
+    Private Sub LogInButton1_Click(sender As Object, e As EventArgs) Handles LogInButton1.Click
+        LogInGroupBox1.Visible = False
+        DLC.Show()
+    End Sub
+
+    Private Sub HotFixButton_Click(sender As Object, e As EventArgs) Handles HotFixButton.Click
+        LogInGroupBox1.Visible = True
+        Beep()
     End Sub
 End Class

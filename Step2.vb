@@ -114,10 +114,12 @@ Public Class Step2
             ExtractStatus.Text = "Extracting - D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip..."
             If LogInRadialProgressBar1.Value = 10 Then
                 BackgroundWorker1.RunWorkerAsync()
+                Extraction.Interval = 10
                 'IronZipArchive.ExtractArchiveToDirectory("Downloads\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip", "Downloads")
             ElseIf LogInRadialProgressBar1.Value = 98 Then
                 Extraction.Stop()
             ElseIf LogInRadialProgressBar1.Value = LogInRadialProgressBar1.Maximum Then
+                Extraction.Interval = 100
                 Extraction.Stop()
                 TrackingProgressBar.Value = 5
                 LogInRadialProgressBar1.Value = 0
@@ -130,13 +132,13 @@ Public Class Step2
             End If
             If LogInRadialProgressBar1.Value = 2 Then
                 ExtractStatus.Text = "Copying Data to DLC Directory - 01_Understone.zip..."
-                My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\01_Understone", My.Settings.FableLocation & "\DLC\01_Understone")
+                My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\01_Understone", My.Settings.FableLocation & "\DLC\")
             ElseIf LogInRadialProgressBar1.Value = 5 Then
                 ExtractStatus.Text = "Copying Data to DLC Directory - 02_TraitorsKeep.zip..."
-                My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\02_TraitorsKeep", My.Settings.FableLocation & "\DLC\02_TraitorsKeep")
+                My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\02_TraitorsKeep", My.Settings.FableLocation & "\DLC\")
             ElseIf LogInRadialProgressBar1.Value = 8 Then
                 ExtractStatus.Text = "Copying Data to DLC Directory - 03_InquisitorsPack.zip..."
-                My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\03_InquisitorsPack", My.Settings.FableLocation & "\DLC\03_InquisitorsPack")
+                My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Downloads\03_InquisitorsPack", My.Settings.FableLocation & "\DLC\")
             ElseIf LogInRadialProgressBar1.Value = 20 Then
                 ExtractStatus.Text = "Cleaning Up..."
                 Extraction.Interval = 10
@@ -160,7 +162,7 @@ Public Class Step2
     End Sub
 
     Private Sub BackgroundWorker2_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker2.DoWork
-        ZipFile.ExtractToDirectory(Application.StartupPath & "\Downloads\03_InquisitorsPack.zip", Application.StartupPath & "\Downloads\03_InquisitorsPack")
+        ZipFile.ExtractToDirectory(Application.StartupPath & "\Downloads\03_InquisitorsPack.zip", Application.StartupPath & "\Downloads\")
     End Sub
 
     Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted

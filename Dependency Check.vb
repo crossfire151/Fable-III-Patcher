@@ -91,20 +91,20 @@ Public Class Dependency_Check
             Timer1.Interval = 1
         ElseIf ProgressBar1.Value = ProgressBar1.Maximum Then
             Timer1.Stop()
-            Form1.MetroSetButton1.Enabled = True
-            Form1.MetroSetButton15.Visible = True
-            Form1.DLCskip.Enabled = True
+            SetupInstaller.MetroSetButton1.Enabled = True
+            SetupInstaller.MetroSetButton15.Visible = True
+            SetupInstaller.DLCskip.Enabled = True
             Close()
         End If
     End Sub
 
     Private Sub Dependency_Check_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Form1.LinkLabel1.Enabled = False
+        SetupInstaller.LinkLabel1.Enabled = False
         Lang()
     End Sub
 
     Private Sub Dependency_Check_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Form1.LinkLabel1.Enabled = True
+        SetupInstaller.LinkLabel1.Enabled = True
     End Sub
 
     Public Sub Lang()

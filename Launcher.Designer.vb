@@ -33,22 +33,31 @@ Partial Class Launcher
         Me.SmartButton = New Fable_III_Patcher.LogInButtonWithProgress()
         Me.StatusLabel = New Fable_III_Patcher.LogInLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Discord = New System.Windows.Forms.ToolStripButton()
-        Me.SupportButton = New System.Windows.Forms.ToolStripButton()
         Me.LogInTabControl1 = New Fable_III_Patcher.LogInTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.WebInfo = New System.Windows.Forms.WebBrowser()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
+        Me.HotFixButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ResetApplicationToDefaultsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ViewPatchNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Discord = New System.Windows.Forms.ToolStripButton()
+        Me.SupportButton = New System.Windows.Forms.ToolStripButton()
+        Me.WebInfo = New System.Windows.Forms.WebBrowser()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LogInGroupBox1 = New Fable_III_Patcher.LogInGroupBox()
+        Me.LogInLabel2 = New Fable_III_Patcher.LogInLabel()
+        Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
+        Me.LogInButton2 = New Fable_III_Patcher.LogInButton()
         Me.LogInThemeContainer1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.LogInTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LogInGroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -75,6 +84,7 @@ Partial Class Launcher
         Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.LogInThemeContainer1.Controls.Add(Me.LogInGroupBox1)
         Me.LogInThemeContainer1.Controls.Add(Me.LoadingLabel)
         Me.LogInThemeContainer1.Controls.Add(Me.SmartButton)
         Me.LogInThemeContainer1.Controls.Add(Me.StatusLabel)
@@ -98,7 +108,7 @@ Partial Class Launcher
         Me.LoadingLabel.Font = New System.Drawing.Font("Arial Black", 13.0!, System.Drawing.FontStyle.Bold)
         Me.LoadingLabel.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LoadingLabel.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.LoadingLabel.Location = New System.Drawing.Point(343, 476)
+        Me.LoadingLabel.Location = New System.Drawing.Point(349, 476)
         Me.LoadingLabel.Name = "LoadingLabel"
         Me.LoadingLabel.Size = New System.Drawing.Size(257, 55)
         Me.LoadingLabel.TabIndex = 1
@@ -138,45 +148,17 @@ Partial Class Launcher
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.Discord, Me.SupportButton})
-        Me.ToolStrip1.Location = New System.Drawing.Point(4, 530)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HotFixButton, Me.ToolStripDropDownButton1, Me.ToolStripSeparator1, Me.Discord, Me.SupportButton})
+        Me.ToolStrip1.Location = New System.Drawing.Point(22, 53)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(171, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(71, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(162, 22)
-        Me.ToolStripButton1.Text = "Reset Application to defaults"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'Discord
-        '
-        Me.Discord.Image = Global.Fable_III_Patcher.My.Resources.Resources.Discord_icon
-        Me.Discord.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Discord.Name = "Discord"
-        Me.Discord.Size = New System.Drawing.Size(112, 22)
-        Me.Discord.Text = "Discord Support"
-        Me.Discord.Visible = False
-        '
-        'SupportButton
-        '
-        Me.SupportButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.SupportButton.Image = CType(resources.GetObject("SupportButton.Image"), System.Drawing.Image)
-        Me.SupportButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SupportButton.Name = "SupportButton"
-        Me.SupportButton.Size = New System.Drawing.Size(53, 22)
-        Me.SupportButton.Text = "Support"
-        Me.SupportButton.Visible = False
         '
         'LogInTabControl1
         '
@@ -209,18 +191,6 @@ Partial Class Launcher
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "About"
         '
-        'WebInfo
-        '
-        Me.WebInfo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebInfo.IsWebBrowserContextMenuEnabled = False
-        Me.WebInfo.Location = New System.Drawing.Point(3, 3)
-        Me.WebInfo.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebInfo.Name = "WebInfo"
-        Me.WebInfo.ScriptErrorsSuppressed = True
-        Me.WebInfo.ScrollBarsEnabled = False
-        Me.WebInfo.Size = New System.Drawing.Size(225, 366)
-        Me.WebInfo.TabIndex = 0
-        '
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
@@ -246,6 +216,77 @@ Partial Class Launcher
         Me.LogInLabel1.TabIndex = 0
         Me.LogInLabel1.Text = resources.GetString("LogInLabel1.Text")
         '
+        'HotFixButton
+        '
+        Me.HotFixButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.HotFixButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.HotFixButton.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HotFixButton.ForeColor = System.Drawing.Color.White
+        Me.HotFixButton.Image = CType(resources.GetObject("HotFixButton.Image"), System.Drawing.Image)
+        Me.HotFixButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.HotFixButton.Name = "HotFixButton"
+        Me.HotFixButton.Size = New System.Drawing.Size(87, 22)
+        Me.HotFixButton.Text = "HotFix Ready!"
+        Me.HotFixButton.Visible = False
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetApplicationToDefaultsToolStripMenuItem, Me.ToolStripSeparator2, Me.ViewPatchNotesToolStripMenuItem})
+        Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(62, 22)
+        Me.ToolStripDropDownButton1.Text = "Options"
+        '
+        'ResetApplicationToDefaultsToolStripMenuItem
+        '
+        Me.ResetApplicationToDefaultsToolStripMenuItem.Name = "ResetApplicationToDefaultsToolStripMenuItem"
+        Me.ResetApplicationToDefaultsToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.ResetApplicationToDefaultsToolStripMenuItem.Text = "Reset Application to defaults"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(222, 6)
+        '
+        'ViewPatchNotesToolStripMenuItem
+        '
+        Me.ViewPatchNotesToolStripMenuItem.Name = "ViewPatchNotesToolStripMenuItem"
+        Me.ViewPatchNotesToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.ViewPatchNotesToolStripMenuItem.Text = "View Patch Notes"
+        '
+        'Discord
+        '
+        Me.Discord.Image = Global.Fable_III_Patcher.My.Resources.Resources.Discord_icon
+        Me.Discord.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Discord.Name = "Discord"
+        Me.Discord.Size = New System.Drawing.Size(112, 22)
+        Me.Discord.Text = "Discord Support"
+        Me.Discord.Visible = False
+        '
+        'SupportButton
+        '
+        Me.SupportButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.SupportButton.Image = CType(resources.GetObject("SupportButton.Image"), System.Drawing.Image)
+        Me.SupportButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SupportButton.Name = "SupportButton"
+        Me.SupportButton.Size = New System.Drawing.Size(53, 22)
+        Me.SupportButton.Text = "Support"
+        Me.SupportButton.Visible = False
+        '
+        'WebInfo
+        '
+        Me.WebInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebInfo.IsWebBrowserContextMenuEnabled = False
+        Me.WebInfo.Location = New System.Drawing.Point(3, 3)
+        Me.WebInfo.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebInfo.Name = "WebInfo"
+        Me.WebInfo.ScriptErrorsSuppressed = True
+        Me.WebInfo.ScrollBarsEnabled = False
+        Me.WebInfo.Size = New System.Drawing.Size(225, 366)
+        Me.WebInfo.TabIndex = 0
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.Fable_III_Patcher.My.Resources.Resources.Fable3
@@ -255,6 +296,65 @@ Partial Class Launcher
         Me.PictureBox1.Size = New System.Drawing.Size(625, 414)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'LogInGroupBox1
+        '
+        Me.LogInGroupBox1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.LogInGroupBox1.Controls.Add(Me.LogInButton2)
+        Me.LogInGroupBox1.Controls.Add(Me.LogInButton1)
+        Me.LogInGroupBox1.Controls.Add(Me.LogInLabel2)
+        Me.LogInGroupBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LogInGroupBox1.HeaderColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInGroupBox1.Location = New System.Drawing.Point(22, 98)
+        Me.LogInGroupBox1.MainColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInGroupBox1.Name = "LogInGroupBox1"
+        Me.LogInGroupBox1.Size = New System.Drawing.Size(399, 181)
+        Me.LogInGroupBox1.TabIndex = 5
+        Me.LogInGroupBox1.Text = "Are You Sure?"
+        Me.LogInGroupBox1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInGroupBox1.Visible = False
+        '
+        'LogInLabel2
+        '
+        Me.LogInLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LogInLabel2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel2.Location = New System.Drawing.Point(3, 31)
+        Me.LogInLabel2.Name = "LogInLabel2"
+        Me.LogInLabel2.Size = New System.Drawing.Size(393, 108)
+        Me.LogInLabel2.TabIndex = 0
+        Me.LogInLabel2.Text = resources.GetString("LogInLabel2.Text")
+        '
+        'LogInButton1
+        '
+        Me.LogInButton1.BackColor = System.Drawing.Color.Transparent
+        Me.LogInButton1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInButton1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LogInButton1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LogInButton1.Location = New System.Drawing.Point(309, 148)
+        Me.LogInButton1.Name = "LogInButton1"
+        Me.LogInButton1.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInButton1.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton1.Size = New System.Drawing.Size(87, 30)
+        Me.LogInButton1.TabIndex = 1
+        Me.LogInButton1.Text = "Yes, Download"
+        '
+        'LogInButton2
+        '
+        Me.LogInButton2.BackColor = System.Drawing.Color.Transparent
+        Me.LogInButton2.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInButton2.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LogInButton2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton2.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LogInButton2.Location = New System.Drawing.Point(3, 148)
+        Me.LogInButton2.Name = "LogInButton2"
+        Me.LogInButton2.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInButton2.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton2.Size = New System.Drawing.Size(75, 30)
+        Me.LogInButton2.TabIndex = 2
+        Me.LogInButton2.Text = "Cancel"
         '
         'Launcher
         '
@@ -276,6 +376,7 @@ Partial Class Launcher
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LogInGroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -283,7 +384,6 @@ Partial Class Launcher
     Friend WithEvents LogInThemeContainer1 As LogInThemeContainer
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents Discord As ToolStripButton
     Friend WithEvents SupportButton As ToolStripButton
@@ -299,4 +399,13 @@ Partial Class Launcher
     Friend WithEvents SmartButton As LogInButtonWithProgress
     Friend WithEvents LoadingLabel As LogInLabel
     Friend WithEvents LogInLabel1 As LogInLabel
+    Friend WithEvents HotFixButton As ToolStripButton
+    Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
+    Friend WithEvents ResetApplicationToDefaultsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents ViewPatchNotesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogInGroupBox1 As LogInGroupBox
+    Friend WithEvents LogInButton2 As LogInButton
+    Friend WithEvents LogInButton1 As LogInButton
+    Friend WithEvents LogInLabel2 As LogInLabel
 End Class

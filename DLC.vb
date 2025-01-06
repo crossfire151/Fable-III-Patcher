@@ -53,7 +53,7 @@ Public Class DLC
         End If
     End Sub
 
-    Private Sub xuidPanelClose_Click(sender As Object, e As EventArgs) Handles xuidPanelClose.Click
+    Private Sub XuidPanelClose_Click(sender As Object, e As EventArgs) Handles xuidPanelClose.Click
         LicencePanel.Visible = False
     End Sub
 
@@ -103,7 +103,7 @@ Public Class DLC
             If LicenceAllocationClose.Enabled = True Then
                 My.Settings.PatchComplete = "1"
                 My.Settings.Save()
-                Form1.Close()
+                SetupInstaller.Close()
                 Launcher.SmartButton.Text = "Play"
                 Launcher.BringToFront()
                 Close()

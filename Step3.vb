@@ -46,8 +46,8 @@ Public Class Step3
             DLC.Close()
             Launcher.SmartButton.Text = "Play"
             Launcher.BringToFront()
-            If Form1.Visible = True Then
-                Form1.Close()
+            If SetupInstaller.Visible = True Then
+                SetupInstaller.Close()
             End If
             My.Settings.PatchComplete = "1"
             My.Settings.Save()
