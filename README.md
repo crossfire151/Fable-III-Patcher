@@ -1,3 +1,11 @@
+# IMPORTANT INFORMATION!!
+
+
+We are performing live maintenance on this project,
+The ability to download data; the info panel is also unavailable. We aim to restore the application soon.
+We are in the process of moving out server to a more stable system. Thank you for your patience during this time.
+
+
 # Fable-III-Patcher
 An easier much more simple Patcher and troubleshooter included.
 
