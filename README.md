@@ -1,11 +1,3 @@
-# IMPORTANT INFORMATION!!
-
-
-We are performing live maintenance on this project,
-The ability to download data; the info panel is also unavailable. We aim to restore the application soon.
-We are in the process of moving out server to a more stable system. Thank you for your patience during this time.
-
-
 # Fable-III-Patcher
 An easier much more simple Patcher and troubleshooter included.
 
@@ -45,7 +37,7 @@ Before installing the DLC make sure you create a backup of your saves, we don't 
 
 # Patch Notes
 
-[https://cloud.crossfire151.xyz/Fable-III/Support/help/viewforum.php?f=7&i=1](https://cloud.crossfire151.xyz/Fable-III/Support/help/viewforum.php?f=7&i=1)
+4.0.0.1 = Added Server Status tab due to new maintenance periods, making statuses clearer.
 
 # Issues
 
