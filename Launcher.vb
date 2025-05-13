@@ -2,7 +2,13 @@
 Public Class Launcher
     Private Sub SmartButton_Click(sender As Object, e As EventArgs) Handles SmartButton.Click
         If SmartButton.Text = "Begin Installation" Then
-            SetupInstaller.Show()
+            If ServerStatus.Text = "Server Online" Then
+                SetupInstaller.Show()
+            ElseIf ServerStatus.Text = "Server Offline" Then
+                MsgBox("The server is currently offline. Please try again later. Check the Server Status tab for furthure details", MsgBoxStyle.Critical, "Server Offline")
+            ElseIf ServerStatus.Text = "Waiting on Server..." Then
+                MsgBox("Please waiting for the server to come online. Check the Server Status tab for furthure details", MsgBoxStyle.Critical, "Server Offline")
+            End If
         ElseIf SmartButton.Text = "Play" Then
             System.Diagnostics.Process.Start("steam://rungameid/")
             TopMost = True
@@ -120,10 +126,16 @@ Public Class Launcher
 
     Private Sub StartupTimer_Tick(sender As Object, e As EventArgs) Handles StartupTimer.Tick
         StartupTimer.Stop()
+        If My.Computer.Network.Ping("crossfire151.xyz") Then
+            ServerStatus.Text = "Server Online"
+        Else
+            ServerStatus.Text = "Server Offline"
+        End If
         'PictureBox2.Visible = False
         SmartButton.Visible = True
         LoadingLabel.Visible = False
         Timer1.Start()
+        ServerStatusChecker.start()
     End Sub
 
     Private Sub WebInfo_DocumentTitleChanged(sender As Object, e As EventArgs) Handles WebInfo.DocumentTitleChanged
@@ -189,5 +201,28 @@ Public Class Launcher
     Private Sub HotFixButton_Click(sender As Object, e As EventArgs) Handles HotFixButton.Click
         LogInGroupBox1.Visible = True
         Beep()
+    End Sub
+
+    Private Sub ServerStatus_TextChanged(sender As Object, e As EventArgs) Handles ServerStatus.TextChanged
+        If ServerStatus.Text = "Server Online" Then
+            ServerStatus.ForeColor = Color.ForestGreen
+            ServerWarning.Visible = False
+        ElseIf ServerStatus.Text = "Server Offline" Then
+            ServerStatus.ForeColor = Color.Red
+            ServerWarning.Visible = True
+        ElseIf ServerStatus.Text = "Waiting on Server..." Then
+            ServerStatus.ForeColor = Color.Orange
+            ServerWarning.Visible = False
+        End If
+    End Sub
+
+    Private Sub ServerStatusChecker_Tick(sender As Object, e As EventArgs) Handles ServerStatusChecker.Tick
+        ServerStatusChecker.Stop()
+        If My.Computer.Network.Ping("crossfire151.xyz") Then
+            ServerStatus.Text = "Server Online"
+        Else
+            ServerStatus.Text = "Server Offline"
+        End If
+        ServerStatusChecker.Start()
     End Sub
 End Class
