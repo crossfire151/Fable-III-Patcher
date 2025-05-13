@@ -37,7 +37,7 @@ Before installing the DLC make sure you create a backup of your saves, we don't 
 
 # Patch Notes
 
-4.0.0.1 = Added Server Status tab due to new maintenance periods, making statuses clearer.
+4.0.0.2 = Added Server Status tab due to new maintenance periods, making statuses clearer.
 
 # Issues
 
