@@ -15,10 +15,6 @@ Visit the Releases section to download this patcher, I have conveniently zipped 
 This should prevent those DOTS in the filenames, this was done by github during the upload for some strange reason; the zip file should have solved this.
 
 
-# Looking for Voluntary Translators!
-
-Currently this Patcher only Supports English.
-As this Patcher grows in the upcoming future this application will need to be translated to support the NEW upcoming DLC Installtion feature.
 
 # DECLARATION -> READ ME!
 
