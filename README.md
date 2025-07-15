@@ -34,6 +34,7 @@ Before installing the DLC make sure you create a backup of your saves, we don't 
 # Patch Notes
 
 4.0.0.3 = Bug fixed with DLC downloader after server downtime which caused dependency links to become broken.
+
 4.0.0.2 = Added Server Status tab due to new maintenance periods, making statuses clearer. [Now bugged, DLC Downloader get's stuck at initializing stage - Update required to fix]
 
 # Issues
