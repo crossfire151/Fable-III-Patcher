@@ -4,7 +4,7 @@ Imports Microsoft.VisualBasic.FileIO
 
 Public Class DLC
 #Region "CloudServer"
-    Dim CloudServer As String = "https://cloud.crossfire151.xyz/download/f_files_downloads_33jhuf-_-ih83h2!uhgr7u9g3b/"
+    Dim CloudServer As String = "https://cloud.crossfire151.co.uk/download/f_files_downloads_33jhuf-_-ih83h2!uhgr7u9g3b/"
 #End Region
     Dim InquisitorPack As String = CloudServer & "4d53090a0ecf000e_INQUISITOR.cab"
     Dim TraitorsKeepPack As String = CloudServer & "4d53090a0ecf0010_TRAITORS.cab"

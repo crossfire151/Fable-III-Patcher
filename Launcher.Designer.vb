@@ -28,6 +28,7 @@ Partial Class Launcher
         Me.SmartLoader = New System.Windows.Forms.Timer(Me.components)
         Me.GetReadyClose = New System.Windows.Forms.Timer(Me.components)
         Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.ServerStatusChecker = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
         Me.LogInGroupBox1 = New Fable_III_Patcher.LogInGroupBox()
         Me.LogInButton2 = New Fable_III_Patcher.LogInButton()
@@ -55,7 +56,6 @@ Partial Class Launcher
         Me.ServerStatus = New Fable_III_Patcher.LogInLabel()
         Me.LogInLabel3 = New Fable_III_Patcher.LogInLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ServerStatusChecker = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1.SuspendLayout()
         Me.LogInGroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -80,6 +80,10 @@ Partial Class Launcher
         'StartupTimer
         '
         Me.StartupTimer.Interval = 6000
+        '
+        'ServerStatusChecker
+        '
+        Me.ServerStatusChecker.Interval = 30000
         '
         'LogInThemeContainer1
         '
@@ -418,10 +422,6 @@ Partial Class Launcher
         Me.PictureBox1.Size = New System.Drawing.Size(607, 414)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'ServerStatusChecker
-        '
-        Me.ServerStatusChecker.Interval = 30000
         '
         'Launcher
         '

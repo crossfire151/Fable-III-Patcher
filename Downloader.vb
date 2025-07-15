@@ -4,7 +4,7 @@ Imports System.Net
 Public Class Downloader
     Public WithEvents download As WebClient
 
-    Dim FileServerURL As String = "https://cloud.crossfire151.xyz/download/" & My.Settings.data & "/Fable3-Packages/"
+    Dim FileServerURL As String = "https://cloud.crossfire151.co.uk/download/" & My.Settings.data & "/Fable3-Packages/"
 
     Public Sub FileDownload()
         StatusText.Cursor = Cursors.Default
