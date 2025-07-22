@@ -52,3 +52,5 @@ Both 32bit and 64bit OS are supported.
 
 Support has been moved here [https://support.crossfire151.co.uk](https://support.crossfire151.co.uk)
 This is due to people abusing the issues tab which has now been disabled, support requests now require approval.
+
+Live chat widget has been added for quick answer's!
