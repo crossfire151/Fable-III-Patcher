@@ -1,3 +1,7 @@
+# Support
+
+[Get Support](https://support.crossfire151.co.uk/forumdisplay.php?fid=7)
+
 # Fable-III-Patcher
 An easier much more simple Patcher and troubleshooter included.
 
@@ -39,7 +43,7 @@ Before installing the DLC make sure you create a backup of your saves, we don't 
 
 # Issues
 
-If you notice any error popups please copy the error log and create a new Issue above.
+If you notice any error popups please copy the error log and create a new Issue here: [Create Issue](https://support.crossfire151.co.uk/forumdisplay.php?fid=7).
 
 # REQUIREMENTS
 
@@ -48,6 +52,4 @@ Both 32bit and 64bit OS are supported.
 
 !! WINDOWS ONLY !!
 
-# Support
 
-Due to technical issues this is turned off.
