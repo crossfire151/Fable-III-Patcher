@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Net
+Imports System.Net.Mail
 Imports System.Text
 Imports System.Web.UI.Design.WebControls
 
@@ -97,6 +98,7 @@ Public Class CrashReporter
     End Function
     Private Sub CrashReporter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         appid.Text = Guid.NewGuid.ToString()
+        NameText.Focus()
     End Sub
 
     Private Sub LogInButton2_Click(sender As Object, e As EventArgs) Handles LogInButton2.Click
@@ -104,9 +106,49 @@ Public Class CrashReporter
         MsgBox("Referance Copied to Clipboard, after you completed the crashlog upload you can give us this in a Support ticket on the Support forum or our discord.", MsgBoxStyle.Information, "Information")
     End Sub
 
+    ' Simple email syntax validator using System.Net.Mail.MailAddress.
+    Private Function IsValidEmail(ByVal email As String) As Boolean
+        If String.IsNullOrWhiteSpace(email) Then Return False
+        Try
+            Dim addr As New MailAddress(email)
+            ' Basic additional check: ensure domain part contains a dot.
+            Return Not String.IsNullOrEmpty(addr.Host) AndAlso addr.Host.Contains(".")
+        Catch
+            Return False
+        End Try
+    End Function
+
     Private Sub LogInButtonWithProgress1_Click(sender As Object, e As EventArgs) Handles SendCrash.Click
-        sender.Enabled = False
-        Timer1.Start()
+        If Not NameText.Text = "" Then
+            If Not EmailText.Text = "" Then
+                Dim nameValue As String = NameText.Text.Trim()
+                Dim emailValue As String = EmailText.Text.Trim()
+
+                If String.IsNullOrEmpty(nameValue) Then
+                    MsgBox("Please enter your Name before sending the crash log.", MsgBoxStyle.Exclamation, "Missing Information")
+                    Return
+                End If
+
+                If String.IsNullOrEmpty(emailValue) Then
+                    MsgBox("Please enter your Email before sending the crash log.", MsgBoxStyle.Exclamation, "Missing Information")
+                    Return
+                End If
+
+                If Not IsValidEmail(emailValue) Then
+                    MsgBox("Please enter a valid Email address (example: user@example.com).", MsgBoxStyle.Exclamation, "Invalid Email")
+                    Return
+                End If
+
+                NameText.Enabled = False
+                EmailText.Enabled = False
+                SendCrash.Enabled = False
+                Timer1.Start()
+            Else
+                MsgBox("Please enter your Email before sending the crash log.", MsgBoxStyle.Exclamation, "Missing Information")
+            End If
+        Else
+            MsgBox("Please enter your Name before sending the crash log.", MsgBoxStyle.Exclamation, "Missing Information")
+        End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -116,9 +158,13 @@ Public Class CrashReporter
             Timer1.Stop()
             Dim response As String = UploadCrashWithFile(url, NameText.Text, EmailText.Text, appid.Text)
             ' Show server response or handle it as required
+            NameText.Text = ""
+            EmailText.Text = ""
             MsgBox(response, MsgBoxStyle.Information, "Upload Result")
             SendCrash.Value = 0
             SendCrash.Enabled = True
+            NameText.Enabled = True
+            EmailText.Enabled = True
             If response.Contains("Whoops, you cannot upload this again. Please start a new session.") Then
                 Close()
             ElseIf response.Contains("Thank you for uploading your Crash Log. We will contact you with an update soon.") Then

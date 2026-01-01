@@ -157,7 +157,6 @@ Partial Class CrashReporter
         Me.NameText.Name = "NameText"
         Me.NameText.Size = New System.Drawing.Size(272, 20)
         Me.NameText.TabIndex = 2
-        Me.NameText.Text = "test"
         '
         'EmailText
         '
@@ -165,7 +164,6 @@ Partial Class CrashReporter
         Me.EmailText.Name = "EmailText"
         Me.EmailText.Size = New System.Drawing.Size(272, 20)
         Me.EmailText.TabIndex = 1
-        Me.EmailText.Text = "test@mail.com"
         '
         'CrashReporter
         '
