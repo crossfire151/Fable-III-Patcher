@@ -120,6 +120,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CrashReporter.Designer.vb">
+      <DependentUpon>CrashReporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CrashReporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dependency Check.Designer.vb">
       <DependentUpon>Dependency Check.vb</DependentUpon>
     </Compile>
@@ -214,6 +221,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CrashReporter.resx">
+      <DependentUpon>CrashReporter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dependency Check.resx">
       <DependentUpon>Dependency Check.vb</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +291,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fable3 Logo.ico" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\refresh.ico" />
+    <None Include="Resources\up.ico" />
+    <None Include="Resources\settings-icon.png" />
     <None Include="Resources\voice-complete.wav" />
     <None Include="Resources\NEW-Software-Logo.png" />
     <None Include="Resources\Discord_icon.png" />

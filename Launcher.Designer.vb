@@ -30,6 +30,7 @@ Partial Class Launcher
         Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ServerStatusChecker = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
+        Me.LogInLabel4 = New Fable_III_Patcher.LogInLabel()
         Me.LogInGroupBox1 = New Fable_III_Patcher.LogInGroupBox()
         Me.LogInButton2 = New Fable_III_Patcher.LogInButton()
         Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
@@ -43,6 +44,8 @@ Partial Class Launcher
         Me.ResetApplicationToDefaultsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ViewPatchNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.UploadCrashLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.Discord = New System.Windows.Forms.ToolStripButton()
         Me.SupportButton = New System.Windows.Forms.ToolStripButton()
@@ -94,6 +97,7 @@ Partial Class Launcher
         Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.LogInThemeContainer1.Controls.Add(Me.LogInLabel4)
         Me.LogInThemeContainer1.Controls.Add(Me.LogInGroupBox1)
         Me.LogInThemeContainer1.Controls.Add(Me.LoadingLabel)
         Me.LogInThemeContainer1.Controls.Add(Me.SmartButton)
@@ -111,6 +115,19 @@ Partial Class Launcher
         Me.LogInThemeContainer1.Size = New System.Drawing.Size(896, 558)
         Me.LogInThemeContainer1.TabIndex = 0
         Me.LogInThemeContainer1.Text = "Fable III Launcher"
+        '
+        'LogInLabel4
+        '
+        Me.LogInLabel4.AutoSize = True
+        Me.LogInLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LogInLabel4.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel4.ForeColor = System.Drawing.Color.Red
+        Me.LogInLabel4.Location = New System.Drawing.Point(12, 461)
+        Me.LogInLabel4.Name = "LogInLabel4"
+        Me.LogInLabel4.Size = New System.Drawing.Size(373, 15)
+        Me.LogInLabel4.TabIndex = 6
+        Me.LogInLabel4.Text = "*Only genuine copies of this game will function with this Application."
         '
         'LogInGroupBox1
         '
@@ -240,7 +257,7 @@ Partial Class Launcher
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetApplicationToDefaultsToolStripMenuItem, Me.ToolStripSeparator2, Me.ViewPatchNotesToolStripMenuItem})
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetApplicationToDefaultsToolStripMenuItem, Me.ToolStripSeparator2, Me.ViewPatchNotesToolStripMenuItem, Me.ToolStripSeparator3, Me.UploadCrashLogToolStripMenuItem})
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
@@ -249,6 +266,7 @@ Partial Class Launcher
         '
         'ResetApplicationToDefaultsToolStripMenuItem
         '
+        Me.ResetApplicationToDefaultsToolStripMenuItem.Image = CType(resources.GetObject("ResetApplicationToDefaultsToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ResetApplicationToDefaultsToolStripMenuItem.Name = "ResetApplicationToDefaultsToolStripMenuItem"
         Me.ResetApplicationToDefaultsToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
         Me.ResetApplicationToDefaultsToolStripMenuItem.Text = "Reset Application to defaults"
@@ -260,9 +278,22 @@ Partial Class Launcher
         '
         'ViewPatchNotesToolStripMenuItem
         '
+        Me.ViewPatchNotesToolStripMenuItem.Image = Global.Fable_III_Patcher.My.Resources.Resources.settings_icon
         Me.ViewPatchNotesToolStripMenuItem.Name = "ViewPatchNotesToolStripMenuItem"
         Me.ViewPatchNotesToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
         Me.ViewPatchNotesToolStripMenuItem.Text = "View Patch Notes"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(222, 6)
+        '
+        'UploadCrashLogToolStripMenuItem
+        '
+        Me.UploadCrashLogToolStripMenuItem.Image = Global.Fable_III_Patcher.My.Resources.Resources.up
+        Me.UploadCrashLogToolStripMenuItem.Name = "UploadCrashLogToolStripMenuItem"
+        Me.UploadCrashLogToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.UploadCrashLogToolStripMenuItem.Text = "Upload Crash Log"
         '
         'ToolStripSeparator1
         '
@@ -481,4 +512,7 @@ Partial Class Launcher
     Friend WithEvents LogInLabel3 As LogInLabel
     Friend WithEvents ServerWarning As LogInLabel
     Friend WithEvents ServerStatusChecker As Timer
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents UploadCrashLogToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogInLabel4 As LogInLabel
 End Class
