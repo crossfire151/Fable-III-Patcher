@@ -307,4 +307,8 @@ Public Class Launcher
         End If
         ServerStatusChecker.Start()
     End Sub
+
+    Private Sub UploadCrashLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UploadCrashLogToolStripMenuItem.Click
+        CrashReporter.Show()
+    End Sub
 End Class
