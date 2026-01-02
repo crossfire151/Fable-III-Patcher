@@ -1,4 +1,6 @@
-﻿Imports System.Threading
+﻿Imports System.IO
+Imports System.Threading
+Imports EO.Internal
 Public Class Launcher
 
     Public server As String = "crossfire151.co.uk"
@@ -309,6 +311,12 @@ Public Class Launcher
     End Sub
 
     Private Sub UploadCrashLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UploadCrashLogToolStripMenuItem.Click
-        CrashReporter.Show()
+        Dim myFile As New FileInfo(Application.StartupPath & "\applicationCrash.log")
+        Dim sizeInBytes As Long = myFile.Length
+        If sizeInBytes = 0 Then
+            MsgBox("Crashlog is empty. There is nothing to upload. If the application crashed and no data was recorded please let us know.", MsgBoxStyle.Information, "No Crash Data Avaialable")
+        Else
+            CrashReporter.Show()
+        End If
     End Sub
 End Class
