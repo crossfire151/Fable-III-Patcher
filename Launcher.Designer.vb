@@ -30,28 +30,30 @@ Partial Class Launcher
         Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ServerStatusChecker = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
+        Me.UpdateFound = New Fable_III_Patcher.LogInTabControl()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.LogInButton4 = New Fable_III_Patcher.LogInButton()
+        Me.LogInButton3 = New Fable_III_Patcher.LogInButton()
+        Me.LogInRichTextBox1 = New Fable_III_Patcher.LogInRichTextBox()
         Me.LogInLabel4 = New Fable_III_Patcher.LogInLabel()
-        Me.LogInGroupBox1 = New Fable_III_Patcher.LogInGroupBox()
-        Me.LogInButton2 = New Fable_III_Patcher.LogInButton()
-        Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
-        Me.LogInLabel2 = New Fable_III_Patcher.LogInLabel()
         Me.LoadingLabel = New Fable_III_Patcher.LogInLabel()
         Me.SmartButton = New Fable_III_Patcher.LogInButtonWithProgress()
         Me.StatusLabel = New Fable_III_Patcher.LogInLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.HotFixButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ResetApplicationToDefaultsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ViewPatchNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.UploadCrashLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HotFixButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.Discord = New System.Windows.Forms.ToolStripButton()
         Me.SupportButton = New System.Windows.Forms.ToolStripButton()
         Me.LogInTabControl1 = New Fable_III_Patcher.LogInTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.WebInfo = New System.Windows.Forms.WebBrowser()
+        Me.CheckkForUpdates = New System.Windows.Forms.WebBrowser()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -59,14 +61,20 @@ Partial Class Launcher
         Me.ServerStatus = New Fable_III_Patcher.LogInLabel()
         Me.LogInLabel3 = New Fable_III_Patcher.LogInLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LogInGroupBox1 = New Fable_III_Patcher.LogInGroupBox()
+        Me.LogInButton2 = New Fable_III_Patcher.LogInButton()
+        Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
+        Me.LogInLabel2 = New Fable_III_Patcher.LogInLabel()
         Me.LogInThemeContainer1.SuspendLayout()
-        Me.LogInGroupBox1.SuspendLayout()
+        Me.UpdateFound.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.LogInTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LogInGroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -97,14 +105,15 @@ Partial Class Launcher
         Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.LogInThemeContainer1.Controls.Add(Me.UpdateFound)
         Me.LogInThemeContainer1.Controls.Add(Me.LogInLabel4)
-        Me.LogInThemeContainer1.Controls.Add(Me.LogInGroupBox1)
         Me.LogInThemeContainer1.Controls.Add(Me.LoadingLabel)
         Me.LogInThemeContainer1.Controls.Add(Me.SmartButton)
         Me.LogInThemeContainer1.Controls.Add(Me.StatusLabel)
         Me.LogInThemeContainer1.Controls.Add(Me.ToolStrip1)
         Me.LogInThemeContainer1.Controls.Add(Me.LogInTabControl1)
         Me.LogInThemeContainer1.Controls.Add(Me.PictureBox1)
+        Me.LogInThemeContainer1.Controls.Add(Me.LogInGroupBox1)
         Me.LogInThemeContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LogInThemeContainer1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInThemeContainer1.FontSize = 12
@@ -116,6 +125,82 @@ Partial Class Launcher
         Me.LogInThemeContainer1.TabIndex = 0
         Me.LogInThemeContainer1.Text = "Fable III Launcher"
         '
+        'UpdateFound
+        '
+        Me.UpdateFound.ActiveColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.UpdateFound.BackTabColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.UpdateFound.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.UpdateFound.BorderColour = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.UpdateFound.Controls.Add(Me.TabPage4)
+        Me.UpdateFound.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.UpdateFound.HorizontalLineColour = System.Drawing.Color.Lime
+        Me.UpdateFound.ItemSize = New System.Drawing.Size(240, 32)
+        Me.UpdateFound.Location = New System.Drawing.Point(309, 48)
+        Me.UpdateFound.Multiline = True
+        Me.UpdateFound.Name = "UpdateFound"
+        Me.UpdateFound.SelectedIndex = 0
+        Me.UpdateFound.Size = New System.Drawing.Size(307, 139)
+        Me.UpdateFound.TabIndex = 8
+        Me.UpdateFound.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UpdateFound.UpLineColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.UpdateFound.Visible = False
+        '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.TabPage4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage4.Controls.Add(Me.LogInButton4)
+        Me.TabPage4.Controls.Add(Me.LogInButton3)
+        Me.TabPage4.Controls.Add(Me.LogInRichTextBox1)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 36)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(299, 99)
+        Me.TabPage4.TabIndex = 0
+        Me.TabPage4.Text = "Update Available!"
+        '
+        'LogInButton4
+        '
+        Me.LogInButton4.BackColor = System.Drawing.Color.Transparent
+        Me.LogInButton4.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInButton4.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LogInButton4.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton4.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LogInButton4.Location = New System.Drawing.Point(181, 52)
+        Me.LogInButton4.Name = "LogInButton4"
+        Me.LogInButton4.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInButton4.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton4.Size = New System.Drawing.Size(100, 30)
+        Me.LogInButton4.TabIndex = 2
+        Me.LogInButton4.Text = "Begin Update"
+        '
+        'LogInButton3
+        '
+        Me.LogInButton3.BackColor = System.Drawing.Color.Transparent
+        Me.LogInButton3.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInButton3.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LogInButton3.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton3.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LogInButton3.Location = New System.Drawing.Point(18, 52)
+        Me.LogInButton3.Name = "LogInButton3"
+        Me.LogInButton3.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInButton3.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton3.Size = New System.Drawing.Size(90, 30)
+        Me.LogInButton3.TabIndex = 1
+        Me.LogInButton3.Text = "Patch Notes"
+        '
+        'LogInRichTextBox1
+        '
+        Me.LogInRichTextBox1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInRichTextBox1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.LogInRichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LogInRichTextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.LogInRichTextBox1.Name = "LogInRichTextBox1"
+        Me.LogInRichTextBox1.Size = New System.Drawing.Size(291, 91)
+        Me.LogInRichTextBox1.TabIndex = 0
+        Me.LogInRichTextBox1.Text = "An update is available to download and install."
+        Me.LogInRichTextBox1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        '
         'LogInLabel4
         '
         Me.LogInLabel4.AutoSize = True
@@ -123,70 +208,11 @@ Partial Class Launcher
         Me.LogInLabel4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LogInLabel4.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInLabel4.ForeColor = System.Drawing.Color.Red
-        Me.LogInLabel4.Location = New System.Drawing.Point(12, 461)
+        Me.LogInLabel4.Location = New System.Drawing.Point(0, 540)
         Me.LogInLabel4.Name = "LogInLabel4"
         Me.LogInLabel4.Size = New System.Drawing.Size(373, 15)
         Me.LogInLabel4.TabIndex = 6
         Me.LogInLabel4.Text = "*Only genuine copies of this game will function with this Application."
-        '
-        'LogInGroupBox1
-        '
-        Me.LogInGroupBox1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.LogInGroupBox1.Controls.Add(Me.LogInButton2)
-        Me.LogInGroupBox1.Controls.Add(Me.LogInButton1)
-        Me.LogInGroupBox1.Controls.Add(Me.LogInLabel2)
-        Me.LogInGroupBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.LogInGroupBox1.HeaderColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LogInGroupBox1.Location = New System.Drawing.Point(22, 98)
-        Me.LogInGroupBox1.MainColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.LogInGroupBox1.Name = "LogInGroupBox1"
-        Me.LogInGroupBox1.Size = New System.Drawing.Size(399, 181)
-        Me.LogInGroupBox1.TabIndex = 5
-        Me.LogInGroupBox1.Text = "Are You Sure?"
-        Me.LogInGroupBox1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInGroupBox1.Visible = False
-        '
-        'LogInButton2
-        '
-        Me.LogInButton2.BackColor = System.Drawing.Color.Transparent
-        Me.LogInButton2.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LogInButton2.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.LogInButton2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInButton2.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.LogInButton2.Location = New System.Drawing.Point(3, 148)
-        Me.LogInButton2.Name = "LogInButton2"
-        Me.LogInButton2.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.LogInButton2.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInButton2.Size = New System.Drawing.Size(75, 30)
-        Me.LogInButton2.TabIndex = 2
-        Me.LogInButton2.Text = "Cancel"
-        '
-        'LogInButton1
-        '
-        Me.LogInButton1.BackColor = System.Drawing.Color.Transparent
-        Me.LogInButton1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.LogInButton1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.LogInButton1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInButton1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.LogInButton1.Location = New System.Drawing.Point(309, 148)
-        Me.LogInButton1.Name = "LogInButton1"
-        Me.LogInButton1.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.LogInButton1.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInButton1.Size = New System.Drawing.Size(87, 30)
-        Me.LogInButton1.TabIndex = 1
-        Me.LogInButton1.Text = "Yes, Download"
-        '
-        'LogInLabel2
-        '
-        Me.LogInLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.LogInLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.LogInLabel2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel2.Location = New System.Drawing.Point(3, 31)
-        Me.LogInLabel2.Name = "LogInLabel2"
-        Me.LogInLabel2.Size = New System.Drawing.Size(393, 108)
-        Me.LogInLabel2.TabIndex = 0
-        Me.LogInLabel2.Text = resources.GetString("LogInLabel2.Text")
         '
         'LoadingLabel
         '
@@ -234,25 +260,12 @@ Partial Class Launcher
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HotFixButton, Me.ToolStripDropDownButton1, Me.ToolStripSeparator1, Me.Discord, Me.SupportButton})
-        Me.ToolStrip1.Location = New System.Drawing.Point(22, 53)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.HotFixButton, Me.ToolStripSeparator1, Me.Discord, Me.SupportButton})
+        Me.ToolStrip1.Location = New System.Drawing.Point(15, 430)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(354, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(71, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'HotFixButton
-        '
-        Me.HotFixButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.HotFixButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.HotFixButton.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HotFixButton.ForeColor = System.Drawing.Color.White
-        Me.HotFixButton.Image = CType(resources.GetObject("HotFixButton.Image"), System.Drawing.Image)
-        Me.HotFixButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.HotFixButton.Name = "HotFixButton"
-        Me.HotFixButton.Size = New System.Drawing.Size(87, 22)
-        Me.HotFixButton.Text = "HotFix Ready!"
-        Me.HotFixButton.Visible = False
         '
         'ToolStripDropDownButton1
         '
@@ -294,6 +307,19 @@ Partial Class Launcher
         Me.UploadCrashLogToolStripMenuItem.Name = "UploadCrashLogToolStripMenuItem"
         Me.UploadCrashLogToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
         Me.UploadCrashLogToolStripMenuItem.Text = "Upload Crash Log"
+        '
+        'HotFixButton
+        '
+        Me.HotFixButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.HotFixButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.HotFixButton.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HotFixButton.ForeColor = System.Drawing.Color.White
+        Me.HotFixButton.Image = CType(resources.GetObject("HotFixButton.Image"), System.Drawing.Image)
+        Me.HotFixButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.HotFixButton.Name = "HotFixButton"
+        Me.HotFixButton.Size = New System.Drawing.Size(87, 22)
+        Me.HotFixButton.Text = "HotFix Ready!"
+        Me.HotFixButton.Visible = False
         '
         'ToolStripSeparator1
         '
@@ -344,12 +370,13 @@ Partial Class Launcher
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TabPage1.Controls.Add(Me.WebInfo)
+        Me.TabPage1.Controls.Add(Me.CheckkForUpdates)
         Me.TabPage1.Location = New System.Drawing.Point(4, 36)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(251, 374)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "About"
+        Me.TabPage1.Text = "News"
         '
         'WebInfo
         '
@@ -363,6 +390,17 @@ Partial Class Launcher
         Me.WebInfo.Size = New System.Drawing.Size(243, 366)
         Me.WebInfo.TabIndex = 0
         '
+        'CheckkForUpdates
+        '
+        Me.CheckkForUpdates.Location = New System.Drawing.Point(76, 93)
+        Me.CheckkForUpdates.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.CheckkForUpdates.Name = "CheckkForUpdates"
+        Me.CheckkForUpdates.ScriptErrorsSuppressed = True
+        Me.CheckkForUpdates.ScrollBarsEnabled = False
+        Me.CheckkForUpdates.Size = New System.Drawing.Size(40, 38)
+        Me.CheckkForUpdates.TabIndex = 7
+        Me.CheckkForUpdates.Visible = False
+        '
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
@@ -373,7 +411,7 @@ Partial Class Launcher
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(251, 374)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Information"
+        Me.TabPage2.Text = "About"
         '
         'LogInLabel1
         '
@@ -399,7 +437,7 @@ Partial Class Launcher
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(251, 374)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Server Status"
+        Me.TabPage3.Text = "Status"
         '
         'ServerWarning
         '
@@ -454,6 +492,65 @@ Partial Class Launcher
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'LogInGroupBox1
+        '
+        Me.LogInGroupBox1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.LogInGroupBox1.Controls.Add(Me.LogInButton2)
+        Me.LogInGroupBox1.Controls.Add(Me.LogInButton1)
+        Me.LogInGroupBox1.Controls.Add(Me.LogInLabel2)
+        Me.LogInGroupBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LogInGroupBox1.HeaderColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInGroupBox1.Location = New System.Drawing.Point(16, 48)
+        Me.LogInGroupBox1.MainColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInGroupBox1.Name = "LogInGroupBox1"
+        Me.LogInGroupBox1.Size = New System.Drawing.Size(399, 181)
+        Me.LogInGroupBox1.TabIndex = 5
+        Me.LogInGroupBox1.Text = "Are You Sure?"
+        Me.LogInGroupBox1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInGroupBox1.Visible = False
+        '
+        'LogInButton2
+        '
+        Me.LogInButton2.BackColor = System.Drawing.Color.Transparent
+        Me.LogInButton2.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInButton2.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LogInButton2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton2.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LogInButton2.Location = New System.Drawing.Point(3, 148)
+        Me.LogInButton2.Name = "LogInButton2"
+        Me.LogInButton2.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInButton2.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton2.Size = New System.Drawing.Size(75, 30)
+        Me.LogInButton2.TabIndex = 2
+        Me.LogInButton2.Text = "Cancel"
+        '
+        'LogInButton1
+        '
+        Me.LogInButton1.BackColor = System.Drawing.Color.Transparent
+        Me.LogInButton1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.LogInButton1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LogInButton1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LogInButton1.Location = New System.Drawing.Point(309, 148)
+        Me.LogInButton1.Name = "LogInButton1"
+        Me.LogInButton1.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.LogInButton1.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInButton1.Size = New System.Drawing.Size(87, 30)
+        Me.LogInButton1.TabIndex = 1
+        Me.LogInButton1.Text = "Yes, Download"
+        '
+        'LogInLabel2
+        '
+        Me.LogInLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.LogInLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LogInLabel2.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LogInLabel2.Location = New System.Drawing.Point(3, 31)
+        Me.LogInLabel2.Name = "LogInLabel2"
+        Me.LogInLabel2.Size = New System.Drawing.Size(393, 108)
+        Me.LogInLabel2.TabIndex = 0
+        Me.LogInLabel2.Text = resources.GetString("LogInLabel2.Text")
+        '
         'Launcher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -468,7 +565,8 @@ Partial Class Launcher
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.LogInThemeContainer1.ResumeLayout(False)
         Me.LogInThemeContainer1.PerformLayout()
-        Me.LogInGroupBox1.ResumeLayout(False)
+        Me.UpdateFound.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.LogInTabControl1.ResumeLayout(False)
@@ -476,6 +574,7 @@ Partial Class Launcher
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LogInGroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -515,4 +614,10 @@ Partial Class Launcher
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents UploadCrashLogToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogInLabel4 As LogInLabel
+    Friend WithEvents CheckkForUpdates As WebBrowser
+    Friend WithEvents UpdateFound As LogInTabControl
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents LogInButton4 As LogInButton
+    Friend WithEvents LogInButton3 As LogInButton
+    Friend WithEvents LogInRichTextBox1 As LogInRichTextBox
 End Class

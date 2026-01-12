@@ -34,6 +34,7 @@ Public Class Launcher
             SmartButton.Text = "Play"
         End If
         WebInfo.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion)
+        CheckkForUpdates.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion & "&type=updater")
         StartupTimer.Start()
     End Sub
 
@@ -191,6 +192,7 @@ Public Class Launcher
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
         WebInfo.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion)
+        CheckkForUpdates.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion & "&type=updater")
         If WebInfo.DocumentTitle.Contains("DiscordHelp:Enabled") Then
             Discord.Visible = True
         End If
@@ -318,5 +320,21 @@ Public Class Launcher
         Else
             CrashReporter.Show()
         End If
+    End Sub
+
+    Private Sub CheckkForUpdates_DocumentTitleChanged(sender As Object, e As EventArgs) Handles CheckkForUpdates.DocumentTitleChanged
+        If Not CheckkForUpdates.Document.Title.Contains(Application.ProductVersion) Then
+            If UpdateFound.Visible = False Then
+                UpdateFound.Visible = True
+            End If
+        End If
+    End Sub
+
+    Private Sub LogInButton3_Click(sender As Object, e As EventArgs) Handles LogInButton3.Click
+        ViewPatchNotesToolStripMenuItem.PerformClick()
+    End Sub
+
+    Private Sub LogInButton4_Click(sender As Object, e As EventArgs) Handles LogInButton4.Click
+        System.Diagnostics.Process.Start(Application.StartupPath & "\Update.exe")
     End Sub
 End Class
