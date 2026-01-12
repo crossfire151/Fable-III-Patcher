@@ -1,0 +1,13 @@
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\bin\Debug\Update.exe.config
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\bin\Debug\Update.exe
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\bin\Debug\Update.pdb
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\bin\Debug\Update.xml
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.vbproj.AssemblyReference.cache
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.Form1.resources
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.Resources.resources
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.vbproj.GenerateResource.cache
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.vbproj.CoreCompileInputs.cache
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.exe
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.xml
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.pdb
+E:\Documents\Visual Studio\Projects\Fable-III-Patcher-master\Updater\Update\Update\obj\Debug\Update.exe.config

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Update
+</name>
+</assembly>
+<members>
+<member name="T:Update.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Update.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Update.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Update.DrawHelpers">
+ <summary>
+ LogIn GDI+ Theme
+ Creator: Xertz (HF)
+ Version: 1.2
+ Control Count: 28
+ Date Created: 18/12/2013
+ Date Changed: 01/01/2014
+ UID: 1602992
+ For any bugs / errors, PM me.
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
