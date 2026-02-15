@@ -210,8 +210,11 @@ Public Class Launcher
             SupportButton.Visible = False
         End If
         If Not WebInfo.DocumentTitle.Contains(Application.ProductVersion()) Then
-            If UpdateFound.Visible = False Then
-                UpdateFound.Visible = True
+            If WebInfo.DocumentTitle = "" Then
+            Else
+                If UpdateFound.Visible = False Then
+                    UpdateFound.Visible = True
+                End If
             End If
         Else
             If UpdateFound.Visible = True Then
