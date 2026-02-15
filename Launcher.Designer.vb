@@ -30,6 +30,8 @@ Partial Class Launcher
         Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ServerStatusChecker = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
+        Me.maintenancePanel = New Fable_III_Patcher.LogInGroupBox()
+        Me.maintenanceMsg = New Fable_III_Patcher.LogInLabel()
         Me.UpdateFound = New Fable_III_Patcher.LogInTabControl()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.LogInButton4 = New Fable_III_Patcher.LogInButton()
@@ -52,8 +54,8 @@ Partial Class Launcher
         Me.SupportButton = New System.Windows.Forms.ToolStripButton()
         Me.LogInTabControl1 = New Fable_III_Patcher.LogInTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.maintenanceServer = New System.Windows.Forms.WebBrowser()
         Me.WebInfo = New System.Windows.Forms.WebBrowser()
-        Me.CheckkForUpdates = New System.Windows.Forms.WebBrowser()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.LogInLabel1 = New Fable_III_Patcher.LogInLabel()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -66,6 +68,7 @@ Partial Class Launcher
         Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
         Me.LogInLabel2 = New Fable_III_Patcher.LogInLabel()
         Me.LogInThemeContainer1.SuspendLayout()
+        Me.maintenancePanel.SuspendLayout()
         Me.UpdateFound.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -105,6 +108,7 @@ Partial Class Launcher
         Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.LogInThemeContainer1.Controls.Add(Me.maintenancePanel)
         Me.LogInThemeContainer1.Controls.Add(Me.UpdateFound)
         Me.LogInThemeContainer1.Controls.Add(Me.LogInLabel4)
         Me.LogInThemeContainer1.Controls.Add(Me.LoadingLabel)
@@ -121,9 +125,36 @@ Partial Class Launcher
         Me.LogInThemeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.LogInThemeContainer1.Name = "LogInThemeContainer1"
         Me.LogInThemeContainer1.ShowIcon = True
-        Me.LogInThemeContainer1.Size = New System.Drawing.Size(896, 558)
+        Me.LogInThemeContainer1.Size = New System.Drawing.Size(1080, 654)
         Me.LogInThemeContainer1.TabIndex = 0
         Me.LogInThemeContainer1.Text = "Fable III Launcher"
+        '
+        'maintenancePanel
+        '
+        Me.maintenancePanel.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.maintenancePanel.Controls.Add(Me.maintenanceMsg)
+        Me.maintenancePanel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.maintenancePanel.HeaderColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.maintenancePanel.Location = New System.Drawing.Point(15, 46)
+        Me.maintenancePanel.MainColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.maintenancePanel.Name = "maintenancePanel"
+        Me.maintenancePanel.Size = New System.Drawing.Size(788, 110)
+        Me.maintenancePanel.TabIndex = 9
+        Me.maintenancePanel.Text = "Maintenance"
+        Me.maintenancePanel.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.maintenancePanel.Visible = False
+        '
+        'maintenanceMsg
+        '
+        Me.maintenanceMsg.BackColor = System.Drawing.Color.Transparent
+        Me.maintenanceMsg.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.maintenanceMsg.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.maintenanceMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.maintenanceMsg.Location = New System.Drawing.Point(0, 33)
+        Me.maintenanceMsg.Name = "maintenanceMsg"
+        Me.maintenanceMsg.Size = New System.Drawing.Size(788, 77)
+        Me.maintenanceMsg.TabIndex = 0
+        Me.maintenanceMsg.Text = "%%%"
         '
         'UpdateFound
         '
@@ -135,11 +166,11 @@ Partial Class Launcher
         Me.UpdateFound.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.UpdateFound.HorizontalLineColour = System.Drawing.Color.Lime
         Me.UpdateFound.ItemSize = New System.Drawing.Size(240, 32)
-        Me.UpdateFound.Location = New System.Drawing.Point(309, 48)
+        Me.UpdateFound.Location = New System.Drawing.Point(811, 446)
         Me.UpdateFound.Multiline = True
         Me.UpdateFound.Name = "UpdateFound"
         Me.UpdateFound.SelectedIndex = 0
-        Me.UpdateFound.Size = New System.Drawing.Size(307, 139)
+        Me.UpdateFound.Size = New System.Drawing.Size(257, 139)
         Me.UpdateFound.TabIndex = 8
         Me.UpdateFound.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.UpdateFound.UpLineColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -155,7 +186,7 @@ Partial Class Launcher
         Me.TabPage4.Location = New System.Drawing.Point(4, 36)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(299, 99)
+        Me.TabPage4.Size = New System.Drawing.Size(249, 99)
         Me.TabPage4.TabIndex = 0
         Me.TabPage4.Text = "Update Available!"
         '
@@ -166,7 +197,7 @@ Partial Class Launcher
         Me.LogInButton4.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.LogInButton4.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInButton4.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.LogInButton4.Location = New System.Drawing.Point(181, 52)
+        Me.LogInButton4.Location = New System.Drawing.Point(136, 54)
         Me.LogInButton4.Name = "LogInButton4"
         Me.LogInButton4.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.LogInButton4.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -196,9 +227,9 @@ Partial Class Launcher
         Me.LogInRichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LogInRichTextBox1.Location = New System.Drawing.Point(3, 3)
         Me.LogInRichTextBox1.Name = "LogInRichTextBox1"
-        Me.LogInRichTextBox1.Size = New System.Drawing.Size(291, 91)
+        Me.LogInRichTextBox1.Size = New System.Drawing.Size(241, 91)
         Me.LogInRichTextBox1.TabIndex = 0
-        Me.LogInRichTextBox1.Text = "An update is available to download and install."
+        Me.LogInRichTextBox1.Text = "An update is available"
         Me.LogInRichTextBox1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'LogInLabel4
@@ -207,12 +238,12 @@ Partial Class Launcher
         Me.LogInLabel4.BackColor = System.Drawing.Color.Transparent
         Me.LogInLabel4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LogInLabel4.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LogInLabel4.ForeColor = System.Drawing.Color.Red
-        Me.LogInLabel4.Location = New System.Drawing.Point(0, 540)
+        Me.LogInLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(113, Byte), Integer), CType(CType(15, Byte), Integer))
+        Me.LogInLabel4.Location = New System.Drawing.Point(1, 637)
         Me.LogInLabel4.Name = "LogInLabel4"
-        Me.LogInLabel4.Size = New System.Drawing.Size(373, 15)
+        Me.LogInLabel4.Size = New System.Drawing.Size(377, 15)
         Me.LogInLabel4.TabIndex = 6
-        Me.LogInLabel4.Text = "*Only genuine copies of this game will function with this Application."
+        Me.LogInLabel4.Text = "Multiplayer servers were discontinued by Microsoft, single player only."
         '
         'LoadingLabel
         '
@@ -220,7 +251,7 @@ Partial Class Launcher
         Me.LoadingLabel.Font = New System.Drawing.Font("Arial Black", 13.0!, System.Drawing.FontStyle.Bold)
         Me.LoadingLabel.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LoadingLabel.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.LoadingLabel.Location = New System.Drawing.Point(349, 476)
+        Me.LoadingLabel.Location = New System.Drawing.Point(815, 593)
         Me.LoadingLabel.Name = "LoadingLabel"
         Me.LoadingLabel.Size = New System.Drawing.Size(257, 55)
         Me.LoadingLabel.TabIndex = 1
@@ -234,7 +265,7 @@ Partial Class Launcher
         Me.SmartButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.SmartButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.SmartButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.SmartButton.Location = New System.Drawing.Point(363, 476)
+        Me.SmartButton.Location = New System.Drawing.Point(829, 593)
         Me.SmartButton.Maximum = 100
         Me.SmartButton.Name = "SmartButton"
         Me.SmartButton.PressedColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
@@ -250,7 +281,7 @@ Partial Class Launcher
         Me.StatusLabel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.StatusLabel.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.StatusLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.StatusLabel.Location = New System.Drawing.Point(360, 534)
+        Me.StatusLabel.Location = New System.Drawing.Point(826, 629)
         Me.StatusLabel.Name = "StatusLabel"
         Me.StatusLabel.Size = New System.Drawing.Size(231, 23)
         Me.StatusLabel.TabIndex = 3
@@ -261,7 +292,7 @@ Partial Class Launcher
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.HotFixButton, Me.ToolStripSeparator1, Me.Discord, Me.SupportButton})
-        Me.ToolStrip1.Location = New System.Drawing.Point(15, 430)
+        Me.ToolStrip1.Location = New System.Drawing.Point(15, 560)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(71, 25)
         Me.ToolStrip1.TabIndex = 2
@@ -357,10 +388,10 @@ Partial Class Launcher
         Me.LogInTabControl1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.LogInTabControl1.HorizontalLineColour = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(151, Byte), Integer))
         Me.LogInTabControl1.ItemSize = New System.Drawing.Size(240, 32)
-        Me.LogInTabControl1.Location = New System.Drawing.Point(625, 44)
+        Me.LogInTabControl1.Location = New System.Drawing.Point(809, 44)
         Me.LogInTabControl1.Name = "LogInTabControl1"
         Me.LogInTabControl1.SelectedIndex = 0
-        Me.LogInTabControl1.Size = New System.Drawing.Size(259, 414)
+        Me.LogInTabControl1.Size = New System.Drawing.Size(259, 543)
         Me.LogInTabControl1.TabIndex = 1
         Me.LogInTabControl1.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInTabControl1.UpLineColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(199, Byte), Integer))
@@ -369,14 +400,25 @@ Partial Class Launcher
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage1.Controls.Add(Me.maintenanceServer)
         Me.TabPage1.Controls.Add(Me.WebInfo)
-        Me.TabPage1.Controls.Add(Me.CheckkForUpdates)
         Me.TabPage1.Location = New System.Drawing.Point(4, 36)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(251, 374)
+        Me.TabPage1.Size = New System.Drawing.Size(251, 503)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "News"
+        '
+        'maintenanceServer
+        '
+        Me.maintenanceServer.Location = New System.Drawing.Point(175, 6)
+        Me.maintenanceServer.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.maintenanceServer.Name = "maintenanceServer"
+        Me.maintenanceServer.ScriptErrorsSuppressed = True
+        Me.maintenanceServer.ScrollBarsEnabled = False
+        Me.maintenanceServer.Size = New System.Drawing.Size(63, 42)
+        Me.maintenanceServer.TabIndex = 1
+        Me.maintenanceServer.Visible = False
         '
         'WebInfo
         '
@@ -387,19 +429,8 @@ Partial Class Launcher
         Me.WebInfo.Name = "WebInfo"
         Me.WebInfo.ScriptErrorsSuppressed = True
         Me.WebInfo.ScrollBarsEnabled = False
-        Me.WebInfo.Size = New System.Drawing.Size(243, 366)
+        Me.WebInfo.Size = New System.Drawing.Size(243, 495)
         Me.WebInfo.TabIndex = 0
-        '
-        'CheckkForUpdates
-        '
-        Me.CheckkForUpdates.Location = New System.Drawing.Point(76, 93)
-        Me.CheckkForUpdates.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.CheckkForUpdates.Name = "CheckkForUpdates"
-        Me.CheckkForUpdates.ScriptErrorsSuppressed = True
-        Me.CheckkForUpdates.ScrollBarsEnabled = False
-        Me.CheckkForUpdates.Size = New System.Drawing.Size(40, 38)
-        Me.CheckkForUpdates.TabIndex = 7
-        Me.CheckkForUpdates.Visible = False
         '
         'TabPage2
         '
@@ -409,7 +440,7 @@ Partial Class Launcher
         Me.TabPage2.Location = New System.Drawing.Point(4, 36)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(251, 374)
+        Me.TabPage2.Size = New System.Drawing.Size(251, 503)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "About"
         '
@@ -422,7 +453,7 @@ Partial Class Launcher
         Me.LogInLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInLabel1.Location = New System.Drawing.Point(3, 3)
         Me.LogInLabel1.Name = "LogInLabel1"
-        Me.LogInLabel1.Size = New System.Drawing.Size(243, 366)
+        Me.LogInLabel1.Size = New System.Drawing.Size(243, 495)
         Me.LogInLabel1.TabIndex = 0
         Me.LogInLabel1.Text = resources.GetString("LogInLabel1.Text")
         '
@@ -435,7 +466,7 @@ Partial Class Launcher
         Me.TabPage3.Controls.Add(Me.LogInLabel3)
         Me.TabPage3.Location = New System.Drawing.Point(4, 36)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(251, 374)
+        Me.TabPage3.Size = New System.Drawing.Size(251, 503)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Status"
         '
@@ -488,7 +519,7 @@ Partial Class Launcher
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(12, 44)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(607, 414)
+        Me.PictureBox1.Size = New System.Drawing.Size(791, 543)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -555,7 +586,7 @@ Partial Class Launcher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(896, 558)
+        Me.ClientSize = New System.Drawing.Size(1080, 654)
         Me.Controls.Add(Me.LogInThemeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -565,6 +596,7 @@ Partial Class Launcher
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.LogInThemeContainer1.ResumeLayout(False)
         Me.LogInThemeContainer1.PerformLayout()
+        Me.maintenancePanel.ResumeLayout(False)
         Me.UpdateFound.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
@@ -613,11 +645,13 @@ Partial Class Launcher
     Friend WithEvents ServerStatusChecker As Timer
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents UploadCrashLogToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LogInLabel4 As LogInLabel
-    Friend WithEvents CheckkForUpdates As WebBrowser
     Friend WithEvents UpdateFound As LogInTabControl
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents LogInButton4 As LogInButton
     Friend WithEvents LogInButton3 As LogInButton
     Friend WithEvents LogInRichTextBox1 As LogInRichTextBox
+    Friend WithEvents LogInLabel4 As LogInLabel
+    Friend WithEvents maintenancePanel As LogInGroupBox
+    Friend WithEvents maintenanceMsg As LogInLabel
+    Friend WithEvents maintenanceServer As WebBrowser
 End Class

@@ -34,7 +34,7 @@ Public Class Launcher
             SmartButton.Text = "Play"
         End If
         WebInfo.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion)
-        CheckkForUpdates.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion & "&type=updater")
+        maintenanceServer.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?type=maintenance")
         StartupTimer.Start()
     End Sub
 
@@ -182,6 +182,11 @@ Public Class Launcher
             WebInfo.Refresh()
             System.Diagnostics.Process.Start("https://github.com/crossfire151/Fable-III-Patcher/releases/tag/release")
         End If
+        If WebInfo.DocumentTitle.Contains("AllowScroll:True") Then
+            WebInfo.ScrollBarsEnabled = True
+        ElseIf WebInfo.DocumentTitle.Contains("AllowScroll:False") Then
+            WebInfo.ScrollBarsEnabled = False
+        End If
         If WebInfo.DocumentTitle.Contains("HotFix::READY") Then
             HotFixButton.Visible = True
         ElseIf Not WebInfo.DocumentTitle.Contains("HotFix::READY") Then
@@ -192,7 +197,6 @@ Public Class Launcher
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
         WebInfo.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion)
-        CheckkForUpdates.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion & "&type=updater")
         If WebInfo.DocumentTitle.Contains("DiscordHelp:Enabled") Then
             Discord.Visible = True
         End If
@@ -205,7 +209,16 @@ Public Class Launcher
         If WebInfo.DocumentTitle.Contains("WebSupport:Disabled") Then
             SupportButton.Visible = False
         End If
-        Timer1.Start()
+        If Not WebInfo.DocumentTitle.Contains(Application.ProductVersion()) Then
+            If UpdateFound.Visible = False Then
+                UpdateFound.Visible = True
+            End If
+        Else
+            If UpdateFound.Visible = True Then
+                UpdateFound.Visible = False
+            End If
+        End If
+            Timer1.Start()
     End Sub
 
     Private Sub Discord_Click(sender As Object, e As EventArgs) Handles Discord.Click
@@ -322,13 +335,6 @@ Public Class Launcher
         End If
     End Sub
 
-    Private Sub CheckkForUpdates_DocumentTitleChanged(sender As Object, e As EventArgs) Handles CheckkForUpdates.DocumentTitleChanged
-        If Not CheckkForUpdates.Document.Title.Contains(Application.ProductVersion) Then
-            If UpdateFound.Visible = False Then
-                UpdateFound.Visible = True
-            End If
-        End If
-    End Sub
 
     Private Sub LogInButton3_Click(sender As Object, e As EventArgs) Handles LogInButton3.Click
         ViewPatchNotesToolStripMenuItem.PerformClick()
@@ -336,5 +342,14 @@ Public Class Launcher
 
     Private Sub LogInButton4_Click(sender As Object, e As EventArgs) Handles LogInButton4.Click
         System.Diagnostics.Process.Start(Application.StartupPath & "\Update.exe")
+    End Sub
+
+    Private Sub maintenanceServer_DocumentTitleChanged(sender As Object, e As EventArgs) Handles maintenanceServer.DocumentTitleChanged
+        If Not maintenanceServer.DocumentTitle = "" Then
+            maintenancePanel.Visible = True
+            maintenanceMsg.Text = maintenanceServer.DocumentTitle
+        ElseIf maintenanceServer.DocumentTitle = "" Then
+            maintenancePanel.Visible = False
+        End If
     End Sub
 End Class
