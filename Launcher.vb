@@ -171,8 +171,8 @@ Public Class Launcher
             End If
         End If
         'PictureBox2.Visible = False
-        SmartButton.Visible = True
-        LoadingLabel.Visible = False
+        SmartButton.Enabled = True
+        'LoadingLabel.Visible = False
         Timer1.Start()
         ServerStatusChecker.Start()
     End Sub
@@ -348,10 +348,14 @@ Public Class Launcher
     End Sub
 
     Private Sub maintenanceServer_DocumentTitleChanged(sender As Object, e As EventArgs) Handles maintenanceServer.DocumentTitleChanged
-        If Not maintenanceServer.DocumentTitle = "" Then
+        If maintenanceServer.DocumentTitle = "" Then
+            'Do Nothing
+            'To prevent the maintenance panel from flashing on startup when the document title is blank before loading the actual title else,
+            'Leave maintenance panel static
+        ElseIf Not maintenanceServer.DocumentTitle = "" Then
             maintenancePanel.Visible = True
             maintenanceMsg.Text = maintenanceServer.DocumentTitle
-        ElseIf maintenanceServer.DocumentTitle = "" Then
+        ElseIf maintenanceServer.DocumentTitle = "none" Then
             maintenancePanel.Visible = False
         End If
     End Sub

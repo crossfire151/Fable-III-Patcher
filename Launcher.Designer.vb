@@ -38,7 +38,6 @@ Partial Class Launcher
         Me.LogInButton3 = New Fable_III_Patcher.LogInButton()
         Me.LogInRichTextBox1 = New Fable_III_Patcher.LogInRichTextBox()
         Me.LogInLabel4 = New Fable_III_Patcher.LogInLabel()
-        Me.LoadingLabel = New Fable_III_Patcher.LogInLabel()
         Me.SmartButton = New Fable_III_Patcher.LogInButtonWithProgress()
         Me.StatusLabel = New Fable_III_Patcher.LogInLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -111,7 +110,6 @@ Partial Class Launcher
         Me.LogInThemeContainer1.Controls.Add(Me.maintenancePanel)
         Me.LogInThemeContainer1.Controls.Add(Me.UpdateFound)
         Me.LogInThemeContainer1.Controls.Add(Me.LogInLabel4)
-        Me.LogInThemeContainer1.Controls.Add(Me.LoadingLabel)
         Me.LogInThemeContainer1.Controls.Add(Me.SmartButton)
         Me.LogInThemeContainer1.Controls.Add(Me.StatusLabel)
         Me.LogInThemeContainer1.Controls.Add(Me.ToolStrip1)
@@ -131,14 +129,15 @@ Partial Class Launcher
         '
         'maintenancePanel
         '
-        Me.maintenancePanel.BorderColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.maintenancePanel.BackColor = System.Drawing.Color.Transparent
+        Me.maintenancePanel.BorderColour = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.maintenancePanel.Controls.Add(Me.maintenanceMsg)
         Me.maintenancePanel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.maintenancePanel.HeaderColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.maintenancePanel.Location = New System.Drawing.Point(15, 46)
+        Me.maintenancePanel.Location = New System.Drawing.Point(13, 46)
         Me.maintenancePanel.MainColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.maintenancePanel.Name = "maintenancePanel"
-        Me.maintenancePanel.Size = New System.Drawing.Size(788, 110)
+        Me.maintenancePanel.Size = New System.Drawing.Size(789, 110)
         Me.maintenancePanel.TabIndex = 9
         Me.maintenancePanel.Text = "Maintenance"
         Me.maintenancePanel.TextColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -152,7 +151,7 @@ Partial Class Launcher
         Me.maintenanceMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.maintenanceMsg.Location = New System.Drawing.Point(0, 33)
         Me.maintenanceMsg.Name = "maintenanceMsg"
-        Me.maintenanceMsg.Size = New System.Drawing.Size(788, 77)
+        Me.maintenanceMsg.Size = New System.Drawing.Size(791, 77)
         Me.maintenanceMsg.TabIndex = 0
         Me.maintenanceMsg.Text = "%%%"
         '
@@ -161,12 +160,12 @@ Partial Class Launcher
         Me.UpdateFound.ActiveColour = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.UpdateFound.BackTabColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.UpdateFound.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.UpdateFound.BorderColour = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.UpdateFound.BorderColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.UpdateFound.Controls.Add(Me.TabPage4)
         Me.UpdateFound.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.UpdateFound.HorizontalLineColour = System.Drawing.Color.Lime
         Me.UpdateFound.ItemSize = New System.Drawing.Size(240, 32)
-        Me.UpdateFound.Location = New System.Drawing.Point(811, 446)
+        Me.UpdateFound.Location = New System.Drawing.Point(810, 446)
         Me.UpdateFound.Multiline = True
         Me.UpdateFound.Name = "UpdateFound"
         Me.UpdateFound.SelectedIndex = 0
@@ -245,24 +244,12 @@ Partial Class Launcher
         Me.LogInLabel4.TabIndex = 6
         Me.LogInLabel4.Text = "Multiplayer servers were discontinued by Microsoft, single player only."
         '
-        'LoadingLabel
-        '
-        Me.LoadingLabel.BackColor = System.Drawing.Color.Transparent
-        Me.LoadingLabel.Font = New System.Drawing.Font("Arial Black", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.LoadingLabel.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LoadingLabel.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.LoadingLabel.Location = New System.Drawing.Point(815, 593)
-        Me.LoadingLabel.Name = "LoadingLabel"
-        Me.LoadingLabel.Size = New System.Drawing.Size(257, 55)
-        Me.LoadingLabel.TabIndex = 1
-        Me.LoadingLabel.Text = "Loading..."
-        Me.LoadingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'SmartButton
         '
         Me.SmartButton.BackColor = System.Drawing.Color.Transparent
         Me.SmartButton.BaseColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.SmartButton.BorderColour = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.SmartButton.Enabled = False
         Me.SmartButton.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.SmartButton.HoverColour = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.SmartButton.Location = New System.Drawing.Point(829, 593)
@@ -272,7 +259,7 @@ Partial Class Launcher
         Me.SmartButton.ProgressColour = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.SmartButton.Size = New System.Drawing.Size(228, 55)
         Me.SmartButton.TabIndex = 4
-        Me.SmartButton.Text = "Begin Installation"
+        Me.SmartButton.Text = "Loading..."
         Me.SmartButton.Value = 0
         '
         'StatusLabel
@@ -627,7 +614,6 @@ Partial Class Launcher
     Friend WithEvents StartupTimer As Timer
     Friend WithEvents StatusLabel As LogInLabel
     Friend WithEvents SmartButton As LogInButtonWithProgress
-    Friend WithEvents LoadingLabel As LogInLabel
     Friend WithEvents LogInLabel1 As LogInLabel
     Friend WithEvents HotFixButton As ToolStripButton
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton

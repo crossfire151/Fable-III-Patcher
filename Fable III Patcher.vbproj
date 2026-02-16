@@ -280,17 +280,14 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Resources\01_Understone.zip" />
-    <None Include="Resources\02_TraitorsKeep.zip" />
-    <None Include="Resources\03_InquisitorsPack.zip" />
-    <None Include="Resources\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB.zip" />
-    <None Include="Resources\gfwlclient.msi" />
     <None Include="Resources\wllogin_32.msi" />
     <None Include="Resources\wllogin_64.msi" />
     <None Include="Resources\xliveredist.msi" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fable3 Logo.ico" />
+    <None Include="Resources\gfwlivesetup.exe" />
+    <None Include="Resources\gfwlclient.msi" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\refresh.ico" />
     <None Include="Resources\up.ico" />
@@ -301,7 +298,6 @@
     <None Include="Resources\Splash.png" />
     <None Include="Resources\chevron.png" />
     <None Include="Resources\Fable3.jpg" />
-    <None Include="Resources\gfwlivesetup.exe" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -315,6 +311,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Debug\resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
