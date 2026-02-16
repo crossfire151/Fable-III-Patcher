@@ -352,11 +352,12 @@ Public Class Launcher
             'Do Nothing
             'To prevent the maintenance panel from flashing on startup when the document title is blank before loading the actual title else,
             'Leave maintenance panel static
+
+        ElseIf maintenanceServer.DocumentTitle = "none" Then
+            maintenancePanel.Visible = False
         ElseIf Not maintenanceServer.DocumentTitle = "" Then
             maintenancePanel.Visible = True
             maintenanceMsg.Text = maintenanceServer.DocumentTitle
-        ElseIf maintenanceServer.DocumentTitle = "none" Then
-            maintenancePanel.Visible = False
         End If
     End Sub
 End Class
