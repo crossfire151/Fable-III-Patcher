@@ -17,7 +17,7 @@ Public Class Launcher
                 MsgBox("Please wait for the server to come online. Check the Server Status tab for more details", MsgBoxStyle.Critical, "Server Offline")
             End If
         ElseIf SmartButton.Text = "Click to Update" Then
-            System.Diagnostics.Process.Start("https://github.com/crossfire151/Fable-III-Patcher/releases/tag/release")
+            System.Diagnostics.Process.Start(Application.StartupPath & "\Update.exe")
         ElseIf SmartButton.Text = "Play" Then
             System.Diagnostics.Process.Start("steam://rungameid/")
             TopMost = True

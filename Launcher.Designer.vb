@@ -29,6 +29,8 @@ Partial Class Launcher
         Me.GetReadyClose = New System.Windows.Forms.Timer(Me.components)
         Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ServerStatusChecker = New System.Windows.Forms.Timer(Me.components)
+        Me.FetchUpdater = New System.Windows.Forms.Timer(Me.components)
+        Me.NowCheckUpdater = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1 = New Fable_III_Patcher.LogInThemeContainer()
         Me.maintenancePanel = New Fable_III_Patcher.LogInGroupBox()
         Me.maintenanceMsg = New Fable_III_Patcher.LogInLabel()
@@ -66,8 +68,6 @@ Partial Class Launcher
         Me.LogInButton2 = New Fable_III_Patcher.LogInButton()
         Me.LogInButton1 = New Fable_III_Patcher.LogInButton()
         Me.LogInLabel2 = New Fable_III_Patcher.LogInLabel()
-        Me.FetchUpdater = New System.Windows.Forms.Timer(Me.components)
-        Me.NowCheckUpdater = New System.Windows.Forms.Timer(Me.components)
         Me.LogInThemeContainer1.SuspendLayout()
         Me.maintenancePanel.SuspendLayout()
         Me.UpdateFound.SuspendLayout()
@@ -99,6 +99,14 @@ Partial Class Launcher
         'ServerStatusChecker
         '
         Me.ServerStatusChecker.Interval = 30000
+        '
+        'FetchUpdater
+        '
+        Me.FetchUpdater.Interval = 5000
+        '
+        'NowCheckUpdater
+        '
+        Me.NowCheckUpdater.Interval = 5000
         '
         'LogInThemeContainer1
         '
@@ -570,14 +578,6 @@ Partial Class Launcher
         Me.LogInLabel2.Size = New System.Drawing.Size(393, 108)
         Me.LogInLabel2.TabIndex = 0
         Me.LogInLabel2.Text = resources.GetString("LogInLabel2.Text")
-        '
-        'FetchUpdater
-        '
-        Me.FetchUpdater.Interval = 5000
-        '
-        'NowCheckUpdater
-        '
-        Me.NowCheckUpdater.Interval = 5000
         '
         'Launcher
         '
