@@ -35,6 +35,10 @@ Public Class Launcher
         End If
         WebInfo.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?version=" & Application.ProductVersion)
         maintenanceServer.Navigate("https://cloud.crossfire151.co.uk/Fable-III/Fable-III.php?type=maintenance")
+        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\Update.exe") Then
+            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\Update.exe")
+            FetchUpdater.start()
+        End If
         StartupTimer.Start()
     End Sub
 
@@ -358,6 +362,22 @@ Public Class Launcher
         ElseIf Not maintenanceServer.DocumentTitle = "" Then
             maintenancePanel.Visible = True
             maintenanceMsg.Text = maintenanceServer.DocumentTitle
+        End If
+    End Sub
+
+    Private Sub FetchUpdater_Tick(sender As Object, e As EventArgs) Handles FetchUpdater.Tick
+        FetchUpdater.Stop()
+        My.Computer.Network.DownloadFile("https://cloud.crossfire151.co.uk/Fable-III/installer/Update.exe", Application.StartupPath & "\Update.exe")
+        NowCheckUpdater.start()
+    End Sub
+
+    Private Sub NowCheckUpdater_Tick(sender As Object, e As EventArgs) Handles NowCheckUpdater.Tick
+        NowCheckUpdater.Stop()
+        If My.Settings.gotwebview = "0" Then
+            My.Settings.gotwebview = "1"
+            My.Settings.Save()
+            MsgBox("The Launcher will now install a HOTFIX Patch for missing dependencies, this is required.", MsgBoxStyle.Critical, "HotFix required")
+            System.Diagnostics.Process.Start(Application.StartupPath & "\Update.exe")
         End If
     End Sub
 End Class

@@ -1,6 +1,8 @@
-﻿Imports Microsoft.VisualBasic.FileIO
-Imports EO.WebBrowser
-Imports System.Threading
+﻿Imports System.Threading
+Imports EO.Internal
+Imports Microsoft.VisualBasic.FileIO
+Imports Microsoft.Web.WebView2.Core
+Imports Microsoft.Web.WebView2.WinForms
 
 Public Class Step3
     Private Sub DoneButton_Click(sender As Object, e As EventArgs) Handles DoneButton.Click
@@ -68,7 +70,7 @@ Public Class Step3
             End If
             Thread.Sleep(100) 'Allows the application to create the above folder for FABLE to work.
             LicenceCopyToLocation.Navigate("C:\Users\" & My.Settings.username & "\AppData\Local\Microsoft\Xlive\DLC\4D53090A\00000002\D7FCB87DC6790538CC5EE45EC44EC782603B8ACB\")
-            End If
+        End If
     End Sub
 
     Private Sub OpenPane1_Tick(sender As Object, e As EventArgs) Handles OpenPane1.Tick
@@ -76,6 +78,8 @@ Public Class Step3
         Pane1.Size = New Point(800, ProgressBar1.Value)
         If ProgressBar1.Value = ProgressBar1.Maximum Then
             OpenPane1.Stop()
+            WebView21.Focus()
+            FocusGamertag()
         End If
     End Sub
 
@@ -88,12 +92,57 @@ Public Class Step3
         End If
     End Sub
 
-    Private xuuid As New EO.WebBrowser.WebView
-
     Private Sub Step3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         OpenPane1.Start()
-        EO.WebBrowser.Runtime.AddLicense("Kb114+30EO2s3OmxGeCm3MGz8M5nzunz7fGo7vf2HaF3s7P9FOKe5ff2EL112PD9GvZ3s+X1D5+t8PT26KF+xrLUE/Go5Omzy5+v3PYEFO6ntKbC461pmaTA6bto2PD9GvZ3s/MDD+SrwPL3Gp+d2Pj26KFpqbPC3a5rp7XIzZ+v3PYEFO6ntKbC46FotcAEFOan2PgGHeR36d7SGeWawbMKFOervtrI9eBysO3XErx2s7MEFOan2PgGHeR3s7P9FOKe5ff26XXj7fQQ7azcws0X6Jzc8gQQyJ21tMbbtnCttcbcs3Wm8PoO5Kfq6doP")
-        xuuid.Url = "https://cxkes.me/xbox/xuid"
-        xuuid.Create(PictureBox1.Handle)
+
+    End Sub
+
+    Private Async Sub FocusGamertag()
+
+        Dim script As String =
+"
+(() => {
+
+    function focusNow() {
+        const el = document.querySelector('input[name=""gamertag""]');
+
+        if (!el) return false;
+
+        el.scrollIntoView({ block: 'center' });
+
+        // brute-force focus
+        el.focus({ preventScroll: true });
+        el.click();
+
+        // override possible blur traps
+        setTimeout(() => el.focus(), 50);
+        setTimeout(() => el.focus(), 200);
+
+        return true;
+    }
+
+    // aggressive retry loop (this is the key)
+    let attempts = 0;
+
+    const timer = setInterval(() => {
+
+        attempts++;
+
+        if (focusNow()) {
+            clearInterval(timer);
+        }
+
+        // stop after 8 seconds max
+        if (attempts > 80) {
+            clearInterval(timer);
+        }
+
+    }, 100);
+
+})();
+"
+
+        Await WebView21.CoreWebView2.ExecuteScriptAsync(script)
+
     End Sub
 End Class

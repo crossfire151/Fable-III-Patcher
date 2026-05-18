@@ -36,16 +36,16 @@ Partial Class Step3
         Me.DoneButton = New Fable_III_Patcher.LogInButton()
         Me.LogInLabel4 = New Fable_III_Patcher.LogInLabel()
         Me.LogInLabel2 = New Fable_III_Patcher.LogInLabel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.OpenPane1 = New System.Windows.Forms.Timer(Me.components)
         Me.ClosePane1 = New System.Windows.Forms.Timer(Me.components)
         Me.OpenPane2 = New System.Windows.Forms.Timer(Me.components)
         Me.ClosePane2 = New System.Windows.Forms.Timer(Me.components)
+        Me.WebView21 = New Microsoft.Web.WebView2.WinForms.WebView2()
         Me.LogInThemeContainer1.SuspendLayout()
         Me.Pane2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pane1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WebView21, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LogInThemeContainer1
@@ -153,10 +153,10 @@ Partial Class Step3
         '
         'Pane1
         '
+        Me.Pane1.Controls.Add(Me.WebView21)
         Me.Pane1.Controls.Add(Me.DoneButton)
         Me.Pane1.Controls.Add(Me.LogInLabel4)
         Me.Pane1.Controls.Add(Me.LogInLabel2)
-        Me.Pane1.Controls.Add(Me.PictureBox1)
         Me.Pane1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Pane1.Location = New System.Drawing.Point(0, 450)
         Me.Pane1.Name = "Pane1"
@@ -201,19 +201,11 @@ Partial Class Step3
         Me.LogInLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LogInLabel2.Location = New System.Drawing.Point(227, 40)
         Me.LogInLabel2.Name = "LogInLabel2"
-        Me.LogInLabel2.Size = New System.Drawing.Size(344, 30)
+        Me.LogInLabel2.Size = New System.Drawing.Size(345, 30)
         Me.LogInLabel2.TabIndex = 3
-        Me.LogInLabel2.Text = "Enter Your Xbox Gamertag below then click Get." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This will fetch your unique ID. P" &
-    "lease Copy the XUID (HEX) code."
+        Me.LogInLabel2.Text = "Enter Your Xbox Gamertag below then click Done." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This will fetch your unique ID. " &
+    "Please Copy the XUID (HEX) code."
         Me.LogInLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(86, 73)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(621, 299)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'OpenPane1
         '
@@ -231,6 +223,18 @@ Partial Class Step3
         '
         Me.ClosePane2.Interval = 1
         '
+        'WebView21
+        '
+        Me.WebView21.AllowExternalDrop = True
+        Me.WebView21.CreationProperties = Nothing
+        Me.WebView21.DefaultBackgroundColor = System.Drawing.Color.White
+        Me.WebView21.Location = New System.Drawing.Point(138, 73)
+        Me.WebView21.Name = "WebView21"
+        Me.WebView21.Size = New System.Drawing.Size(502, 303)
+        Me.WebView21.Source = New System.Uri("https://cxkes.me/xbox/xuid", System.UriKind.Absolute)
+        Me.WebView21.TabIndex = 6
+        Me.WebView21.ZoomFactor = 1.0R
+        '
         'Step3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -247,14 +251,13 @@ Partial Class Step3
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pane1.ResumeLayout(False)
         Me.Pane1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WebView21, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents LogInThemeContainer1 As LogInThemeContainer
     Friend WithEvents Pane1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LogInLabel2 As LogInLabel
     Friend WithEvents LogInLabel4 As LogInLabel
     Friend WithEvents DoneButton As LogInButton
@@ -269,4 +272,5 @@ Partial Class Step3
     Friend WithEvents OpenPane2 As Timer
     Friend WithEvents ClosePane2 As Timer
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents WebView21 As Microsoft.Web.WebView2.WinForms.WebView2
 End Class
